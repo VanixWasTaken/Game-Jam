@@ -1,17 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://dy5ns274feorx"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/player.gd" id="1_1yapa"]
+[ext_resource type="Script" path="res://Scenes and Scripts/player.gd" id="1_iri1f"]
 [ext_resource type="Texture2D" uid="uid://c4q07npf85uxo" path="res://icon.svg" id="1_tpmkn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5y7q"]
+size = Vector2(149, 148)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_1yapa")
+position = Vector2(140, 92)
+script = ExtResource("1_iri1f")
+max_speed = 900
+acceleration = 5000
+friction = 5000
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2.14577e-06, -2.14577e-06)
-scale = Vector2(0.15625, 0.15625)
+position = Vector2(63, 63)
+scale = Vector2(1.14062, 1.14062)
 texture = ExtResource("1_tpmkn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(64.5, 64)
 shape = SubResource("RectangleShape2D_o5y7q")
