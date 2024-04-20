@@ -35,6 +35,7 @@ max_time = 20.0
 sprite_frames = SubResource("SpriteFrames_xdefc")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
 autostart = true
 
 [node name="Ambience" type="AudioStreamPlayer2D" parent="."]
