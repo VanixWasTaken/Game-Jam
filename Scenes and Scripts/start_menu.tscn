@@ -4,10 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cbggcbgan0wvy" path="res://Scenes and Scripts/HUD/start_button.tscn" id="4_whi0i"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_04am3"]
-load_path = "res://.godot/imported/tile_test_1.png-335414e962efa20c39ef8d1931e4e14d.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x0pvb"]
-load_path = "res://.godot/imported/tile_test_2.png-36d1d68460e025841d789cbf0d75e6bc.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_koc22"]
 animations = [{
