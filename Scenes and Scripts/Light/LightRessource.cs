@@ -18,6 +18,7 @@ public partial class LightRessource : Node2D {
 		_textureRect = GetNode<TextureRect>("Blink");
 		PlayBlinkAnim();
 		
+		//Timer starts anim at random intervall between 3 and 8s
 		Timer timer = new Timer();
 		timer.WaitTime = randomTime;
 		timer.Timeout += PlayBlinkAnim;
@@ -30,14 +31,15 @@ public partial class LightRessource : Node2D {
 		
 	}
 	
+	//Collision with Player, Increase Circle Size, Destroy object
 	private void _on_area_2d_body_entered(Node2D body) {
 		_shader.UpdateCircleSize();
 		GD.Print("Dead Light");
 		QueueFree();
 	}
 
-	private void PlayBlinkAnim()
-	{
+	//Play Blink anim andn starts timer to hide Texture after anim
+	private void PlayBlinkAnim() {
 		_textureRect.Visible = true;
 		_blinkAnimation.Play("Blink");
 		
@@ -49,8 +51,8 @@ public partial class LightRessource : Node2D {
 		timer.Start();
 	}
 
-	private void HideTexture()
-	{
+	//Hides Blink Texture after anim is over
+	private void HideTexture() {
 		_textureRect.Visible = false;
 	}
 }
