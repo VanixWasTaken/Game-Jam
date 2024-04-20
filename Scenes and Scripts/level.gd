@@ -28,6 +28,3 @@ func _process(delta):
 
 
 
-
-func _on_timer_timeout():
-	Global.should_start_enemy_direction_switch = true

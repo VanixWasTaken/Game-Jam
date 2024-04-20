@@ -7,6 +7,8 @@ var player_inside_right_area = false
 
 var enemy_direction = "none"
 
+
+
 var round = 0
 
 func _process(delta):
@@ -29,16 +31,16 @@ func _on_timer_timeout():
 	$Sprite2D.rotate(1.5707963267949) # 90° sind 1.5707963267949 rad
 	print(enemy_direction)
 	
-	if round == 0 and Global.should_start_enemy_direction_switch:
+	if round == 0:
 		enemy_direction = "up"
 		round += 1
-	elif round == 1 and Global.should_start_enemy_direction_switch:
+	elif round == 1:
 		enemy_direction = "right"
 		round += 1
-	elif round == 2 and Global.should_start_enemy_direction_switch:
+	elif round == 2:
 		enemy_direction = "down"
 		round += 1
-	elif round == 3 and Global.should_start_enemy_direction_switch:
+	elif round == 3:
 		enemy_direction = "left"
 		round = 0
 	
