@@ -71,7 +71,7 @@ sprite_frames = SubResource("SpriteFrames_5f1q0")
 animation = &"walk_right"
 
 [node name="CircleShader" parent="." instance=ExtResource("3_2ifmp")]
-position = Vector2(-1049, -499)
+position = Vector2(-960, -540)
 flashIntervall = 3.0
 flashDuration = 0.5
 

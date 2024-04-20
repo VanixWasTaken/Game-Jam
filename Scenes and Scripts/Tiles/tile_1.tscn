@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://wy5shy17ga48"]
+[gd_scene load_steps=3 format=3 uid="uid://wy5shy17ga48"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Tiles/tile_1.gd" id="1_jom5r"]
 [ext_resource type="Texture2D" uid="uid://y3o0vpgtkyx6" path="res://Assets/tiles/LabyrinthEins.png" id="2_ra0hv"]
-[ext_resource type="PackedScene" uid="uid://duhrwv455kw4g" path="res://Scenes and Scripts/Light/LightRessource.tscn" id="3_glllw"]
 
 [node name="Tile1" type="Node2D"]
 script = ExtResource("1_jom5r")
@@ -65,7 +64,3 @@ position = Vector2(1376, 592)
 
 [node name="EnemySpawn5" type="Marker2D" parent="EnemySpawns"]
 position = Vector2(1448, 232)
-
-[node name="LightRessource" parent="." instance=ExtResource("3_glllw")]
-z_index = 1
-position = Vector2(671, 559)
