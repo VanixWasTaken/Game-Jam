@@ -10,4 +10,5 @@ position = Vector2(960, 544)
 texture = ExtResource("1_t55pb")
 
 [node name="LightRessource" parent="." instance=ExtResource("2_nbf3d")]
+z_index = 1
 position = Vector2(825, 659)

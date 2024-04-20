@@ -3,7 +3,7 @@ extends Node2D
 var tiles1 = preload("res://Scenes and Scripts/Tiles/tile_1.tscn")
 var tiles2 = preload("res://Scenes and Scripts/Tiles/tile_2.tscn")
 var last_tile_position = Vector2(0, 0)
-
+var should_spawn_tiles = true
 
 func _process(delta):
 	randomize()
@@ -16,8 +16,9 @@ func _process(delta):
 	
 	
 	
-	if last_tile_position.x >= 57600:
+	if last_tile_position.x >= 19200:
 		last_tile_position.x = 0
 		last_tile_position += Vector2(0, 1080)
 
-	
+	if last_tile_position.y == 10800:
+		should_spawn_tiles = false

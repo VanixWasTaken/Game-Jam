@@ -23,4 +23,5 @@ position = Vector2(23, 24)
 shape = SubResource("RectangleShape2D_o5y7q")
 
 [node name="CircleShader" parent="." groups=["Circle"] instance=ExtResource("3_g81tp")]
+z_index = 1
 position = Vector2(-935, -474)
