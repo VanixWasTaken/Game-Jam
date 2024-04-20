@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://wy5shy17ga48"]
+[gd_scene load_steps=3 format=3 uid="uid://wy5shy17ga48"]
 
 [ext_resource type="Texture2D" uid="uid://dx8f76pg47tss" path="res://Assets/tiles/MonsterPlatz1.png" id="1_h53iy"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Tiles/tile_1.gd" id="1_jom5r"]
 
 [node name="Tile1" type="Node2D"]
+script = ExtResource("1_jom5r")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(960, 544)
@@ -47,3 +49,18 @@ polygon = PackedVector2Array(1016, 544, 1016, 600, 1200, 600, 1200, 544)
 polygon = PackedVector2Array(1328, 304, 1328, 416, 1440, 416, 1440, 296, 1680, 296, 1680, 184, 1384, 184, 1384, 304)
 
 [node name="EnemySpawns" type="Node2D" parent="."]
+
+[node name="EnemySpawn1" type="Marker2D" parent="EnemySpawns"]
+position = Vector2(360, 240)
+
+[node name="EnemySpawn2" type="Marker2D" parent="EnemySpawns"]
+position = Vector2(536, 664)
+
+[node name="EnemySpawn3" type="Marker2D" parent="EnemySpawns"]
+position = Vector2(1144, 848)
+
+[node name="EnemySpawn4" type="Marker2D" parent="EnemySpawns"]
+position = Vector2(1376, 592)
+
+[node name="EnemySpawn5" type="Marker2D" parent="EnemySpawns"]
+position = Vector2(1448, 232)
