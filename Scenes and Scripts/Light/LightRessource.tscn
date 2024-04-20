@@ -76,7 +76,6 @@ texture = ExtResource("1_1ljac")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 z_as_relative = false
-material = SubResource("ShaderMaterial_43b4a")
 offset_left = 18.0
 offset_top = 10.0
 offset_right = 146.0

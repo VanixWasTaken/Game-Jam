@@ -12,7 +12,7 @@ public partial class LightRessource : Node2D {
 	public override void _Ready() {
 		GD.Print("Hello Licht da");
 		_shader = GetNode<IncreaseCircleSize>("/root/Level/Player/CircleShader");
-		_area = GetNode<Area2D>("TextureRect/Area2D");
+		_area = GetNode<Area2D>("TextureRect2/Area2D");
 		randomTime = _random.RandiRange(3, 8);
 		_blinkAnimation = GetNode<AnimationPlayer>("AnimationPlayer");
 		_textureRect = GetNode<TextureRect>("Blink");

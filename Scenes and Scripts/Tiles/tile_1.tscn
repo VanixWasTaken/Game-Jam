@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://wy5shy17ga48"]
+[gd_scene load_steps=4 format=3 uid="uid://wy5shy17ga48"]
 
 [ext_resource type="Texture2D" uid="uid://cwjkujey2w8q8" path="res://Assets/tiles/LabyrinthNew1.png" id="1_fl0ae"]
 [ext_resource type="PackedScene" uid="uid://dh0n7nkjo625o" path="res://Scenes and Scripts/enemy.tscn" id="2_csybf"]
+[ext_resource type="PackedScene" uid="uid://duhrwv455kw4g" path="res://Scenes and Scripts/Light/LightRessource.tscn" id="3_qub2o"]
 
 [node name="Tile1" type="Node2D"]
 
@@ -11,3 +12,7 @@ texture = ExtResource("1_fl0ae")
 
 [node name="Enemy" parent="." instance=ExtResource("2_csybf")]
 position = Vector2(1229, 458)
+
+[node name="LightRessource" parent="." instance=ExtResource("3_qub2o")]
+z_index = 1
+position = Vector2(725, 200)
