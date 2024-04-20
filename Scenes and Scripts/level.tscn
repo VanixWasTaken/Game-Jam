@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://0ihn3m31l6ba"]
+[gd_scene load_steps=17 format=3 uid="uid://0ihn3m31l6ba"]
 
 [ext_resource type="PackedScene" uid="uid://dy5ns274feorx" path="res://Scenes and Scripts/player.tscn" id="1_di0k0"]
 [ext_resource type="Script" path="res://Scenes and Scripts/level.gd" id="1_mrmsb"]
+[ext_resource type="Script" path="res://Scenes and Scripts/CameraShake.cs" id="3_7c3bx"]
 [ext_resource type="Texture2D" uid="uid://c4mbtdkos0i1j" path="res://Assets/loading screen/Unbenanntes_Projekt-1.png" id="3_mrruq"]
 [ext_resource type="Texture2D" uid="uid://ddjwh4uvcgdkg" path="res://Assets/loading screen/Unbenanntes_Projekt-2.png" id="4_dls1g"]
 [ext_resource type="Texture2D" uid="uid://b4qerit35aqfr" path="res://Assets/loading screen/Unbenanntes_Projekt-3.png" id="5_f8e4j"]
@@ -13,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bibr86ioid7ow" path="res://Assets/loading screen/Unbenanntes_Projekt-9.png" id="11_erduw"]
 [ext_resource type="Texture2D" uid="uid://bid02qxddbfqu" path="res://Assets/loading screen/Unbenanntes_Projekt-10.png" id="12_f5r5g"]
 [ext_resource type="Script" path="res://Scenes and Scripts/animated_sprite_2d.gd" id="13_u2si1"]
-[ext_resource type="PackedScene" uid="uid://dwfsg15rsb3c7" path="res://Scenes and Scripts/highscore.tscn" id="14_p1ur8"]
+[ext_resource type="PackedScene" uid="uid://cqonxovi635ux" path="res://Scenes and Scripts/highscore.tscn" id="14_p1ur8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vr1j3"]
 animations = [{
@@ -60,6 +61,7 @@ script = ExtResource("1_mrmsb")
 z_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+script = ExtResource("3_7c3bx")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player"]
 visible = false

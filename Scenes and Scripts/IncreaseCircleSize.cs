@@ -68,13 +68,13 @@ public partial class IncreaseCircleSize : Node2D {
 		*/
 		if(currentTimeLeft >= 7 && currentTimeLeft <= 6)
 		{
-			//_cameraShake.ShakeCamera(0.1f,);
+			_cameraShake.ShakeCamera(0.1f,0.1f);
 			GD.Print("2");
 		}
 		
 		else if(currentTimeLeft <= 8 && currentTimeLeft >=7)
 		{
-			_cameraShake.ShakeCamera(0.1f,.1f);
+			_cameraShake.ShakeCamera(0.1f,0.2f);
 			GD.Print("3");
 		}
 		
