@@ -8,6 +8,14 @@ public partial class LightRessource : Node2D {
 	private RandomNumberGenerator _random = new RandomNumberGenerator();
 	private AnimationPlayer _blinkAnimation;
 	private TextureRect _textureRect;
+	/*
+	GDScript MyGDScript = GD.Load<GDScript>("res://Scenes and Scripts/highscore.gd");
+	GodotObject myGDScriptNode = (GodotObject)MyGDScript.New(); 
+	*/
+	GDScript myGDScript = (GDScript)GD.Load("res://Scenes and Scripts/highscore.gd");
+	CanvasLayer myNode = new CanvasLayer();
+	
+
 	
 	public override void _Ready() {
 		GD.Print("Hello Licht da");
@@ -25,6 +33,9 @@ public partial class LightRessource : Node2D {
 		AddChild(timer);
 		timer.Start();
 		
+		//GodotObject myGDScriptNode = (GodotObject)MyGDScript.New();
+		myNode.SetScript(myGDScript);
+		
 	}
 	public override void _Process(double delta)
 	{
@@ -36,6 +47,10 @@ public partial class LightRessource : Node2D {
 		_shader.UpdateCircleSize();
 		GD.Print("Dead Light");
 		QueueFree();
+		//myGDScriptNode.Call("IncreaseHighScore", 1000);
+		//gdScriptNode.Call("res://Scenes and Scripts/highscore.gd");
+		//_myGDScriptNode.Call("IncreaseHighScore", 1000); //Prints "Hello World" to the console
+		myNode.Call("IncreaseHighScore", 1000);
 	}
 
 	//Play Blink anim andn starts timer to hide Texture after anim
