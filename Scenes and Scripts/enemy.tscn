@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dh0n7nkjo625o"]
+[gd_scene load_steps=7 format=3 uid="uid://dh0n7nkjo625o"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/enemy.gd" id="1_mlcn8"]
 [ext_resource type="Texture2D" uid="uid://bmvmgg2igq56s" path="res://Assets/enemy_down.png" id="2_72min"]
@@ -26,9 +26,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tmnt"]
-size = Vector2(122, 192)
-
 [node name="Enemy" type="Node2D"]
 script = ExtResource("1_mlcn8")
 min_time = 10.0
@@ -40,32 +37,6 @@ sprite_frames = SubResource("SpriteFrames_xdefc")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="DownScan" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DownScan"]
-position = Vector2(-4, 148)
-shape = SubResource("RectangleShape2D_0tmnt")
-
-[node name="LeftScan" type="Area2D" parent="."]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="LeftScan"]
-position = Vector2(-161, -7)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_0tmnt")
-
-[node name="UpScan" type="Area2D" parent="."]
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="UpScan"]
-position = Vector2(-4, -164)
-shape = SubResource("RectangleShape2D_0tmnt")
-
-[node name="RightScan" type="Area2D" parent="."]
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="RightScan"]
-position = Vector2(154, -6)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_0tmnt")
-
 [node name="Ambience" type="AudioStreamPlayer2D" parent="."]
 max_distance = 1500.0
 attenuation = 1.36604
@@ -74,13 +45,9 @@ bus = &"SFX"
 [node name="AmbienceTimer" type="Timer" parent="."]
 autostart = true
 
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 250)
+collision_mask = 2
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="body_entered" from="DownScan" to="." method="_on_down_scan_body_entered"]
-[connection signal="body_exited" from="DownScan" to="." method="_on_down_scan_body_exited"]
-[connection signal="body_entered" from="LeftScan" to="." method="_on_left_scan_body_entered"]
-[connection signal="body_exited" from="LeftScan" to="." method="_on_left_scan_body_exited"]
-[connection signal="body_entered" from="UpScan" to="." method="_on_up_scan_body_entered"]
-[connection signal="body_exited" from="UpScan" to="." method="_on_up_scan_body_exited"]
-[connection signal="body_entered" from="RightScan" to="." method="_on_right_scan_body_entered"]
-[connection signal="body_exited" from="RightScan" to="." method="_on_right_scan_body_exited"]
 [connection signal="timeout" from="AmbienceTimer" to="." method="_on_ambience_timer_timeout"]
