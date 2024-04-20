@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://bmr5rn02o2kae"]
 
-[ext_resource type="Texture2D" uid="uid://sv2k1mejw2mi" path="res://Assets/tiles/ByrinthNew2.png" id="1_1lp3s"]
+[ext_resource type="Texture2D" uid="uid://beoa2o2eja04b" path="res://Assets/tiles/MonsterPlatz2.png" id="1_037p4"]
 
 [node name="Tile2" type="Node2D"]
 
-[node name="TileTest2" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(960, 544)
-texture = ExtResource("1_1lp3s")
+texture = ExtResource("1_037p4")

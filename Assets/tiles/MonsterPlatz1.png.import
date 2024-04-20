@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sv2k1mejw2mi"
-path="res://.godot/imported/ByrinthNew2.png-40077bea0816ba33e011d192b8382887.ctex"
+uid="uid://dx8f76pg47tss"
+path="res://.godot/imported/MonsterPlatz1.png-23fc96db82f208a1a8ba719f1ba1970f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tiles/ByrinthNew2.png"
-dest_files=["res://.godot/imported/ByrinthNew2.png-40077bea0816ba33e011d192b8382887.ctex"]
+source_file="res://Assets/tiles/MonsterPlatz1.png"
+dest_files=["res://.godot/imported/MonsterPlatz1.png-23fc96db82f208a1a8ba719f1ba1970f.ctex"]
 
 [params]
 
