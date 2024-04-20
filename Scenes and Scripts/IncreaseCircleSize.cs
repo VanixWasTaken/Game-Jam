@@ -19,7 +19,7 @@ public partial class IncreaseCircleSize : Node2D {
 		_closeAnim = GetNode<AnimationPlayer>("ColorRect/AnimationPlayer");
 		_closeAnim.Play("Close");
 		
-		_cameraShake = GetNode<CameraShake>("/root/Level/Player/Node2D/Camera2D");
+		_cameraShake = GetNode<CameraShake>("/root/Level/Player/Camera2D");
 		
 		Timer timer = new Timer();
 		timer.WaitTime = flashIntervall;
@@ -54,8 +54,11 @@ public partial class IncreaseCircleSize : Node2D {
 		_closeAnim.Seek(timeLeft);
 		_closeAnim.Play();
 	}
+	
+	//gets current anim time and starts shake, kim sounds hier
 	public override void _Process(double delta) {
 		currentTimeLeft =_closeAnim.CurrentAnimationPosition;
+		
 		/*
 		if (currentTimeLeft < 4)
 		{
@@ -63,25 +66,25 @@ public partial class IncreaseCircleSize : Node2D {
 			GD.Print("1");
 		}
 		*/
-		if(currentTimeLeft >= 1 && currentTimeLeft <= 0)
+		if(currentTimeLeft >= 7 && currentTimeLeft <= 6)
 		{
-			//_cameraShake.ShakeCamera(0.1f,);
+			_cameraShake.ShakeCamera(0.1f,0.1f);
 			GD.Print("2");
 		}
 		
-		else if(currentTimeLeft <= 3 && currentTimeLeft >=2)
+		else if(currentTimeLeft <= 8 && currentTimeLeft >=7)
 		{
-			_cameraShake.ShakeCamera(0.1f,.1f);
+			_cameraShake.ShakeCamera(0.1f,0.2f);
 			GD.Print("3");
 		}
 		
-		else if(currentTimeLeft <= 4 && currentTimeLeft >= 3)
+		else if(currentTimeLeft <= 9 && currentTimeLeft >= 8)
 		{
 			_cameraShake.ShakeCamera(0.1f,0.3f);
 			GD.Print("4");
 		}
 		
-		else if(currentTimeLeft <= 5 && currentTimeLeft >= 4)
+		else if(currentTimeLeft <= 10.5 && currentTimeLeft >= 9)
 		{
 			_cameraShake.ShakeCamera(0.1f,0.5f);
 			GD.Print("5");
