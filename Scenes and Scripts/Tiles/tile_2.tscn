@@ -1,9 +1,60 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmr5rn02o2kae"]
+[gd_scene load_steps=3 format=3 uid="uid://bmr5rn02o2kae"]
 
 [ext_resource type="Texture2D" uid="uid://beoa2o2eja04b" path="res://Assets/tiles/MonsterPlatz2.png" id="1_037p4"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Tiles/tile_1.gd" id="1_o5byn"]
 
 [node name="Tile2" type="Node2D"]
+script = ExtResource("1_o5byn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(960, 544)
 texture = ExtResource("1_037p4")
+
+[node name="LevelBorder" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(120, 60, 480, 60, 480, 180, 780, 180, 780, 60, 900, 60, 900, 0, 0, 0, 0, 480, 120, 480)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(0, 600, 120, 600, 120, 1020, 480, 1020, 480, 900, 600, 900, 600, 1020, 720, 1020, 720, 660, 900, 660, 900, 1080, 0, 1080)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(240, 180, 360, 180, 360, 900, 240, 900)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(480, 300, 480, 780, 600, 780, 600, 300)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(720, 300, 720, 540, 900, 540, 900, 360, 780, 360, 780, 300)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(1020, 360, 1140, 360, 1140, 660, 1020, 660)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(900, 180, 900, 240, 1380, 240, 1380, 180)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(1260, 360, 1260, 420, 1380, 420, 1380, 360)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(1020, 780, 1020, 1080, 1920, 1080, 1920, 600, 1740, 600, 1740, 780, 1620, 780, 1620, 360, 1500, 360, 1500, 1020, 1380, 1020, 1380, 540, 1260, 540, 1260, 1020, 1140, 1020, 1140, 780)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(1020, 0, 1020, 60, 1500, 60, 1500, 240, 1620, 240, 1620, 60, 1740, 60, 1740, 480, 1920, 480, 1920, 0)
+
+[node name="EnemySpawns" type="Node2D" parent="."]
+
+[node name="EnemySpawn1" type="Marker2D" parent="EnemySpawns"]
+position = Vector2(300, 240)
+
+[node name="EnemySpawn2" type="Marker2D" parent="EnemySpawns"]
+position = Vector2(540, 720)
+
+[node name="EnemySpawn3" type="Marker2D" parent="EnemySpawns"]
+position = Vector2(1080, 600)
+
+[node name="EnemySpawn4" type="Marker2D" parent="EnemySpawns"]
+position = Vector2(1320, 780)
+
+[node name="EnemySpawn5" type="Marker2D" parent="EnemySpawns"]
+position = Vector2(1800, 180)
