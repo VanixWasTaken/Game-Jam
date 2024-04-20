@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dy5ns274feorx"]
+[gd_scene load_steps=5 format=3 uid="uid://dy5ns274feorx"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/player.gd" id="1_iri1f"]
 [ext_resource type="Texture2D" uid="uid://c4q07npf85uxo" path="res://Assets/icon.svg" id="1_tpmkn"]
+[ext_resource type="PackedScene" uid="uid://21afqfophfo3" path="res://Scenes and Scripts/CircleShader.tscn" id="3_g81tp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5y7q"]
 size = Vector2(38.5, 42)
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(140, 92)
+position = Vector2(142, 90)
 script = ExtResource("1_iri1f")
 acceleration = 5000
 friction = 10000
@@ -20,3 +21,6 @@ texture = ExtResource("1_tpmkn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(23, 24)
 shape = SubResource("RectangleShape2D_o5y7q")
+
+[node name="CircleShader" parent="." groups=["Circle"] instance=ExtResource("3_g81tp")]
+position = Vector2(-935, -474)
