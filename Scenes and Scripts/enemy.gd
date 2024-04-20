@@ -27,7 +27,8 @@ func _process(delta):
 	if player_inside_right_area and enemy_direction == "right":
 		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 
-
+	if $RayCast2D.is_colliding():
+		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 
 
 
@@ -36,18 +37,21 @@ func _on_timer_timeout():
 
 	$AnimatedSprite2D.frame += 1
 	
-	print(enemy_direction)
 	if round == 0:
 		enemy_direction = "up"
+		$RayCast2D.rotate(1.5707963267949)
 		round += 1
 	elif round == 1:
 		enemy_direction = "right"
+		$RayCast2D.rotate(1.5707963267949)
 		round += 1
 	elif round == 2:
 		enemy_direction = "down"
+		$RayCast2D.rotate(1.5707963267949)
 		round += 1
 	elif round == 3:
 		enemy_direction = "left"
+		$RayCast2D.rotate(1.5707963267949)
 		round = 0
 		$AnimatedSprite2D.frame = 0
 	

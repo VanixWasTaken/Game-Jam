@@ -60,6 +60,7 @@ animations = [{
 size = Vector2(38.5, 42)
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 3
 script = ExtResource("1_iri1f")
 acceleration = 5000
 friction = 10000
