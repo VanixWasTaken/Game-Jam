@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://wy5shy17ga48"]
 
-[ext_resource type="Texture2D" uid="uid://dx8f76pg47tss" path="res://Assets/tiles/MonsterPlatz1.png" id="1_h53iy"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Tiles/tile_1.gd" id="1_jom5r"]
+[ext_resource type="Texture2D" uid="uid://y3o0vpgtkyx6" path="res://Assets/tiles/LabyrinthEins.png" id="2_ra0hv"]
 [ext_resource type="PackedScene" uid="uid://duhrwv455kw4g" path="res://Scenes and Scripts/Light/LightRessource.tscn" id="3_glllw"]
 
 [node name="Tile1" type="Node2D"]
@@ -9,7 +9,7 @@ script = ExtResource("1_jom5r")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(960, 544)
-texture = ExtResource("1_h53iy")
+texture = ExtResource("2_ra0hv")
 
 [node name="LevelBorder" type="StaticBody2D" parent="."]
 

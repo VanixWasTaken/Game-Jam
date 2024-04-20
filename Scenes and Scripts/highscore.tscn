@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwfsg15rsb3c7"]
+[gd_scene load_steps=3 format=3 uid="uid://cqonxovi635ux"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/highscore.gd" id="1_l0mdj"]
 
 [sub_resource type="FontFile" id="FontFile_rcndx"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
