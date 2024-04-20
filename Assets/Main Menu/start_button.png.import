@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sv2k1mejw2mi"
-path="res://.godot/imported/ByrinthNew2.png-40077bea0816ba33e011d192b8382887.ctex"
+uid="uid://rf86014uu7s6"
+path="res://.godot/imported/start_button.png-273f1c9351a3614244ff571b24fe0828.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tiles/ByrinthNew2.png"
-dest_files=["res://.godot/imported/ByrinthNew2.png-40077bea0816ba33e011d192b8382887.ctex"]
+source_file="res://Assets/Main Menu/start_button.png"
+dest_files=["res://.godot/imported/start_button.png-273f1c9351a3614244ff571b24fe0828.ctex"]
 
 [params]
 

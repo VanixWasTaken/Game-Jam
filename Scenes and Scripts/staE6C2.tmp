@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://jwk6wcnbmqul"]
+[gd_scene load_steps=8 format=3 uid="uid://jwk6wcnbmqul"]
 
 [ext_resource type="Texture2D" uid="uid://b8p3fw8vphql6" path="res://Assets/Main Menu/menu.png" id="1_ubvkp"]
 [ext_resource type="PackedScene" uid="uid://3gosd8jl8ker" path="res://Scenes and Scripts/HUD/exit_button.tscn" id="4_4frjo"]
+[ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="4_khmd3"]
 [ext_resource type="PackedScene" uid="uid://cbggcbgan0wvy" path="res://Scenes and Scripts/HUD/start_button.tscn" id="4_whi0i"]
-[ext_resource type="Texture2D" uid="uid://rf86014uu7s6" path="res://Assets/Main Menu/start_button.png" id="4_x6848"]
+[ext_resource type="Texture2D" uid="uid://c64ou1hhl0ula" path="res://Assets/Main Menu/start_button.png" id="4_x6848"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_koc22"]
 animations = [{
@@ -16,6 +17,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ffxbf"]
+shader = ExtResource("4_khmd3")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 1.0
+
 [node name="StartMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -25,7 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(959, 541)
+position = Vector2(959, 542)
 sprite_frames = SubResource("SpriteFrames_koc22")
 autoplay = "default"
 frame_progress = 0.0512843
@@ -38,11 +44,12 @@ offset_right = 1846.0
 offset_bottom = 191.0
 
 [node name="StartButton" parent="." instance=ExtResource("4_whi0i")]
+material = SubResource("ShaderMaterial_ffxbf")
 layout_mode = 0
-offset_left = 594.0
-offset_top = 543.0
-offset_right = 1311.0
-offset_bottom = 921.0
+offset_left = 0.0
+offset_top = 1.0
+offset_right = 1920.0
+offset_bottom = 1081.0
 texture_normal = ExtResource("4_x6848")
 
 [connection signal="mouse_entered" from="StartButton" to="StartButton" method="_on_mouse_entered"]

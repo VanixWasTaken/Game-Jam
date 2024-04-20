@@ -1,18 +1,52 @@
-[gd_scene load_steps=4 format=3 uid="uid://wy5shy17ga48"]
 
-[ext_resource type="Texture2D" uid="uid://cwjkujey2w8q8" path="res://Assets/tiles/LabyrinthNew1.png" id="1_fl0ae"]
-[ext_resource type="PackedScene" uid="uid://dh0n7nkjo625o" path="res://Scenes and Scripts/enemy.tscn" id="2_csybf"]
-[ext_resource type="PackedScene" uid="uid://duhrwv455kw4g" path="res://Scenes and Scripts/Light/LightRessource.tscn" id="3_qub2o"]
+[gd_scene load_steps=2 format=3 uid="uid://wy5shy17ga48"]
+
+[ext_resource type="Texture2D" uid="uid://dx8f76pg47tss" path="res://Assets/tiles/MonsterPlatz1.png" id="1_h53iy"]
+
 
 [node name="Tile1" type="Node2D"]
 
-[node name="TileTest1" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(960, 544)
-texture = ExtResource("1_fl0ae")
+texture = ExtResource("1_h53iy")
 
-[node name="Enemy" parent="." instance=ExtResource("2_csybf")]
-position = Vector2(1229, 458)
 
-[node name="LightRessource" parent="." instance=ExtResource("3_qub2o")]
-z_index = 1
-position = Vector2(725, 200)
+[node name="LevelBorder" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(54, 62, 54, 483, 1, 483, 0, 4, 897, 4, 896, 183, 1021, 183, 1021, 301, 1201, 301, 1201, 420, 901, 420, 900, 722, 782, 722, 783, 301, 661, 300, 661, 62)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(176, 184, 176, 296, 480, 296, 480, 720, 648, 720, 648, 424, 536, 424, 536, 184)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(176, 432, 352, 432, 352, 720, 176, 720)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(0, 608, 48, 608, 48, 848, 344, 848, 344, 1032, 784, 1032, 784, 848, 888, 848, 888, 1080, 0, 1080)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(1024, 1032, 1024, 1080, 1920, 1080, 1920, 608, 1680, 608, 1680, 432, 1568, 432, 1568, 664, 1808, 664, 1808, 1032)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(1024, 8, 1024, 56, 1152, 56, 1152, 184, 1256, 184, 1256, 56, 1808, 56, 1808, 480, 1920, 480, 1920, 8)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(480, 848, 480, 904, 656, 904, 656, 840, 480, 840)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(1016, 728, 1016, 904, 1208, 904, 1208, 720, 1016, 720)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(1680, 784, 1680, 904, 1328, 904, 1328, 784)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(1328, 552, 1328, 656, 1440, 656, 1440, 544, 1328, 544)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(1016, 544, 1016, 600, 1200, 600, 1200, 544)
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(1328, 304, 1328, 416, 1440, 416, 1440, 296, 1680, 296, 1680, 184, 1384, 184, 1384, 304)
+
+[node name="EnemySpawns" type="Node2D" parent="."]

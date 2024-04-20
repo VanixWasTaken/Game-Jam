@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://0ihn3m31l6ba"]
+[gd_scene load_steps=16 format=3 uid="uid://0ihn3m31l6ba"]
 
 [ext_resource type="PackedScene" uid="uid://dy5ns274feorx" path="res://Scenes and Scripts/player.tscn" id="1_di0k0"]
 [ext_resource type="Script" path="res://Scenes and Scripts/level.gd" id="1_mrmsb"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bibr86ioid7ow" path="res://Assets/loading screen/Unbenanntes_Projekt-9.png" id="11_erduw"]
 [ext_resource type="Texture2D" uid="uid://bid02qxddbfqu" path="res://Assets/loading screen/Unbenanntes_Projekt-10.png" id="12_f5r5g"]
 [ext_resource type="Script" path="res://Scenes and Scripts/animated_sprite_2d.gd" id="13_u2si1"]
+[ext_resource type="PackedScene" uid="uid://cqonxovi635ux" path="res://Scenes and Scripts/highscore.tscn" id="14_p1ur8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vr1j3"]
 animations = [{
@@ -66,6 +67,8 @@ z_index = 2
 sprite_frames = SubResource("SpriteFrames_vr1j3")
 autoplay = "default"
 script = ExtResource("13_u2si1")
+
+[node name="Highscore" parent="Player" instance=ExtResource("14_p1ur8")]
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
