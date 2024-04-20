@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbggcbgan0wvy"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/HUD/start_button.gd" id="1_23pke"]
+[ext_resource type="Texture2D" uid="uid://c4q07npf85uxo" path="res://Assets/icon.svg" id="1_oiuy6"]
+
+[node name="StartButton" type="TextureButton"]
+offset_left = 656.0
+offset_top = 683.0
+offset_right = 1315.0
+offset_bottom = 811.0
+texture_normal = ExtResource("1_oiuy6")
+stretch_mode = 0
+script = ExtResource("1_23pke")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
