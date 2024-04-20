@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy5ns274feorx"]
+[gd_scene load_steps=6 format=3 uid="uid://dy5ns274feorx"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/player.gd" id="1_iri1f"]
 [ext_resource type="Texture2D" uid="uid://c4q07npf85uxo" path="res://Assets/icon.svg" id="1_tpmkn"]
 [ext_resource type="PackedScene" uid="uid://21afqfophfo3" path="res://Scenes and Scripts/CircleShader.tscn" id="3_2ifmp"]
+[ext_resource type="Texture2D" uid="uid://2my436ttenhw" path="res://Assets/Light/LightCone.png" id="4_bkxap"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5y7q"]
 size = Vector2(38.5, 42)
@@ -11,6 +12,10 @@ size = Vector2(38.5, 42)
 script = ExtResource("1_iri1f")
 acceleration = 5000
 friction = 10000
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color(0.858671, 0.845872, 0.873444, 1)
 
 [node name="CircleShader" parent="." instance=ExtResource("3_2ifmp")]
 position = Vector2(-962, -527)
@@ -25,3 +30,9 @@ texture = ExtResource("1_tpmkn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(23, 24)
 shape = SubResource("RectangleShape2D_o5y7q")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("4_bkxap")
+texture_scale = 0.54
