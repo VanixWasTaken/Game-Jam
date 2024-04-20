@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dpxb7vtpqosys"
+path="res://.godot/imported/light_buzz_1.wav-f891a97cb0d54f8bdc1ea9d7a9046254.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/Light Ambience/light_buzz_1.wav"
+dest_files=["res://.godot/imported/light_buzz_1.wav-f891a97cb0d54f8bdc1ea9d7a9046254.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

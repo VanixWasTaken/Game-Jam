@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://jwk6wcnbmqul"]
+[gd_scene load_steps=10 format=3 uid="uid://jwk6wcnbmqul"]
 
 [ext_resource type="Texture2D" uid="uid://cryfoufmtq07e" path="res://Assets/Main Menu/menu_no_balls.png" id="1_u0uop"]
 [ext_resource type="Texture2D" uid="uid://boa0bfvr51aum" path="res://Assets/Main Menu/menu_light_balls.png" id="2_8tk2m"]
 [ext_resource type="PackedScene" uid="uid://3gosd8jl8ker" path="res://Scenes and Scripts/HUD/exit_button.tscn" id="4_4frjo"]
 [ext_resource type="PackedScene" uid="uid://cbggcbgan0wvy" path="res://Scenes and Scripts/HUD/start_button.tscn" id="4_whi0i"]
 [ext_resource type="Texture2D" uid="uid://rf86014uu7s6" path="res://Assets/Main Menu/start_button.png" id="4_x6848"]
+[ext_resource type="AudioStream" uid="uid://b3xc7v8eqm868" path="res://Assets/Sound/SFX/Ambience/insect_ambience.wav" id="6_wlmb2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_koc22"]
 animations = [{
@@ -80,6 +81,12 @@ offset_bottom = 921.0
 texture_normal = ExtResource("4_x6848")
 
 [node name="UI" type="AudioStreamPlayer" parent="StartButton"]
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_wlmb2")
+volume_db = -12.0
+autoplay = true
+bus = &"SFX"
 
 [connection signal="mouse_entered" from="StartButton" to="StartButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="StartButton" to="StartButton" method="_on_mouse_exited"]

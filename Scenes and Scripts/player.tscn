@@ -63,6 +63,8 @@ size = Vector2(38.5, 42)
 script = ExtResource("1_iri1f")
 acceleration = 5000
 friction = 10000
+min_time_buzz = 10.0
+max_time_buzz = 20.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(22, -62)
@@ -82,3 +84,12 @@ shape = SubResource("RectangleShape2D_o5y7q")
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
 position = Vector2(26, 28)
 current = true
+
+[node name="Steps" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Buzzzzzzz" type="AudioStreamPlayer2D" parent="."]
+
+[node name="FoleyTime" type="Timer" parent="Buzzzzzzz"]
+autostart = true
+
+[connection signal="timeout" from="Buzzzzzzz/FoleyTime" to="." method="_on_foley_time_timeout"]
