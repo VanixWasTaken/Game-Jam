@@ -90,7 +90,7 @@ func spawn_enemy1():
 		enemy.rotate(1.5707963267949 * 2)
 	if my_random_number2 == 3:
 		enemy.rotate(1.5707963267949 * 3)
-	
+
 
 func spawn_enemy2():
 	var my_random_number = rng.randi_range(0, 100)
@@ -143,7 +143,6 @@ func spawn_enemy5():
 		enemy.rotate(1.5707963267949 * 2)
 	if my_random_number2 == 3:
 		enemy.rotate(1.5707963267949 * 3)
-		
 
 func spawn_light1():
 	var my_random_number = rng.randi_range(0, 100)
