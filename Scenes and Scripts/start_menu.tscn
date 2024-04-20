@@ -79,5 +79,7 @@ offset_right = 1311.0
 offset_bottom = 921.0
 texture_normal = ExtResource("4_x6848")
 
+[node name="UI" type="AudioStreamPlayer" parent="StartButton"]
+
 [connection signal="mouse_entered" from="StartButton" to="StartButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="StartButton" to="StartButton" method="_on_mouse_exited"]

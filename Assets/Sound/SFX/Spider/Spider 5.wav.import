@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://l1m8f4r6ehfe"
+path="res://.godot/imported/Spider 5.wav-5c509a0867c0769c3cdfe4610d410a8e.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/Spider/Spider 5.wav"
+dest_files=["res://.godot/imported/Spider 5.wav-5c509a0867c0769c3cdfe4610d410a8e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

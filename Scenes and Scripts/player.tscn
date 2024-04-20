@@ -78,3 +78,7 @@ flashDuration = 0.5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -7)
 shape = SubResource("RectangleShape2D_o5y7q")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+position = Vector2(26, 28)
+current = true
