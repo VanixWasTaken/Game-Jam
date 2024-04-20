@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vqpg4kdm57oi"
+path="res://.godot/imported/Endless Ramble Stress Level 3.mp3-a16c4709765751c4a93e0351420fb38c.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Music/Stress/Endless Ramble Stress Level 3.mp3"
+dest_files=["res://.godot/imported/Endless Ramble Stress Level 3.mp3-a16c4709765751c4a93e0351420fb38c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

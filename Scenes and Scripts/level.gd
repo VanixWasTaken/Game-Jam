@@ -6,6 +6,9 @@ var tiles3 = preload("res://Scenes and Scripts/Tiles/tile_3.tscn")
 var last_tile_position = Vector2(0, 0)
 var should_spawn_tiles = true
 
+func _ready():
+	MusicController._play_music("sign_of_light")
+
 func _process(delta):
 	if should_spawn_tiles:
 		randomize()

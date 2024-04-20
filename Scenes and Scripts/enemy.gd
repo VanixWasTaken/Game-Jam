@@ -5,11 +5,17 @@ var player_inside_left_area = false
 var player_inside_up_area = false
 var player_inside_right_area = false
 
+@export var min_time: float
+@export var max_time: float
+
 var enemy_direction = "none"
 
 
 
 var round = 0
+
+func _ready():
+	$AmbienceTimer.wait_time = randf_range(min_time, max_time)
 
 func _process(delta):
 	if player_inside_down_area and enemy_direction == "down":
@@ -30,6 +36,7 @@ func _on_timer_timeout():
 
 	$AnimatedSprite2D.frame += 1
 	
+	print(enemy_direction)
 	if round == 0:
 		enemy_direction = "up"
 		round += 1
@@ -82,3 +89,24 @@ func _on_right_scan_body_entered(body):
 func _on_right_scan_body_exited(body):
 	if body.get_name() == "Player":
 		player_inside_right_area = false
+
+
+
+func _on_ambience_timer_timeout():
+	$AmbienceTimer.wait_time = randf_range(min_time, max_time)
+	_play_ambience("frog")
+	$AmbienceTimer.start()
+
+func _play_ambience(enemy_type):
+	if enemy_type == "frog":
+		var random = randi() % 4
+		match random:
+			0:
+				$Ambience.stream = load("res://Assets/Sound/SFX/Frog/frog_ambience1.wav")
+			1:
+				$Ambience.stream = load("res://Assets/Sound/SFX/Frog/frog_ambience2.wav")
+			2:
+				$Ambience.stream = load("res://Assets/Sound/SFX/Frog/frog_ambience3.wav")
+			3:
+				$Ambience.stream = load("res://Assets/Sound/SFX/Frog/frog_ambience4.wav")
+		$Ambience.play()

@@ -61,7 +61,7 @@ z_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player"]
 visible = false
 z_index = 2
 sprite_frames = SubResource("SpriteFrames_vr1j3")
@@ -70,4 +70,6 @@ script = ExtResource("13_u2si1")
 
 [node name="Highscore" parent="Player" instance=ExtResource("14_p1ur8")]
 
-[connection signal="animation_finished" from="Player/AnimatedSprite2D" to="Player/AnimatedSprite2D" method="_on_animation_finished"]
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+
+[connection signal="animation_finished" from="Player/AnimatedSprite2D2" to="Player/AnimatedSprite2D2" method="_on_animation_finished"]

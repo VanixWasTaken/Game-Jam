@@ -5,6 +5,7 @@
 
 [node name="Tile2" type="Node2D"]
 script = ExtResource("1_o5byn")
+light_spawn_chance = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(960, 544)
@@ -58,3 +59,188 @@ position = Vector2(1320, 780)
 
 [node name="EnemySpawn5" type="Marker2D" parent="EnemySpawns"]
 position = Vector2(1800, 180)
+
+[node name="LightSpawns" type="Node2D" parent="."]
+
+[node name="LightSpawn1" type="Marker2D" parent="LightSpawns"]
+position = Vector2(180, 120)
+
+[node name="LightSpawn2" type="Marker2D" parent="LightSpawns"]
+position = Vector2(300, 120)
+
+[node name="LightSpawn3" type="Marker2D" parent="LightSpawns"]
+position = Vector2(420, 120)
+
+[node name="LightSpawn4" type="Marker2D" parent="LightSpawns"]
+position = Vector2(480, 240)
+
+[node name="LightSpawn5" type="Marker2D" parent="LightSpawns"]
+position = Vector2(420, 360)
+
+[node name="LightSpawn6" type="Marker2D" parent="LightSpawns"]
+position = Vector2(420, 480)
+
+[node name="LightSpawn7" type="Marker2D" parent="LightSpawns"]
+position = Vector2(420, 600)
+
+[node name="LightSpawn8" type="Marker2D" parent="LightSpawns"]
+position = Vector2(420, 780)
+
+[node name="LightSpawn9" type="Marker2D" parent="LightSpawns"]
+position = Vector2(420, 960)
+
+[node name="LightSpawn10" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1680, 540)
+
+[node name="LightSpawn11" type="Marker2D" parent="LightSpawns"]
+position = Vector2(300, 960)
+
+[node name="LightSpawn12" type="Marker2D" parent="LightSpawns"]
+position = Vector2(180, 960)
+
+[node name="LightSpawn13" type="Marker2D" parent="LightSpawns"]
+position = Vector2(180, 840)
+
+[node name="LightSpawn14" type="Marker2D" parent="LightSpawns"]
+position = Vector2(180, 720)
+
+[node name="LightSpawn15" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1680, 720)
+
+[node name="LightSpawn16" type="Marker2D" parent="LightSpawns"]
+position = Vector2(60, 540)
+
+[node name="LightSpawn17" type="Marker2D" parent="LightSpawns"]
+position = Vector2(180, 540)
+
+[node name="LightSpawn18" type="Marker2D" parent="LightSpawns"]
+position = Vector2(180, 420)
+
+[node name="LightSpawn19" type="Marker2D" parent="LightSpawns"]
+position = Vector2(180, 240)
+
+[node name="LightSpawn20" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1860, 540)
+
+[node name="LightSpawn21" type="Marker2D" parent="LightSpawns"]
+position = Vector2(660, 240)
+
+[node name="LightSpawn22" type="Marker2D" parent="LightSpawns"]
+position = Vector2(840, 240)
+
+[node name="LightSpawn23" type="Marker2D" parent="LightSpawns"]
+position = Vector2(660, 360)
+
+[node name="LightSpawn24" type="Marker2D" parent="LightSpawns"]
+position = Vector2(660, 480)
+
+[node name="LightSpawn25" type="Marker2D" parent="LightSpawns"]
+position = Vector2(660, 660)
+
+[node name="LightSpawn26" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1680, 300)
+
+[node name="LightSpawn27" type="Marker2D" parent="LightSpawns"]
+position = Vector2(660, 840)
+
+[node name="LightSpawn28" type="Marker2D" parent="LightSpawns"]
+position = Vector2(660, 960)
+
+[node name="LightSpawn29" type="Marker2D" parent="LightSpawns"]
+position = Vector2(540, 840)
+
+[node name="LightSpawn30" type="Marker2D" parent="LightSpawns"]
+position = Vector2(780, 600)
+
+[node name="LightSpawn31" type="Marker2D" parent="LightSpawns"]
+position = Vector2(960, 600)
+
+[node name="LightSpawn32" type="Marker2D" parent="LightSpawns"]
+position = Vector2(960, 720)
+
+[node name="LightSpawn33" type="Marker2D" parent="LightSpawns"]
+position = Vector2(960, 840)
+
+[node name="LightSpawn34" type="Marker2D" parent="LightSpawns"]
+position = Vector2(960, 960)
+
+[node name="LightSpawn35" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1080, 720)
+
+[node name="LightSpawn36" type="Marker2D" parent="LightSpawns"]
+position = Vector2(960, 480)
+
+[node name="LightSpawn37" type="Marker2D" parent="LightSpawns"]
+position = Vector2(960, 300)
+
+[node name="LightSpawn38" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1080, 300)
+
+[node name="LightSpawn39" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1200, 300)
+
+[node name="LightSpawn40" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1200, 420)
+
+[node name="LightSpawn41" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1200, 540)
+
+[node name="LightSpawn42" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1200, 660)
+
+[node name="LightSpawn43" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1200, 780)
+
+[node name="LightSpawn44" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1200, 900)
+
+[node name="LightSpawn45" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1320, 480)
+
+[node name="LightSpawn46" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1440, 480)
+
+[node name="LightSpawn47" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1440, 600)
+
+[node name="LightSpawn48" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1440, 720)
+
+[node name="LightSpawn49" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1440, 840)
+
+[node name="LightSpawn50" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1440, 960)
+
+[node name="LightSpawn51" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1440, 360)
+
+[node name="LightSpawn52" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1440, 240)
+
+[node name="LightSpawn53" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1320, 300)
+
+[node name="LightSpawn54" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1440, 120)
+
+[node name="LightSpawn55" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1320, 120)
+
+[node name="LightSpawn56" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1200, 120)
+
+[node name="LightSpawn57" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1080, 120)
+
+[node name="LightSpawn58" type="Marker2D" parent="LightSpawns"]
+position = Vector2(960, 60)
+
+[node name="LightSpawn59" type="Marker2D" parent="LightSpawns"]
+position = Vector2(840, 120)
+
+[node name="LightSpawn60" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1560, 300)
+
+[node name="LightSpawn61" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1680, 120)

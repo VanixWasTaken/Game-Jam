@@ -10,6 +10,12 @@ extends CharacterBody2D
 func _ready():
 	global_position = Vector2(10540, 5940)
 
+func _process(delta):
+	if Input.is_action_just_pressed("ui_right"):
+		walk_animation_right()
+	if Input.is_action_just_pressed("ui_down"):
+		walk_animation_down()
+
 func _physics_process(delta):
 	move(delta)
 	
@@ -22,7 +28,6 @@ func get_input_axis():
 
 
 func move(delta):
-	
 	axis = get_input_axis()
 	
 	if axis ==Vector2.ZERO:
@@ -44,5 +49,11 @@ func apply_movement(accel):
 	velocity += accel
 	velocity = velocity.limit_length(max_speed)
 
+func walk_animation_right():
+	$AnimatedSprite2D.stop()
+	$AnimatedSprite2D.play("walk_right")
 
+func walk_animation_down():
+	$AnimatedSprite2D.stop()
+	$AnimatedSprite2D.play("walk_down")
 
