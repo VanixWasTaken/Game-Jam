@@ -30,16 +30,16 @@ func _on_timer_timeout():
 	print(enemy_direction)
 	
 	if round == 0 and Global.should_start_enemy_direction_switch:
-		enemy_direction = "right"
+		enemy_direction = "up"
 		round += 1
 	elif round == 1 and Global.should_start_enemy_direction_switch:
-		enemy_direction = "down"
+		enemy_direction = "right"
 		round += 1
 	elif round == 2 and Global.should_start_enemy_direction_switch:
-		enemy_direction = "left"
+		enemy_direction = "down"
 		round += 1
 	elif round == 3 and Global.should_start_enemy_direction_switch:
-		enemy_direction = "up"
+		enemy_direction = "left"
 		round = 0
 	
 

@@ -1,28 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://wy5shy17ga48"]
+[gd_scene load_steps=2 format=3 uid="uid://wy5shy17ga48"]
 
 [ext_resource type="Texture2D" uid="uid://dx8f76pg47tss" path="res://Assets/tiles/MonsterPlatz1.png" id="1_h53iy"]
-[ext_resource type="PackedScene" uid="uid://dh0n7nkjo625o" path="res://Scenes and Scripts/enemy.tscn" id="2_csybf"]
 
 [node name="Tile1" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(960, 544)
 texture = ExtResource("1_h53iy")
-
-[node name="Enemy" parent="." instance=ExtResource("2_csybf")]
-position = Vector2(1387, 612)
-
-[node name="Enemy2" parent="." instance=ExtResource("2_csybf")]
-position = Vector2(1144, 848)
-
-[node name="Enemy3" parent="." instance=ExtResource("2_csybf")]
-position = Vector2(536, 664)
-
-[node name="Enemy4" parent="." instance=ExtResource("2_csybf")]
-position = Vector2(360, 240)
-
-[node name="Enemy5" parent="." instance=ExtResource("2_csybf")]
-position = Vector2(1448, 232)
 
 [node name="LevelBorder" type="StaticBody2D" parent="."]
 
@@ -61,3 +45,5 @@ polygon = PackedVector2Array(1016, 544, 1016, 600, 1200, 600, 1200, 544)
 
 [node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="LevelBorder"]
 polygon = PackedVector2Array(1328, 304, 1328, 416, 1440, 416, 1440, 296, 1680, 296, 1680, 184, 1384, 184, 1384, 304)
+
+[node name="EnemySpawns" type="Node2D" parent="."]
