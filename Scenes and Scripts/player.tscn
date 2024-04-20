@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dy5ns274feorx"]
+[gd_scene load_steps=5 format=3 uid="uid://dy5ns274feorx"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/player.gd" id="1_iri1f"]
 [ext_resource type="Texture2D" uid="uid://c4q07npf85uxo" path="res://Assets/icon.svg" id="1_tpmkn"]
+[ext_resource type="PackedScene" uid="uid://21afqfophfo3" path="res://Scenes and Scripts/CircleShader.tscn" id="3_2ifmp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5y7q"]
 size = Vector2(38.5, 42)
@@ -10,6 +11,11 @@ size = Vector2(38.5, 42)
 script = ExtResource("1_iri1f")
 acceleration = 5000
 friction = 10000
+
+[node name="CircleShader" parent="." instance=ExtResource("3_2ifmp")]
+position = Vector2(-962, -527)
+flashIntervall = 5.0
+flashDuration = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(25.5002, 25.5002)
