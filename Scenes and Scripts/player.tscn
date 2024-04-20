@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dy5ns274feorx"]
+[gd_scene load_steps=16 format=3 uid="uid://dy5ns274feorx"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/player.gd" id="1_iri1f"]
 [ext_resource type="Texture2D" uid="uid://lclfb5qgv6ud" path="res://Assets/Light/light_ball.png" id="2_x15la"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://8l5a2bil6qjo" path="res://Assets/Player/walkcycle_sketch_0006.png" id="8_10c5h"]
 [ext_resource type="Texture2D" uid="uid://d4cvkiyv7wc0q" path="res://Assets/Player/walkcycle_sketch_0007.png" id="9_h1alf"]
 [ext_resource type="Texture2D" uid="uid://b652yesq3llfs" path="res://Assets/Player/walkcycle_sketch_0008.png" id="10_fp13t"]
+[ext_resource type="AudioStream" uid="uid://dqb1l2ka7nmil" path="res://Assets/Sound/SFX/Collectable Sounds/power_up.wav" id="13_vemsw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5f1q0"]
 animations = [{
@@ -91,5 +92,8 @@ current = true
 
 [node name="FoleyTime" type="Timer" parent="Buzzzzzzz"]
 autostart = true
+
+[node name="PowerUp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_vemsw")
 
 [connection signal="timeout" from="Buzzzzzzz/FoleyTime" to="." method="_on_foley_time_timeout"]

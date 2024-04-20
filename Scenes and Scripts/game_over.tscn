@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cblm362dhcrdp"]
+[gd_scene load_steps=4 format=3 uid="uid://cblm362dhcrdp"]
 
 [ext_resource type="Texture2D" uid="uid://c4q07npf85uxo" path="res://Assets/icon.svg" id="1_6xu85"]
+[ext_resource type="AudioStream" uid="uid://b6l33how5bci0" path="res://Assets/Sound/SFX/Death Sound/death_sound_lights_out_2.wav" id="2_isgpe"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4xru1"]
 
 [node name="Game Over" type="Control"]
 layout_mode = 3
@@ -15,3 +18,14 @@ layout_mode = 0
 offset_right = 1931.0
 offset_bottom = 1093.0
 texture = ExtResource("1_6xu85")
+
+[node name="LightsOut" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_isgpe")
+autoplay = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 2075.0
+offset_bottom = 1161.0
+texture = SubResource("CanvasTexture_4xru1")

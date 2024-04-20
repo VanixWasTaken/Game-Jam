@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://duhrwv455kw4g"]
+[gd_scene load_steps=12 format=3 uid="uid://duhrwv455kw4g"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Light/LightRessource.cs" id="1_b27ry"]
 [ext_resource type="Shader" path="res://Scenes and Scripts/Light/LightBlink.gdshader" id="2_cpmf7"]
 [ext_resource type="Texture2D" uid="uid://lclfb5qgv6ud" path="res://Assets/Light/light_ball.png" id="4_78jfp"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Light/area_2d.gd" id="4_yxq3n"]
 [ext_resource type="Texture2D" uid="uid://2my436ttenhw" path="res://Assets/Light/LightCone.png" id="5_2dmvw"]
+[ext_resource type="AudioStream" uid="uid://d3desmfx0vi0m" path="res://Assets/Sound/SFX/Collectable Sounds/glow.wav" id="6_6km3m"]
 
 [sub_resource type="Animation" id="Animation_3xcug"]
 resource_name = "Blink"
@@ -100,6 +101,13 @@ scale = Vector2(0.519531, 0.533203)
 energy = 0.5
 shadow_enabled = true
 texture = ExtResource("5_2dmvw")
+
+[node name="Glow" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_6km3m")
+volume_db = -18.0
+autoplay = true
+max_distance = 1500.0
+attenuation = 1.51572
 
 [connection signal="body_entered" from="TextureRect2/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="TextureRect2/Area2D" to="TextureRect2/Area2D" method="_on_body_entered"]

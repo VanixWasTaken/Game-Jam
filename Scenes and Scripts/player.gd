@@ -97,3 +97,6 @@ func _on_foley_time_timeout():
 	$Buzzzzzzz.play()
 	$Buzzzzzzz/FoleyTime.wait_time = randf_range(min_time_buzz, max_time_buzz)
 	$Buzzzzzzz/FoleyTime.start()
+
+func play_powerup():
+	$PowerUp.play()
