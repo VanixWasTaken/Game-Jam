@@ -36,6 +36,7 @@ func _on_timer_timeout():
 
 	$AnimatedSprite2D.frame += 1
 	
+	print(enemy_direction)
 	if round == 0:
 		enemy_direction = "up"
 		round += 1
