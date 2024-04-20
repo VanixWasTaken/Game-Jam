@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bcl35lfle1lee"
+path="res://.godot/imported/Spider Reverb 5.wav-f31e080fb21e80d9170998cad02b6f04.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/Spider/Spider Reverb 5.wav"
+dest_files=["res://.godot/imported/Spider Reverb 5.wav-f31e080fb21e80d9170998cad02b6f04.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

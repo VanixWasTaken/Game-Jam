@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bibr86ioid7ow" path="res://Assets/loading screen/Unbenanntes_Projekt-9.png" id="11_erduw"]
 [ext_resource type="Texture2D" uid="uid://bid02qxddbfqu" path="res://Assets/loading screen/Unbenanntes_Projekt-10.png" id="12_f5r5g"]
 [ext_resource type="Script" path="res://Scenes and Scripts/animated_sprite_2d.gd" id="13_u2si1"]
-[ext_resource type="PackedScene" uid="uid://cqonxovi635ux" path="res://Scenes and Scripts/highscore.tscn" id="14_p1ur8"]
+[ext_resource type="PackedScene" uid="uid://dwfsg15rsb3c7" path="res://Scenes and Scripts/highscore.tscn" id="14_p1ur8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vr1j3"]
 animations = [{
@@ -69,5 +69,7 @@ autoplay = "default"
 script = ExtResource("13_u2si1")
 
 [node name="Highscore" parent="Player" instance=ExtResource("14_p1ur8")]
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
 
 [connection signal="animation_finished" from="Player/AnimatedSprite2D" to="Player/AnimatedSprite2D" method="_on_animation_finished"]

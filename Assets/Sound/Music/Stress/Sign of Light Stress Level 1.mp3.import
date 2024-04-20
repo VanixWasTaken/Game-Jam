@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuos0je60b8hy"
+path="res://.godot/imported/Sign of Light Stress Level 1.mp3-abc1571d8c163b9faafeac7346ed1022.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Music/Stress/Sign of Light Stress Level 1.mp3"
+dest_files=["res://.godot/imported/Sign of Light Stress Level 1.mp3-abc1571d8c163b9faafeac7346ed1022.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
