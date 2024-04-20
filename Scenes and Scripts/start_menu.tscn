@@ -1,18 +1,20 @@
 [gd_scene load_steps=6 format=3 uid="uid://jwk6wcnbmqul"]
 
-[ext_resource type="Texture2D" uid="uid://78l4vivusxyb" path="res://Assets/tile_test_1.png" id="1_aao7s"]
-[ext_resource type="Texture2D" uid="uid://hqkhj0te3st2" path="res://Assets/tile_test_2.png" id="2_tmc53"]
 [ext_resource type="PackedScene" uid="uid://3gosd8jl8ker" path="res://Scenes and Scripts/HUD/exit_button.tscn" id="4_4frjo"]
 [ext_resource type="PackedScene" uid="uid://cbggcbgan0wvy" path="res://Scenes and Scripts/HUD/start_button.tscn" id="4_whi0i"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_04am3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x0pvb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_koc22"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_aao7s")
+"texture": SubResource("CompressedTexture2D_04am3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_tmc53")
+"texture": SubResource("CompressedTexture2D_x0pvb")
 }],
 "loop": true,
 "name": &"default",

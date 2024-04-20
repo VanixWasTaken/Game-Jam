@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://dh0n7nkjo625o"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/enemy.gd" id="1_mlcn8"]
+[ext_resource type="Texture2D" uid="uid://bmvmgg2igq56s" path="res://Assets/enemy.png" id="1_qskob"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tmnt"]
+size = Vector2(122, 192)
+
+[node name="Enemy" type="Node2D"]
+script = ExtResource("1_mlcn8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qskob")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="DownScan" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DownScan"]
+position = Vector2(-4, 148)
+shape = SubResource("RectangleShape2D_0tmnt")
+
+[node name="LeftScan" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LeftScan"]
+position = Vector2(-161, -7)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_0tmnt")
+
+[node name="UpScan" type="Area2D" parent="."]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="UpScan"]
+position = Vector2(-4, -164)
+shape = SubResource("RectangleShape2D_0tmnt")
+
+[node name="RightScan" type="Area2D" parent="."]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="RightScan"]
+position = Vector2(154, -6)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_0tmnt")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="DownScan" to="." method="_on_down_scan_body_entered"]
+[connection signal="body_exited" from="DownScan" to="." method="_on_down_scan_body_exited"]

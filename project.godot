@@ -15,6 +15,10 @@ run/main_scene="res://Scenes and Scripts/start_menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+Global="*res://Scenes and Scripts/global.gd"
+
 [display]
 
 window/size/viewport_width=600

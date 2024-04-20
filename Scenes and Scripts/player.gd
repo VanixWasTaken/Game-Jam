@@ -7,6 +7,9 @@ extends CharacterBody2D
 @onready var axis = Vector2.ZERO
 
 
+func _ready():
+	global_position = Vector2(10540, 5940)
+
 func _physics_process(delta):
 	move(delta)
 	
@@ -40,3 +43,6 @@ func apply_friction(amount):
 func apply_movement(accel):
 	velocity += accel
 	velocity = velocity.limit_length(max_speed)
+
+
+
