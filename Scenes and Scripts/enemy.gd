@@ -28,8 +28,7 @@ func _process(delta):
 
 func _on_timer_timeout():
 
-	$Sprite2D.rotate(1.5707963267949) # 90° sind 1.5707963267949 rad
-	print(enemy_direction)
+	$AnimatedSprite2D.frame += 1
 	
 	if round == 0:
 		enemy_direction = "up"
@@ -43,6 +42,7 @@ func _on_timer_timeout():
 	elif round == 3:
 		enemy_direction = "left"
 		round = 0
+		$AnimatedSprite2D.frame = 0
 	
 
 	
