@@ -1,250 +1,280 @@
-[gd_scene load_steps=3 format=3 uid="uid://dicbo7k2xiobq"]
+[gd_scene load_steps=3 format=3 uid="uid://wy5shy17ga48"]
 
-[ext_resource type="Script" path="res://Scenes and Scripts/Tiles/tile_1.gd" id="1_f3lrx"]
-[ext_resource type="Texture2D" uid="uid://bb11dv4yml45r" path="res://Assets/tiles/MonsterPlatz3.png" id="1_hseh6"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Tiles/tile_1.gd" id="1_jom5r"]
+[ext_resource type="Texture2D" uid="uid://y3o0vpgtkyx6" path="res://Assets/tiles/LabyrinthEins.png" id="2_ra0hv"]
 
-[node name="Tile3" type="Node2D"]
-position = Vector2(1, 1)
-script = ExtResource("1_f3lrx")
-light_spawn_chance = 7
+[node name="Tile1" type="Node2D"]
+script = ExtResource("1_jom5r")
+enemy_spawn_chance = null
+light_spawn_chance = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(959, 539)
-texture = ExtResource("1_hseh6")
+position = Vector2(960, 544)
+texture = ExtResource("2_ra0hv")
 
 [node name="LevelBorder" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(-1, -1, 899, -1, 899, 239, 779, 239, 779, 179, 59, 179, 59, 479, -1, 479)
+polygon = PackedVector2Array(54, 62, 54, 483, 1, 483, 0, 4, 897, 4, 896, 183, 1021, 183, 1021, 301, 1201, 301, 1201, 420, 901, 420, 900, 722, 782, 722, 783, 301, 661, 300, 661, 62)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(179, 299, 359, 299, 359, 779, 239, 779, 239, 479, 179, 479)
+polygon = PackedVector2Array(176, 184, 176, 296, 480, 296, 480, 720, 648, 720, 648, 424, 536, 424, 536, 184)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(-1, 599, 119, 599, 119, 899, 359, 899, 359, 1019, 899, 1019, 899, 1079, -1, 1079)
+polygon = PackedVector2Array(176, 432, 352, 432, 352, 720, 176, 720)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(479, 899, 659, 899, 659, 839, 599, 839, 599, 719, 719, 719, 719, 599, 659, 599, 659, 299, 479, 299)
+polygon = PackedVector2Array(0, 608, 48, 608, 48, 848, 344, 848, 344, 1032, 784, 1032, 784, 848, 888, 848, 888, 1080, 0, 1080)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(779, 359, 779, 479, 899, 479, 899, 359)
+polygon = PackedVector2Array(1024, 1032, 1024, 1080, 1920, 1080, 1920, 608, 1680, 608, 1680, 432, 1568, 432, 1568, 664, 1808, 664, 1808, 1032)
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(1019, 179, 1019, 599, 839, 599, 839, 719, 1139, 719, 1139, 179)
+polygon = PackedVector2Array(1024, 8, 1024, 56, 1152, 56, 1152, 184, 1256, 184, 1256, 56, 1808, 56, 1808, 480, 1920, 480, 1920, 8)
 
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(1019, -1, 1019, 59, 1259, 59, 1259, 179, 1499, 179, 1499, 59, 1619, 59, 1619, 179, 1739, 179, 1739, 479, 1919, 479, 1919, -1)
+polygon = PackedVector2Array(480, 848, 480, 904, 656, 904, 656, 840, 480, 840)
 
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(1619, 479, 1619, 299, 1259, 299, 1259, 479)
+polygon = PackedVector2Array(1016, 728, 1016, 904, 1208, 904, 1208, 720, 1016, 720)
 
 [node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(1259, 599, 1259, 719, 1319, 719, 1319, 1019, 1019, 1019, 1019, 1079, 1919, 1079, 1919, 599, 1859, 599, 1859, 959, 1559, 959, 1559, 839, 1499, 839, 1499, 599)
+polygon = PackedVector2Array(1680, 784, 1680, 904, 1328, 904, 1328, 784)
 
 [node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(779, 839, 779, 899, 1199, 899, 1199, 839)
+polygon = PackedVector2Array(1328, 552, 1328, 656, 1440, 656, 1440, 544, 1328, 544)
 
 [node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(1619, 599, 1619, 719, 1679, 719, 1679, 839, 1739, 839, 1739, 599)
+polygon = PackedVector2Array(1016, 544, 1016, 600, 1200, 600, 1200, 544)
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="LevelBorder"]
+polygon = PackedVector2Array(1328, 304, 1328, 416, 1440, 416, 1440, 296, 1680, 296, 1680, 184, 1384, 184, 1384, 304)
 
 [node name="EnemySpawns" type="Node2D" parent="."]
 
 [node name="EnemySpawn1" type="Marker2D" parent="EnemySpawns"]
-position = Vector2(299, 719)
+position = Vector2(360, 240)
 
 [node name="EnemySpawn2" type="Marker2D" parent="EnemySpawns"]
-position = Vector2(839, 419)
+position = Vector2(536, 664)
 
 [node name="EnemySpawn3" type="Marker2D" parent="EnemySpawns"]
-position = Vector2(1319, 119)
+position = Vector2(1144, 848)
 
 [node name="EnemySpawn4" type="Marker2D" parent="EnemySpawns"]
-position = Vector2(1679, 119)
+position = Vector2(1376, 592)
 
 [node name="EnemySpawn5" type="Marker2D" parent="EnemySpawns"]
-position = Vector2(1319, 659)
+position = Vector2(1448, 232)
 
 [node name="LightSpawns" type="Node2D" parent="."]
 
 [node name="LightSpawn1" type="Marker2D" parent="LightSpawns"]
-position = Vector2(59, 539)
-
-[node name="LightSpawn4" type="Marker2D" parent="LightSpawns"]
-position = Vector2(179, 539)
-
-[node name="LightSpawn5" type="Marker2D" parent="LightSpawns"]
-position = Vector2(179, 659)
-
-[node name="LightSpawn6" type="Marker2D" parent="LightSpawns"]
-position = Vector2(179, 839)
-
-[node name="LightSpawn7" type="Marker2D" parent="LightSpawns"]
-position = Vector2(299, 839)
-
-[node name="LightSpawn8" type="Marker2D" parent="LightSpawns"]
-position = Vector2(419, 839)
-
-[node name="LightSpawn9" type="Marker2D" parent="LightSpawns"]
-position = Vector2(419, 959)
-
-[node name="LightSpawn10" type="Marker2D" parent="LightSpawns"]
-position = Vector2(539, 959)
-
-[node name="LightSpawn11" type="Marker2D" parent="LightSpawns"]
-position = Vector2(659, 959)
-
-[node name="LightSpawn12" type="Marker2D" parent="LightSpawns"]
-position = Vector2(419, 719)
-
-[node name="LightSpawn13" type="Marker2D" parent="LightSpawns"]
-position = Vector2(419, 599)
-
-[node name="LightSpawn14" type="Marker2D" parent="LightSpawns"]
-position = Vector2(419, 479)
-
-[node name="LightSpawn15" type="Marker2D" parent="LightSpawns"]
-position = Vector2(419, 359)
-
-[node name="LightSpawn16" type="Marker2D" parent="LightSpawns"]
-position = Vector2(419, 239)
-
-[node name="LightSpawn17" type="Marker2D" parent="LightSpawns"]
-position = Vector2(299, 239)
-
-[node name="LightSpawn18" type="Marker2D" parent="LightSpawns"]
-position = Vector2(599, 239)
-
-[node name="LightSpawn19" type="Marker2D" parent="LightSpawns"]
-position = Vector2(719, 239)
-
-[node name="LightSpawn20" type="Marker2D" parent="LightSpawns"]
-position = Vector2(719, 359)
-
-[node name="LightSpawn21" type="Marker2D" parent="LightSpawns"]
-position = Vector2(719, 539)
-
-[node name="LightSpawn22" type="Marker2D" parent="LightSpawns"]
-position = Vector2(839, 539)
-
-[node name="LightSpawn23" type="Marker2D" parent="LightSpawns"]
-position = Vector2(959, 539)
-
-[node name="LightSpawn24" type="Marker2D" parent="LightSpawns"]
-position = Vector2(959, 419)
-
-[node name="LightSpawn25" type="Marker2D" parent="LightSpawns"]
-position = Vector2(959, 299)
-
-[node name="LightSpawn26" type="Marker2D" parent="LightSpawns"]
-position = Vector2(839, 299)
-
-[node name="LightSpawn27" type="Marker2D" parent="LightSpawns"]
-position = Vector2(959, 179)
-
-[node name="LightSpawn28" type="Marker2D" parent="LightSpawns"]
-position = Vector2(959, 59)
-
-[node name="LightSpawn29" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1079, 119)
-
-[node name="LightSpawn30" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1199, 119)
-
-[node name="LightSpawn31" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1199, 239)
-
-[node name="LightSpawn32" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1319, 239)
-
-[node name="LightSpawn33" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1439, 239)
-
-[node name="LightSpawn34" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1559, 239)
-
-[node name="LightSpawn35" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1559, 119)
-
-[node name="LightSpawn36" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1679, 239)
-
-[node name="LightSpawn37" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1679, 359)
-
-[node name="LightSpawn38" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1679, 539)
-
-[node name="LightSpawn39" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1859, 539)
-
-[node name="LightSpawn40" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1799, 659)
-
-[node name="LightSpawn41" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1799, 779)
-
-[node name="LightSpawn42" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1799, 899)
-
-[node name="LightSpawn43" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1679, 899)
-
-[node name="LightSpawn44" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1619, 779)
-
-[node name="LightSpawn45" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1559, 659)
-
-[node name="LightSpawn46" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1559, 539)
-
-[node name="LightSpawn47" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1439, 539)
-
-[node name="LightSpawn48" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1319, 539)
-
-[node name="LightSpawn49" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1199, 539)
-
-[node name="LightSpawn50" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1199, 419)
-
-[node name="LightSpawn51" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1199, 659)
-
-[node name="LightSpawn52" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1259, 779)
-
-[node name="LightSpawn53" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1259, 959)
-
-[node name="LightSpawn54" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1139, 959)
-
-[node name="LightSpawn55" type="Marker2D" parent="LightSpawns"]
-position = Vector2(959, 959)
-
-[node name="LightSpawn56" type="Marker2D" parent="LightSpawns"]
-position = Vector2(779, 959)
-
-[node name="LightSpawn57" type="Marker2D" parent="LightSpawns"]
-position = Vector2(659, 779)
-
-[node name="LightSpawn58" type="Marker2D" parent="LightSpawns"]
-position = Vector2(839, 779)
-
-[node name="LightSpawn59" type="Marker2D" parent="LightSpawns"]
-position = Vector2(779, 659)
-
-[node name="LightSpawn60" type="Marker2D" parent="LightSpawns"]
-position = Vector2(959, 779)
-
-[node name="LightSpawn61" type="Marker2D" parent="LightSpawns"]
-position = Vector2(1079, 779)
+position = Vector2(120, 120)
 
 [node name="LightSpawn2" type="Marker2D" parent="LightSpawns"]
-position = Vector2(119, 359)
+position = Vector2(240, 120)
 
 [node name="LightSpawn3" type="Marker2D" parent="LightSpawns"]
-position = Vector2(119, 239)
+position = Vector2(360, 120)
+
+[node name="LightSpawn4" type="Marker2D" parent="LightSpawns"]
+position = Vector2(480, 120)
+
+[node name="LightSpawn5" type="Marker2D" parent="LightSpawns"]
+position = Vector2(600, 120)
+
+[node name="LightSpawn6" type="Marker2D" parent="LightSpawns"]
+position = Vector2(600, 240)
+
+[node name="LightSpawn7" type="Marker2D" parent="LightSpawns"]
+position = Vector2(600, 360)
+
+[node name="LightSpawn8" type="Marker2D" parent="LightSpawns"]
+position = Vector2(720, 360)
+
+[node name="LightSpawn9" type="Marker2D" parent="LightSpawns"]
+position = Vector2(720, 480)
+
+[node name="LightSpawn10" type="Marker2D" parent="LightSpawns"]
+position = Vector2(720, 600)
+
+[node name="LightSpawn11" type="Marker2D" parent="LightSpawns"]
+position = Vector2(720, 720)
+
+[node name="LightSpawn12" type="Marker2D" parent="LightSpawns"]
+position = Vector2(720, 840)
+
+[node name="LightSpawn13" type="Marker2D" parent="LightSpawns"]
+position = Vector2(720, 960)
+
+[node name="LightSpawn14" type="Marker2D" parent="LightSpawns"]
+position = Vector2(600, 960)
+
+[node name="LightSpawn15" type="Marker2D" parent="LightSpawns"]
+position = Vector2(420, 960)
+
+[node name="LightSpawn16" type="Marker2D" parent="LightSpawns"]
+position = Vector2(420, 840)
+
+[node name="LightSpawn17" type="Marker2D" parent="LightSpawns"]
+position = Vector2(420, 720)
+
+[node name="LightSpawn18" type="Marker2D" parent="LightSpawns"]
+position = Vector2(420, 600)
+
+[node name="LightSpawn19" type="Marker2D" parent="LightSpawns"]
+position = Vector2(420, 480)
+
+[node name="LightSpawn20" type="Marker2D" parent="LightSpawns"]
+position = Vector2(420, 360)
+
+[node name="LightSpawn21" type="Marker2D" parent="LightSpawns"]
+position = Vector2(240, 360)
+
+[node name="LightSpawn22" type="Marker2D" parent="LightSpawns"]
+position = Vector2(120, 360)
+
+[node name="LightSpawn23" type="Marker2D" parent="LightSpawns"]
+position = Vector2(120, 240)
+
+[node name="LightSpawn24" type="Marker2D" parent="LightSpawns"]
+position = Vector2(120, 480)
+
+[node name="LightSpawn25" type="Marker2D" parent="LightSpawns"]
+position = Vector2(120, 660)
+
+[node name="LightSpawn26" type="Marker2D" parent="LightSpawns"]
+position = Vector2(120, 780)
+
+[node name="LightSpawn27" type="Marker2D" parent="LightSpawns"]
+position = Vector2(240, 780)
+
+[node name="LightSpawn28" type="Marker2D" parent="LightSpawns"]
+position = Vector2(840, 780)
+
+[node name="LightSpawn29" type="Marker2D" parent="LightSpawns"]
+position = Vector2(960, 780)
+
+[node name="LightSpawn30" type="Marker2D" parent="LightSpawns"]
+position = Vector2(960, 900)
+
+[node name="LightSpawn31" type="Marker2D" parent="LightSpawns"]
+position = Vector2(960, 1020)
+
+[node name="LightSpawn32" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1080, 960)
+
+[node name="LightSpawn33" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1260, 960)
+
+[node name="LightSpawn34" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1380, 960)
+
+[node name="LightSpawn36" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1500, 960)
+
+[node name="LightSpawn37" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1620, 960)
+
+[node name="LightSpawn38" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1740, 960)
+
+[node name="LightSpawn39" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1740, 840)
+
+[node name="LightSpawn40" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1740, 720)
+
+[node name="LightSpawn41" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1620, 720)
+
+[node name="LightSpawn42" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1500, 720)
+
+[node name="LightSpawn43" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1500, 600)
+
+[node name="LightSpawn44" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1380, 720)
+
+[node name="LightSpawn45" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1260, 720)
+
+[node name="LightSpawn46" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1140, 660)
+
+[node name="LightSpawn47" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1020, 660)
+
+[node name="LightSpawn48" type="Marker2D" parent="LightSpawns"]
+position = Vector2(960, 480)
+
+[node name="LightSpawn49" type="Marker2D" parent="LightSpawns"]
+position = Vector2(960, 600)
+
+[node name="LightSpawn50" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1080, 480)
+
+[node name="LightSpawn51" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1200, 480)
+
+[node name="LightSpawn52" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1320, 480)
+
+[node name="LightSpawn53" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1440, 480)
+
+[node name="LightSpawn54" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1500, 360)
+
+[node name="LightSpawn55" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1620, 360)
+
+[node name="LightSpawn56" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1740, 360)
+
+[node name="LightSpawn57" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1740, 540)
+
+[node name="LightSpawn58" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1860, 540)
+
+[node name="LightSpawn59" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1740, 120)
+
+[node name="LightSpawn60" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1740, 240)
+
+[node name="LightSpawn61" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1620, 120)
+
+[node name="LightSpawn62" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1500, 120)
+
+[node name="LightSpawn63" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1320, 120)
+
+[node name="LightSpawn64" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1320, 240)
+
+[node name="LightSpawn65" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1080, 240)
+
+[node name="LightSpawn66" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1200, 240)
+
+[node name="LightSpawn67" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1260, 360)
+
+[node name="LightSpawn68" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1080, 120)
+
+[node name="LightSpawn69" type="Marker2D" parent="LightSpawns"]
+position = Vector2(960, 60)
+
+[node name="LightSpawn35" type="Marker2D" parent="LightSpawns"]
+position = Vector2(1260, 840)
+
+[node name="LightSpawn70" type="Marker2D" parent="LightSpawns"]
+position = Vector2(540, 780)

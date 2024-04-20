@@ -69,19 +69,19 @@ libraries = {
 [node name="Blink" type="TextureRect" parent="."]
 visible = false
 material = SubResource("ShaderMaterial_43b4a")
-offset_left = 18.0
-offset_top = 10.0
-offset_right = 146.0
-offset_bottom = 138.0
+offset_left = -40.0
+offset_top = -64.0
+offset_right = 88.0
+offset_bottom = 64.0
 texture = ExtResource("4_78jfp")
 stretch_mode = 2
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 z_as_relative = false
-offset_left = 18.0
-offset_top = 10.0
-offset_right = 98.0
-offset_bottom = 138.0
+offset_left = -40.0
+offset_top = -64.0
+offset_right = 40.0
+offset_bottom = 64.0
 texture = ExtResource("4_78jfp")
 stretch_mode = 2
 
