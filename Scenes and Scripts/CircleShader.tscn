@@ -65,6 +65,7 @@ shader_parameter/animation_speed = 1.0
 script = ExtResource("1_laj56")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_634l2")
 offset_right = 1922.0
 offset_bottom = 1071.0
