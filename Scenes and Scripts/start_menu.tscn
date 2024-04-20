@@ -30,7 +30,6 @@ grow_vertical = 2
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(959, 542)
 sprite_frames = SubResource("SpriteFrames_koc22")
-autoplay = "default"
 frame_progress = 0.0512843
 
 [node name="ExitButton" parent="." instance=ExtResource("4_4frjo")]
