@@ -5,11 +5,3 @@
 [node name="MusicController" type="AudioStreamPlayer"]
 bus = &"Music"
 script = ExtResource("1_c28qf")
-
-[node name="StressMod1" type="AudioStreamPlayer" parent="."]
-
-[node name="StressMod2" type="AudioStreamPlayer" parent="."]
-
-[node name="StressMod3" type="AudioStreamPlayer" parent="."]
-
-[node name="StressMod4" type="AudioStreamPlayer" parent="."]
