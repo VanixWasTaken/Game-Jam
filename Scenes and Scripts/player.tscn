@@ -7,7 +7,6 @@
 size = Vector2(38.5, 42)
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(140, 92)
 script = ExtResource("1_iri1f")
 acceleration = 5000
 friction = 10000

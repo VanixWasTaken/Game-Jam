@@ -1,12 +1,76 @@
-[gd_scene load_steps=3 format=3 uid="uid://0ihn3m31l6ba"]
+[gd_scene load_steps=15 format=3 uid="uid://0ihn3m31l6ba"]
 
 [ext_resource type="PackedScene" uid="uid://dy5ns274feorx" path="res://Scenes and Scripts/player.tscn" id="1_di0k0"]
 [ext_resource type="Script" path="res://Scenes and Scripts/level.gd" id="1_mrmsb"]
+[ext_resource type="Texture2D" uid="uid://c4mbtdkos0i1j" path="res://Assets/loading screen/Unbenanntes_Projekt-1.png" id="3_mrruq"]
+[ext_resource type="Texture2D" uid="uid://ddjwh4uvcgdkg" path="res://Assets/loading screen/Unbenanntes_Projekt-2.png" id="4_dls1g"]
+[ext_resource type="Texture2D" uid="uid://b4qerit35aqfr" path="res://Assets/loading screen/Unbenanntes_Projekt-3.png" id="5_f8e4j"]
+[ext_resource type="Texture2D" uid="uid://col4jko0sr8l0" path="res://Assets/loading screen/Unbenanntes_Projekt-4.png" id="6_rueis"]
+[ext_resource type="Texture2D" uid="uid://bxenn08x57eef" path="res://Assets/loading screen/Unbenanntes_Projekt-5.png" id="7_0w44d"]
+[ext_resource type="Texture2D" uid="uid://fqleu71lj8r0" path="res://Assets/loading screen/Unbenanntes_Projekt-6.png" id="8_1o7al"]
+[ext_resource type="Texture2D" uid="uid://cedme5pjym607" path="res://Assets/loading screen/Unbenanntes_Projekt-7.png" id="9_7dacf"]
+[ext_resource type="Texture2D" uid="uid://cx2g2dn75cugu" path="res://Assets/loading screen/Unbenanntes_Projekt-8.png" id="10_ppxpj"]
+[ext_resource type="Texture2D" uid="uid://bibr86ioid7ow" path="res://Assets/loading screen/Unbenanntes_Projekt-9.png" id="11_erduw"]
+[ext_resource type="Texture2D" uid="uid://bid02qxddbfqu" path="res://Assets/loading screen/Unbenanntes_Projekt-10.png" id="12_f5r5g"]
+[ext_resource type="Script" path="res://Scenes and Scripts/animated_sprite_2d.gd" id="13_u2si1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vr1j3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mrruq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dls1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_f8e4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rueis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0w44d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1o7al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7dacf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ppxpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_erduw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_f5r5g")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_mrmsb")
 
 [node name="Player" parent="." instance=ExtResource("1_di0k0")]
-position = Vector2(8547, 4792)
+z_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+visible = false
+z_index = 2
+sprite_frames = SubResource("SpriteFrames_vr1j3")
+autoplay = "default"
+script = ExtResource("13_u2si1")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="animation_finished" from="Player/AnimatedSprite2D" to="Player/AnimatedSprite2D" method="_on_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
