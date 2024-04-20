@@ -35,7 +35,7 @@ public partial class IncreaseCircleSize : Node2D {
 	//Go to Game over screen if Animation hits zero
 	private void _on_animation_player_animation_finished(StringName anim_name) {
 		GD.Print("Deeeeead");
-		//GetTree().ChangeSceneToFile("res://Scenes and Scripts/game_over.tscn");
+		GetTree().ChangeSceneToFile("res://Scenes and Scripts/game_over.tscn");
 	}
 	//Stops circel Anim, Starts timer for flash duration
 	public void Flash(){
