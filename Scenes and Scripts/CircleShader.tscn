@@ -1,15 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://21afqfophfo3"]
+[gd_scene load_steps=9 format=3 uid="uid://21afqfophfo3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/IncreaseCircleSize.cs" id="1_laj56"]
 [ext_resource type="Shader" path="res://Scenes and Scripts/CircleShader.gdshader" id="2_gfno6"]
+[ext_resource type="Shader" path="res://Scenes and Scripts/testTets.gdshader" id="3_6j6qa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_634l2"]
 shader = ExtResource("2_gfno6")
-shader_parameter/circle_size = 0.62
+shader_parameter/line_color = null
+shader_parameter/line_count = 0.7
+shader_parameter/line_density = 1.0
+shader_parameter/line_faloff = 0.099
+shader_parameter/mask_size = 0.5
+shader_parameter/mask_edge = 0.826
+shader_parameter/animation_speed = 1.0
 
 [sub_resource type="Animation" id="Animation_o83gh"]
 resource_name = "Close"
-length = 5.0
+length = 5.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -17,10 +24,22 @@ tracks/0/path = NodePath(".:material:shader_parameter/circle_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/mask_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.62, 0.0]
+"values": [0.5, 0.0]
 }
 
 [sub_resource type="Animation" id="Animation_khmab"]
@@ -37,6 +56,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.62]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/mask_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cv1rd"]
 _data = {
@@ -44,8 +75,19 @@ _data = {
 "RESET": SubResource("Animation_khmab")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b5bmm"]
+shader = ExtResource("3_6j6qa")
+shader_parameter/line_color = null
+shader_parameter/line_count = 0.7
+shader_parameter/line_density = 1.0
+shader_parameter/line_faloff = 0.093
+shader_parameter/mask_size = 0.256
+shader_parameter/mask_edge = 0.813
+shader_parameter/animation_speed = 1.0
+
 [node name="CircleShader" type="Node2D"]
 script = ExtResource("1_laj56")
+flashIntervall = 10.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_634l2")
@@ -65,5 +107,14 @@ offset_left = 910.0
 offset_top = 77.0
 offset_right = 1005.0
 offset_bottom = 158.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_b5bmm")
+offset_left = -164.0
+offset_top = -60.0
+offset_right = 2098.0
+offset_bottom = 1158.0
+color = Color(0, 0, 0, 1)
 
 [connection signal="animation_finished" from="ColorRect/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
