@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://jwk6wcnbmqul"]
+[gd_scene load_steps=9 format=3 uid="uid://jwk6wcnbmqul"]
 
-[ext_resource type="Texture2D" uid="uid://b8p3fw8vphql6" path="res://Assets/Main Menu/menu.png" id="1_ubvkp"]
+[ext_resource type="Texture2D" uid="uid://cryfoufmtq07e" path="res://Assets/Main Menu/menu_no_balls.png" id="1_u0uop"]
+[ext_resource type="Texture2D" uid="uid://boa0bfvr51aum" path="res://Assets/Main Menu/menu_light_balls.png" id="2_8tk2m"]
 [ext_resource type="PackedScene" uid="uid://3gosd8jl8ker" path="res://Scenes and Scripts/HUD/exit_button.tscn" id="4_4frjo"]
 [ext_resource type="PackedScene" uid="uid://cbggcbgan0wvy" path="res://Scenes and Scripts/HUD/start_button.tscn" id="4_whi0i"]
 [ext_resource type="Texture2D" uid="uid://rf86014uu7s6" path="res://Assets/Main Menu/start_button.png" id="4_x6848"]
@@ -9,12 +10,34 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ubvkp")
+"texture": ExtResource("1_u0uop")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_3bm6e"]
+resource_name = "floating_balls"
+length = 3.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.9, 3, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 50), Vector2(0, 120), Vector2(0, 50), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1egly"]
+_data = {
+"floating_balls": SubResource("Animation_3bm6e")
+}
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -29,6 +52,17 @@ position = Vector2(959, 541)
 sprite_frames = SubResource("SpriteFrames_koc22")
 autoplay = "default"
 frame_progress = 0.0512843
+
+[node name="Balls" type="Sprite2D" parent="."]
+position = Vector2(0, 4.11712)
+texture = ExtResource("2_8tk2m")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Balls"]
+libraries = {
+"": SubResource("AnimationLibrary_1egly")
+}
+autoplay = "floating_balls"
 
 [node name="ExitButton" parent="." instance=ExtResource("4_4frjo")]
 layout_mode = 0
