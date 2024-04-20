@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4cvkiyv7wc0q"
-path="res://.godot/imported/walkcycle_sketch_0007.png-d03205669fac7cfce8f55202ebf5afe6.ctex"
+uid="uid://bv6cvrrcbb302"
+path="res://.godot/imported/player_walk_left_0007.png-3090ea4aec44b9f0b01c86e30b27f68a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/walkcycle_sketch_0007.png"
-dest_files=["res://.godot/imported/walkcycle_sketch_0007.png-d03205669fac7cfce8f55202ebf5afe6.ctex"]
+source_file="res://Assets/Player/Left Animation/player_walk_left_0007.png"
+dest_files=["res://.godot/imported/player_walk_left_0007.png-3090ea4aec44b9f0b01c86e30b27f68a.ctex"]
 
 [params]
 
