@@ -25,6 +25,11 @@ public partial class IncreaseCircleSize : Node2D {
 	private AudioStreamPlayer _secondFlash;
 	private int _randomZahl;
 	private bool alreadyFlashed = false;
+
+	private Sprite2D _light1;
+	private Sprite2D _light2;
+	private Sprite2D _light3;
+	private Sprite2D _light4;
 	
 	public override void _Ready() {
 		_button = GetNode<Button>("ColorRect/Button");
@@ -51,6 +56,16 @@ public partial class IncreaseCircleSize : Node2D {
 		timer.Timeout += Flash;
 		AddChild(timer);
 		timer.Start();
+
+		_light1 = GetNode<Sprite2D>("Sprite2D");
+		_light2 = GetNode<Sprite2D>("Sprite2D2");
+		_light3 = GetNode<Sprite2D>("Sprite2D3");
+		_light4 = GetNode<Sprite2D>("Sprite2D4");
+
+		_light1.Visible = false;
+		_light2.Visible = false;
+		_light3.Visible = false;
+		_light4.Visible = false;
 		
 		/*_mainSoundtrack.Play();
 		_stressSoundtrack1.Play();
@@ -87,6 +102,10 @@ public partial class IncreaseCircleSize : Node2D {
 		timeLeft =_closeAnim.CurrentAnimationPosition;
 		_closeAnim.Stop();
 		_flash.Play();
+
+		_light1.Visible = true;
+		_light2.Visible = true;
+		
 		
 		Timer timer = new Timer();
 		timer.WaitTime = flashDuration;
@@ -101,6 +120,11 @@ public partial class IncreaseCircleSize : Node2D {
 		GD.Print("StopFlash");
 		_closeAnim.Seek(timeLeft);
 		_closeAnim.Play();
+		
+		_light1.Visible = false;
+		_light2.Visible = false;
+		_light3.Visible = false;
+		_light4.Visible = false;
 
 		//Checks if it is the first or second Flash
 		if (alreadyFlashed == false)
@@ -124,6 +148,9 @@ public partial class IncreaseCircleSize : Node2D {
 		timeLeft =_closeAnim.CurrentAnimationPosition;
 		_closeAnim.Stop();
 		_secondFlash.Play();
+		
+		_light3.Visible = true;
+		_light4.Visible = true;
 		
 		Timer timer = new Timer();
 		timer.WaitTime = secondFlashDuration;
