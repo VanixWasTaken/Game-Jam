@@ -50,19 +50,27 @@ func _on_timer_timeout():
 	
 	if round == 0:
 		enemy_direction = "up"
-		$RayCast2D.rotate(1.5707963267949)
+		$RayCast2D.rotate(0.78539816339745)
+		await get_tree().create_timer(0.05).timeout
+		$RayCast2D.rotate(0.78539816339745)
 		round += 1
 	elif round == 1:
 		enemy_direction = "right"
-		$RayCast2D.rotate(1.5707963267949)
+		$RayCast2D.rotate(0.78539816339745)
+		await get_tree().create_timer(0.05).timeout
+		$RayCast2D.rotate(0.78539816339745)
 		round += 1
 	elif round == 2:
 		enemy_direction = "down"
-		$RayCast2D.rotate(1.5707963267949)
+		$RayCast2D.rotate(0.78539816339745)
+		await get_tree().create_timer(0.05).timeout
+		$RayCast2D.rotate(0.78539816339745)
 		round += 1
 	elif round == 3:
 		enemy_direction = "left"
-		$RayCast2D.rotate(1.5707963267949)
+		$RayCast2D.rotate(0.78539816339745)
+		await get_tree().create_timer(0.05).timeout
+		$RayCast2D.rotate(0.78539816339745)
 		round = 0
 		$AnimatedSprite2D.frame = 0
 	
