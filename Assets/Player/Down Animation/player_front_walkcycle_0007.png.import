@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cftq66vaveb43"
-path="res://.godot/imported/enemy_right.png-8f73440139d4a43cc6375105c0454b7d.ctex"
+uid="uid://dsvfglsxh66v6"
+path="res://.godot/imported/player_front_walkcycle_0007.png-ed1b72dde9e3a767eee8fd5946595455.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/enemy_right.png"
-dest_files=["res://.godot/imported/enemy_right.png-8f73440139d4a43cc6375105c0454b7d.ctex"]
+source_file="res://Assets/Player/Down Animation/player_front_walkcycle_0007.png"
+dest_files=["res://.godot/imported/player_front_walkcycle_0007.png-ed1b72dde9e3a767eee8fd5946595455.ctex"]
 
 [params]
 
