@@ -5,12 +5,12 @@ extends AudioStreamPlayer
 func _ready():
 	_play_music("nocturnal_ember")
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 func _play_music(title: String):
+	MusicController.volume_db = 0
 	MusicController.stream = load("res://Assets/Sound/Music/" + title + ".mp3")
 	MusicController.play()
 

@@ -80,7 +80,8 @@ offset_right = 1311.0
 offset_bottom = 921.0
 texture_normal = ExtResource("4_x6848")
 
-[node name="UI" type="AudioStreamPlayer" parent="StartButton"]
+[node name="UI" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_wlmb2")
