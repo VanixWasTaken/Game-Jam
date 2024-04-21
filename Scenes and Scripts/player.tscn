@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dy5ns274feorx"]
+[gd_scene load_steps=28 format=3 uid="uid://dy5ns274feorx"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/player.gd" id="1_iri1f"]
 [ext_resource type="Texture2D" uid="uid://crlr6l3fqcldf" path="res://Assets/Player/Down Animation/player_front_walkcycle_0001.png" id="2_x3814"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://4a1m8aguuxbl" path="res://Assets/Player/Right Animation/player_walk_right_0005.png" id="15_xacek"]
 [ext_resource type="Texture2D" uid="uid://ddjhuc1stvf0h" path="res://Assets/Player/Right Animation/player_walk_right_0006.png" id="16_rgrre"]
 [ext_resource type="Texture2D" uid="uid://c5v8anc25xu17" path="res://Assets/Player/Right Animation/player_walk_right_0007.png" id="17_0y5fq"]
+[ext_resource type="Texture2D" uid="uid://2my436ttenhw" path="res://Assets/Light/LightCone.png" id="25_ujntq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5f1q0"]
 animations = [{
@@ -110,7 +111,6 @@ animations = [{
 size = Vector2(88, 78)
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 3
 script = ExtResource("1_iri1f")
 acceleration = 5000
 friction = 10000
@@ -118,6 +118,7 @@ min_time_buzz = 10.0
 max_time_buzz = 20.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+light_mask = 0
 position = Vector2(4, -79)
 scale = Vector2(1.07179, 1.07179)
 sprite_frames = SubResource("SpriteFrames_5f1q0")
@@ -146,5 +147,24 @@ autostart = true
 
 [node name="PowerUp" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_vemsw")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-1.19209e-07, -3.57628e-06)
+scale = Vector2(1.75977, 1.75977)
+energy = 0.7
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 4.5
+texture = ExtResource("25_ujntq")
+texture_scale = 1.4
+
+[node name="DarkFilter" type="PointLight2D" parent="."]
+visible = false
+light_mask = 3
+visibility_layer = 3
+energy = 0.5
+blend_mode = 1
+texture = ExtResource("25_ujntq")
+texture_scale = 14.51
 
 [connection signal="timeout" from="Buzzzzzzz/FoleyTime" to="." method="_on_foley_time_timeout"]

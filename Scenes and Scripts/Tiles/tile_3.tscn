@@ -1,7 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://dicbo7k2xiobq"]
+[gd_scene load_steps=15 format=3 uid="uid://dicbo7k2xiobq"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Tiles/tile_1.gd" id="1_f3lrx"]
-[ext_resource type="Texture2D" uid="uid://dhlbl6wu6mtmr" path="res://Assets/tiles/LabyrinthDrei.png" id="2_y8fqy"]
+[ext_resource type="Texture2D" uid="uid://ddcv6cj8q4jij" path="res://Assets/tiles/Labyrinth_3.png" id="2_50kmr"]
+[ext_resource type="Texture2D" uid="uid://d3o8q7155roa6" path="res://Assets/tiles/Lab3_Grasfläche.png" id="3_7mlui"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gn7kc"]
+polygon = PackedVector2Array(-1, -1, 892, -1, 886, 227, 782, 227, 779, 163, 47, 162, 43, 472, -1, 474)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jxxao"]
+polygon = PackedVector2Array(8, 17, 167, 23, 156, 312, 224, 318, 222, 408, 102, 397, 113, 545, 168, 549, 170, 595, 10, 598)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_k7yo6"]
+polygon = PackedVector2Array(12, 7, 110, 8, 107, 534, -173, 536, -174, 429, 12, 434)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6wijy"]
+polygon = PackedVector2Array(111, 427, 110, 534, 7, 529, 7, 428)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_eafh1"]
+polygon = PackedVector2Array(900, 420, 900, 891, 735, 890, 739, 586, 620, 587, 618, 467, 470, 464, 470, 586, 257, 580, 253, 468, 14, 464, 10, 421)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lqpji"]
+polygon = PackedVector2Array(351, 431, 353, 589, 12, 596, 9, 425)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qsqwx"]
+polygon = PackedVector2Array(230, 437, 226, 680, 292, 678, 290, 800, 621, 798, 618, 435, 660, 427, 660, 900, -234, 900, -230, 850, 82, 858, 79, 531, 11, 529, 10, 430)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rqwh1"]
+polygon = PackedVector2Array(119, 429, 116, 652, 74, 653, 76, 526, 18, 528, 20, 434)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cgbrw"]
+polygon = PackedVector2Array(416, 427, 414, 477, 0, 480, 0, 425)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qjx87"]
+polygon = PackedVector2Array(163, 427, 159, 892, 67, 888, 64, 591, 9, 590, 7, 427)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_b1ugb"]
+polygon = PackedVector2Array(103, 428, 104, 734, 347, 735, 349, 853, 892, 854, 893, 900, 0, 900, 0, 425)
 
 [node name="Tile3" type="Node2D"]
 position = Vector2(1, 1)
@@ -9,8 +43,9 @@ script = ExtResource("1_f3lrx")
 light_spawn_chance = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(959, 539)
-texture = ExtResource("2_y8fqy")
+position = Vector2(960, 540)
+rotation = 3.14159
+texture = ExtResource("2_50kmr")
 
 [node name="LevelBorder" type="StaticBody2D" parent="."]
 
@@ -33,7 +68,7 @@ polygon = PackedVector2Array(779, 359, 779, 479, 899, 479, 899, 359)
 polygon = PackedVector2Array(1019, 179, 1019, 599, 839, 599, 839, 719, 1139, 719, 1139, 179)
 
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(1019, -1, 1019, 59, 1259, 59, 1259, 179, 1499, 179, 1499, 59, 1619, 59, 1619, 179, 1739, 179, 1739, 479, 1919, 479, 1919, -1)
+polygon = PackedVector2Array(1019, -1, 1019, 59, 1259, 59, 1259, 179, 1499, 179, 1499, 59, 1619, 59, 1619, 179, 1739, 179, 1739, 480, 1919, 480, 1919, -1)
 
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="LevelBorder"]
 polygon = PackedVector2Array(1619, 479, 1619, 299, 1259, 299, 1259, 479)
@@ -248,3 +283,54 @@ position = Vector2(119, 359)
 
 [node name="LightSpawn3" type="Marker2D" parent="LightSpawns"]
 position = Vector2(119, 239)
+
+[node name="Shadows" type="Node2D" parent="."]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Shadows"]
+occluder = SubResource("OccluderPolygon2D_gn7kc")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Shadows"]
+position = Vector2(479, 299)
+occluder = SubResource("OccluderPolygon2D_jxxao")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Shadows"]
+position = Vector2(1019, 179)
+occluder = SubResource("OccluderPolygon2D_k7yo6")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="Shadows"]
+position = Vector2(779, -61)
+occluder = SubResource("OccluderPolygon2D_6wijy")
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="Shadows"]
+position = Vector2(1019, -421)
+occluder = SubResource("OccluderPolygon2D_eafh1")
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="Shadows"]
+position = Vector2(1259, -121)
+occluder = SubResource("OccluderPolygon2D_lqpji")
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="Shadows"]
+position = Vector2(1259, 179)
+occluder = SubResource("OccluderPolygon2D_qsqwx")
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="Shadows"]
+position = Vector2(1619, 179)
+occluder = SubResource("OccluderPolygon2D_rqwh1")
+
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="Shadows"]
+position = Vector2(779, 419)
+occluder = SubResource("OccluderPolygon2D_cgbrw")
+
+[node name="LightOccluder2D10" type="LightOccluder2D" parent="Shadows"]
+position = Vector2(179, -121)
+occluder = SubResource("OccluderPolygon2D_qjx87")
+
+[node name="LightOccluder2D11" type="LightOccluder2D" parent="Shadows"]
+position = Vector2(-1, 179)
+occluder = SubResource("OccluderPolygon2D_b1ugb")
+
+[node name="Lab3Grasfläche" type="Sprite2D" parent="."]
+light_mask = 0
+position = Vector2(960, 540)
+rotation = 3.14159
+texture = ExtResource("3_7mlui")
