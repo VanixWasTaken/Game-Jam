@@ -23,7 +23,6 @@ func _process(delta):
 		walk_animation_left()
 	if Input.is_action_just_pressed("ui_down"):
 		walk_animation_down()
-		
 
 func _physics_process(delta):
 	move(delta)
@@ -38,8 +37,9 @@ func get_input_axis():
 func move(delta):
 	axis = get_input_axis()
 	
-	if axis ==Vector2.ZERO:
+	if axis == Vector2.ZERO:
 		apply_friction(friction * delta)
+		$AnimatedSprite2D.stop()
 	else:
 		apply_movement(axis * acceleration * delta)
 		randomize_footsteps()
