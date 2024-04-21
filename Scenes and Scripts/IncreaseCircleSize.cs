@@ -67,10 +67,22 @@ public partial class IncreaseCircleSize : Node2D {
 		_light3.Visible = false;
 		_light4.Visible = false;
 		
+		Timer timer2 = new Timer();
+		timer2.WaitTime = 5;
+		timer2.Timeout += StartMusic;
+		timer.OneShot = true;
+		AddChild(timer);
+		timer2.Start();
+		
 		/*_mainSoundtrack.Play();
 		_stressSoundtrack1.Play();
 		_stressSoundtrack2.Play();
 		*/
+
+	}
+
+	public void StartMusic()
+	{
 		if (_randomZahl == 1f)
 		{
 			_mainSoundtrack.Play();

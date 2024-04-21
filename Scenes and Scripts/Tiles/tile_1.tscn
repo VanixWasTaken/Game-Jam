@@ -341,3 +341,7 @@ occluder = SubResource("OccluderPolygon2D_mq3wm")
 light_mask = 0
 position = Vector2(960, 540)
 texture = ExtResource("3_7n0jb")
+
+[node name="Assets" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Assets"]
