@@ -46,6 +46,8 @@ enemy_spawn_chance = 40
 light_spawn_chance = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 129
+visibility_layer = 129
 position = Vector2(960, 540)
 texture = ExtResource("2_r7iyv")
 
@@ -329,20 +331,22 @@ position = Vector2(-120, 120)
 occluder = SubResource("OccluderPolygon2D_3f8db")
 
 [node name="Lab2Grasfläche" type="Sprite2D" parent="."]
-light_mask = 0
+light_mask = 128
+visibility_layer = 129
 position = Vector2(960, 540)
 texture = ExtResource("3_y524s")
 
 [node name="Assets" type="Node2D" parent="."]
 
+[node name="NadelBaumGruppe7" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(1743, 887)
+texture = ExtResource("8_24063")
+
 [node name="BaumStumpf" type="Sprite2D" parent="Assets"]
 visible = false
 position = Vector2(809, 742)
 texture = ExtResource("4_yve0p")
-
-[node name="Laubbaum" type="Sprite2D" parent="Assets"]
-position = Vector2(1331, 310)
-texture = ExtResource("5_lqsk6")
 
 [node name="Stein" type="Sprite2D" parent="Assets"]
 position = Vector2(1109, 549)
@@ -354,7 +358,7 @@ position = Vector2(1564, 70)
 texture = ExtResource("7_mlh6q")
 
 [node name="NadelBaumGruppe" type="Sprite2D" parent="Assets"]
-position = Vector2(600, 99)
+position = Vector2(605, 81)
 texture = ExtResource("8_24063")
 
 [node name="TotHolzHaufen" type="Sprite2D" parent="Assets"]
@@ -363,51 +367,43 @@ texture = ExtResource("9_1bsr7")
 
 [node name="NadelBaumGruppe2" type="Sprite2D" parent="Assets"]
 z_index = 1
-position = Vector2(1756, 853)
+position = Vector2(1627, 880)
 texture = ExtResource("8_24063")
 
 [node name="NadelBaumGruppe3" type="Sprite2D" parent="Assets"]
 z_index = 1
-position = Vector2(1864, 794)
+position = Vector2(1645, 995)
 texture = ExtResource("8_24063")
 
 [node name="NadelBaumGruppe4" type="Sprite2D" parent="Assets"]
 z_index = 1
-position = Vector2(1857, 906)
+position = Vector2(1859, 938)
 texture = ExtResource("8_24063")
 
 [node name="NadelBaumGruppe5" type="Sprite2D" parent="Assets"]
 z_index = 1
-position = Vector2(1756, 963)
+position = Vector2(1758, 1010)
 texture = ExtResource("8_24063")
 
 [node name="NadelBaumGruppe6" type="Sprite2D" parent="Assets"]
 z_index = 1
-position = Vector2(1842, 1016)
+position = Vector2(1317, 1024)
 texture = ExtResource("8_24063")
 
 [node name="Stein2" type="Sprite2D" parent="Assets"]
 position = Vector2(1568, 676)
 texture = ExtResource("6_2ukfs")
 
-[node name="Laubbaum2" type="Sprite2D" parent="Assets"]
-position = Vector2(785, 420)
-texture = ExtResource("5_lqsk6")
-
 [node name="Laubbaum3" type="Sprite2D" parent="Assets"]
 position = Vector2(295, 471)
 texture = ExtResource("5_lqsk6")
 
 [node name="Laubbaum4" type="Sprite2D" parent="Assets"]
-position = Vector2(807, 712)
-texture = ExtResource("5_lqsk6")
-
-[node name="Laubbaum5" type="Sprite2D" parent="Assets"]
-position = Vector2(1075, 835)
+position = Vector2(813, 774)
 texture = ExtResource("5_lqsk6")
 
 [node name="BaumStumpf2" type="Sprite2D" parent="Assets"]
-position = Vector2(539, 442)
+position = Vector2(544, 590)
 texture = ExtResource("4_yve0p")
 
 [node name="BaumStumpf3" type="Sprite2D" parent="Assets"]
@@ -416,10 +412,9 @@ texture = ExtResource("4_yve0p")
 
 [node name="Laubbaum6" type="Sprite2D" parent="Assets"]
 z_index = 1
-position = Vector2(1800, 368)
+position = Vector2(1841, 332)
 texture = ExtResource("5_lqsk6")
 
-[node name="Laubbaum7" type="Sprite2D" parent="Assets"]
-z_index = 1
-position = Vector2(87, 1006)
-texture = ExtResource("5_lqsk6")
+[node name="BaumStumpf4" type="Sprite2D" parent="Assets"]
+position = Vector2(813, 459)
+texture = ExtResource("4_yve0p")

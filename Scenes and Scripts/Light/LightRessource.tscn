@@ -83,6 +83,8 @@ libraries = {
 
 [node name="Blink" type="TextureRect" parent="."]
 visible = false
+light_mask = 129
+visibility_layer = 129
 z_index = 2
 material = SubResource("ShaderMaterial_43b4a")
 offset_left = -40.0
@@ -93,6 +95,8 @@ texture = ExtResource("4_78jfp")
 stretch_mode = 2
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+light_mask = 129
+visibility_layer = 129
 z_as_relative = false
 offset_left = -40.0
 offset_top = -64.0
@@ -110,6 +114,8 @@ position = Vector2(-25.5, -2)
 shape = SubResource("RectangleShape2D_m0rb1")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+light_mask = 129
+visibility_layer = 129
 position = Vector2(1, 26)
 scale = Vector2(0.519531, 0.533203)
 energy = 0.592069
