@@ -51,7 +51,7 @@ size = Vector2(648, 182)
 [node name="Tile1" type="Node2D"]
 script = ExtResource("1_jom5r")
 enemy_spawn_chance = 40
-light_spawn_chance = 10
+light_spawn_chance = 20
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 light_mask = 129
