@@ -127,7 +127,7 @@ animation = &"walk_down"
 position = Vector2(-960, -540)
 flashIntervall = 10.0
 flashDuration = 0.2
-timeBetweenFlash = 0.2
+timeBeteenFlash = 0.2
 secondFlashDuration = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

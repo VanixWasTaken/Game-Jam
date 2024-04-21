@@ -10,8 +10,11 @@ public partial class IncreaseCircleSize : Node2D {
 	[Export] public ShaderMaterial _shader;
 	[Export] public double flashIntervall;
 	[Export] public double flashDuration;
+	[Export] private double timeBeteenFlash;
+	[Export] private double secondFlashDuration;
 	private double timeLeft;
 	private double currentTimeLeft;
+	
 	private AudioStreamPlayer _mainSoundtrack;
 	private AudioStreamPlayer _stressSoundtrack1;
 	private AudioStreamPlayer _stressSoundtrack2;
@@ -19,6 +22,7 @@ public partial class IncreaseCircleSize : Node2D {
 	private AudioStreamPlayer _stressSoundtrack3;
 	private AudioStreamPlayer _stressSoundtrack4;
 	private int _randomZahl;
+	private bool alreadyFlashed;
 	
 	public override void _Ready() {
 		_button = GetNode<Button>("ColorRect/Button");
@@ -51,16 +55,16 @@ public partial class IncreaseCircleSize : Node2D {
 		*/
 		if (_randomZahl == 1f)
 		{
-		_mainSoundtrack.Play();
-		_stressSoundtrack1.Play();
-		_stressSoundtrack2.Play();
+			_mainSoundtrack.Play();
+			_stressSoundtrack1.Play();
+			_stressSoundtrack2.Play();
 		}
 		
 		else if (_randomZahl == 2f)
 		{
-		_mainSoundtrack2.Play();
-		_stressSoundtrack3.Play();
-		_stressSoundtrack4.Play();
+			_mainSoundtrack2.Play();
+			_stressSoundtrack3.Play();
+			_stressSoundtrack4.Play();
 		}
 	}
 	
@@ -68,11 +72,13 @@ public partial class IncreaseCircleSize : Node2D {
 		var time =_closeAnim.CurrentAnimationPosition;
 		_closeAnim.Seek(time-4);
 	}
+	
 	//Go to Game over screen if Animation hits zero
 	private void _on_animation_player_animation_finished(StringName anim_name) {
 		GD.Print("Deeeeead");
 		GetTree().ChangeSceneToFile("res://Scenes and Scripts/game_over.tscn");
 	}
+	
 	//Stops circel Anim, Starts timer for flash duration
 	public void Flash(){
 		timeLeft =_closeAnim.CurrentAnimationPosition;
@@ -85,56 +91,52 @@ public partial class IncreaseCircleSize : Node2D {
 		AddChild(timer);
 		timer.Start();
 	}
+	
 	//Gets called when timer flash duration = 0, Plays circle anim
 	public void StopFlash() {
 		_closeAnim.Seek(timeLeft);
 		_closeAnim.Play();
+
+		//Checks if it is the first or second Flash
+		if (alreadyFlashed == false)
+		{
+			Timer timer = new Timer();
+			timer.WaitTime = timeBeteenFlash;
+			timer.Timeout += SecondFlash;
+			timer.OneShot = true;
+			AddChild(timer);
+			timer.Start();
+			alreadyFlashed = true;
+		}
+		else
+		{
+			alreadyFlashed = false;
+		}
+	}
+
+	public void SecondFlash()
+	{
+		timeLeft =_closeAnim.CurrentAnimationPosition;
+		_closeAnim.Stop();
+		
+		Timer timer = new Timer();
+		timer.WaitTime = secondFlashDuration;
+		timer.Timeout += StopFlash;
+		timer.OneShot = true;
+		AddChild(timer);
+		timer.Start();
+		
 	}
 	
 	//gets current anim time and starts shake, kim sounds hier
 	public override void _Process(double delta) {
 		currentTimeLeft =_closeAnim.CurrentAnimationPosition;
-		
-		/*
-		if (currentTimeLeft < 4)
-		{
-			//_cameraShake.ShakeCamera(5f,0.1f);
-			GD.Print("1");
-		}
-		
-		
-		if(currentTimeLeft >= 7 && currentTimeLeft <= 6)
-		{
-			_cameraShake.ShakeCamera(0.1f,0.1f);
-			GD.Print("2");
-		}
-		
-		else if(currentTimeLeft <= 8 && currentTimeLeft >=7)
-		{
-			_cameraShake.ShakeCamera(0.1f,0.2f);
-			GD.Print("3");
-		}
-		
-		else if(currentTimeLeft <= 9 && currentTimeLeft >= 8)
-		{
-			_cameraShake.ShakeCamera(0.1f,0.3f);
-			GD.Print("4");
-		}
-		
-		else if(currentTimeLeft <= 10.5 && currentTimeLeft >= 9)
-		{
-			_cameraShake.ShakeCamera(0.1f,0.5f);
-			GD.Print("5");
-		}
-		*/
+
 		if(currentTimeLeft >= 0 && currentTimeLeft <= 5)
 		{
 			_cameraShake.ShakeCamera(0.1f,0.1f);
-			GD.Print("2");
 			
-			
-			
-			
+
 			_mainSoundtrack.VolumeDb = 0f;
 			_stressSoundtrack1.VolumeDb = -80f;
 			_stressSoundtrack2.VolumeDb = -80f;
@@ -146,8 +148,7 @@ public partial class IncreaseCircleSize : Node2D {
 		
 		else if(currentTimeLeft <= 10 && currentTimeLeft >=5)
 		{
-			_cameraShake.ShakeCamera(0.1f,0.2f);
-			GD.Print("3");
+			_cameraShake.ShakeCamera(0.1f,0.5f);
 			
 			_mainSoundtrack.VolumeDb = -80f;
 			_stressSoundtrack1.VolumeDb = 0f;
@@ -159,8 +160,7 @@ public partial class IncreaseCircleSize : Node2D {
 		
 		else if(currentTimeLeft <= 15 && currentTimeLeft >= 10)
 		{
-			_cameraShake.ShakeCamera(0.1f,0.3f);
-			GD.Print("4");
+			_cameraShake.ShakeCamera(0.1f,1f);
 			
 			_mainSoundtrack.VolumeDb = -80f;
 			_stressSoundtrack1.VolumeDb = -80f;
