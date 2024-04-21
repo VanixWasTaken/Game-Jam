@@ -136,24 +136,28 @@ stream = ExtResource("6_ha80y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(-59, -61)
 scale = Vector2(7.3252, 7.08253)
 texture = ExtResource("12_23fik")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(2041, 1123)
 scale = Vector2(7.3252, 7.08253)
 texture = ExtResource("12_23fik")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(-39, 1059)
 scale = Vector2(7.3252, 7.08253)
 texture = ExtResource("12_23fik")
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(1921, 15)
 scale = Vector2(7.3252, 7.08253)
 texture = ExtResource("12_23fik")
