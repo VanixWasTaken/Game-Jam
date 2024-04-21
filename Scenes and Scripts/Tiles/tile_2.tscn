@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmr5rn02o2kae"]
 
-[ext_resource type="Texture2D" uid="uid://beoa2o2eja04b" path="res://Assets/tiles/MonsterPlatz2.png" id="1_037p4"]
 [ext_resource type="Script" path="res://Scenes and Scripts/Tiles/tile_1.gd" id="1_o5byn"]
+[ext_resource type="Texture2D" uid="uid://cpgfqrivhuavf" path="res://Assets/tiles/LabyrinthZwei.png" id="2_27flg"]
 
 [node name="Tile2" type="Node2D"]
 script = ExtResource("1_o5byn")
@@ -9,7 +9,8 @@ light_spawn_chance = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(960, 544)
-texture = ExtResource("1_037p4")
+rotation = 3.14159
+texture = ExtResource("2_27flg")
 
 [node name="LevelBorder" type="StaticBody2D" parent="."]
 

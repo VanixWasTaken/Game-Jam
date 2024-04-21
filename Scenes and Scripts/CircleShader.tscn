@@ -19,7 +19,7 @@ shader_parameter/animation_speed = 1.0
 
 [sub_resource type="Animation" id="Animation_o83gh"]
 resource_name = "Close"
-length = 10.5
+length = 15.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -27,7 +27,7 @@ tracks/0/path = NodePath(".:material:shader_parameter/mask_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 10.1),
+"times": PackedFloat32Array(0, 14.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.629, 0.0]
@@ -80,6 +80,7 @@ libraries = {
 }
 
 [node name="Button" type="Button" parent="ColorRect"]
+visible = false
 layout_mode = 0
 offset_left = 910.0
 offset_top = 77.0

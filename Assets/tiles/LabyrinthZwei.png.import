@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ll00lhfw5c4f"
-path="res://.godot/imported/walkcycle_sketch_0002.png-8769bf804819b55f4a0b80d314e0c94e.ctex"
+uid="uid://cpgfqrivhuavf"
+path="res://.godot/imported/LabyrinthZwei.png-c9811944b20ace06272c422697f8983b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/walkcycle_sketch_0002.png"
-dest_files=["res://.godot/imported/walkcycle_sketch_0002.png-8769bf804819b55f4a0b80d314e0c94e.ctex"]
+source_file="res://Assets/tiles/LabyrinthZwei.png"
+dest_files=["res://.godot/imported/LabyrinthZwei.png-c9811944b20ace06272c422697f8983b.ctex"]
 
 [params]
 

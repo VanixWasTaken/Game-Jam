@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb11dv4yml45r"
-path="res://.godot/imported/MonsterPlatz3.png-755aa00e33403b92b65a8be0874cfc27.ctex"
+uid="uid://bfblk2m8flkej"
+path="res://.godot/imported/player_walk_right_0002.png-476c5c3b04a40fd7b7a05e7fbba1bab6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tiles/MonsterPlatz3.png"
-dest_files=["res://.godot/imported/MonsterPlatz3.png-755aa00e33403b92b65a8be0874cfc27.ctex"]
+source_file="res://Assets/Player/Right Animation/player_walk_right_0002.png"
+dest_files=["res://.godot/imported/player_walk_right_0002.png-476c5c3b04a40fd7b7a05e7fbba1bab6.ctex"]
 
 [params]
 

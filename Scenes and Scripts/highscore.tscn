@@ -1,17 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cqonxovi635ux"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/highscore.gd" id="1_l0mdj"]
-
-[sub_resource type="FontFile" id="FontFile_rcndx"]
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+[ext_resource type="FontFile" uid="uid://dm5x2ub0j0cyl" path="res://Assets/LintsecRegular-Wy2n.ttf" id="2_e4juh"]
 
 [node name="Highscore" type="CanvasLayer"]
 script = ExtResource("1_l0mdj")
@@ -20,11 +10,14 @@ script = ExtResource("1_l0mdj")
 autostart = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 34.0
-offset_top = 10.0
-offset_right = 277.0
-offset_bottom = 136.0
-theme_override_fonts/normal_font = SubResource("FontFile_rcndx")
-theme_override_font_sizes/normal_font_size = 64
+offset_left = -102.0
+offset_top = -74.0
+offset_right = 1737.0
+offset_bottom = 232.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("2_e4juh")
+theme_override_font_sizes/normal_font_size = 100
+text = "1000"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
