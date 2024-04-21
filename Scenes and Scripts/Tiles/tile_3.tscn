@@ -50,13 +50,13 @@ texture = ExtResource("2_50kmr")
 [node name="LevelBorder" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(-1, -1, 899, -1, 899, 239, 779, 239, 779, 179, 59, 179, 59, 479, -1, 479)
+polygon = PackedVector2Array(0, 0, 900, 0, 900, 240, 780, 240, 780, 179, 60, 180, 60, 480, 0, 480)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(179, 299, 359, 299, 359, 779, 239, 779, 239, 479, 179, 479)
+polygon = PackedVector2Array(180, 300, 360, 300, 360, 780, 240, 780, 240, 480, 180, 480)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(-1, 599, 119, 599, 119, 899, 359, 899, 359, 1019, 899, 1019, 899, 1079, -1, 1079)
+polygon = PackedVector2Array(0, 600, 120, 600, 120, 900, 360, 900, 360, 1020, 899, 1020, 900, 1080, 0, 1080)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="LevelBorder"]
 polygon = PackedVector2Array(479, 899, 659, 899, 659, 839, 599, 839, 599, 719, 719, 719, 719, 599, 659, 599, 659, 299, 479, 299)
@@ -68,13 +68,13 @@ polygon = PackedVector2Array(779, 359, 779, 479, 899, 479, 899, 359)
 polygon = PackedVector2Array(1019, 179, 1019, 599, 839, 599, 839, 719, 1139, 719, 1139, 179)
 
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(1019, -1, 1019, 59, 1259, 59, 1259, 179, 1499, 179, 1499, 59, 1619, 59, 1619, 179, 1739, 179, 1739, 480, 1919, 480, 1919, -1)
+polygon = PackedVector2Array(1020, 0, 1020, 60, 1260, 60, 1260, 180, 1500, 180, 1500, 60, 1620, 60, 1620, 180, 1740, 180, 1740, 480, 1920, 480, 1920, 0)
 
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="LevelBorder"]
 polygon = PackedVector2Array(1619, 479, 1619, 299, 1259, 299, 1259, 479)
 
 [node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="LevelBorder"]
-polygon = PackedVector2Array(1259, 599, 1259, 719, 1319, 719, 1319, 1019, 1019, 1019, 1019, 1079, 1919, 1079, 1919, 599, 1859, 599, 1859, 959, 1559, 959, 1559, 839, 1499, 839, 1499, 599)
+polygon = PackedVector2Array(1260, 600, 1260, 720, 1320, 720, 1320, 1020, 1020, 1020, 1020, 1080, 1920, 1080, 1920, 600, 1860, 600, 1860, 960, 1560, 970, 1560, 840, 1500, 840, 1500, 600)
 
 [node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="LevelBorder"]
 polygon = PackedVector2Array(779, 839, 779, 899, 1199, 899, 1199, 839)
