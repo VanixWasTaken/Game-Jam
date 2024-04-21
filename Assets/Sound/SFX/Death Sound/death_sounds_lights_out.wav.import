@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bxot8wb2nn44u"
+path="res://.godot/imported/death_sounds_lights_out.wav-90338889736b395a652c641232a90582.sample"
+
+[deps]
+
+source_file="res://Assets/Sound/SFX/Death Sound/death_sounds_lights_out.wav"
+dest_files=["res://.godot/imported/death_sounds_lights_out.wav-90338889736b395a652c641232a90582.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
