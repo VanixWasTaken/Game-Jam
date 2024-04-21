@@ -157,7 +157,8 @@ min_time_buzz = 10.0
 max_time_buzz = 20.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-light_mask = 0
+light_mask = 192
+visibility_layer = 129
 position = Vector2(4, -79)
 scale = Vector2(1.07179, 1.07179)
 sprite_frames = SubResource("SpriteFrames_5f1q0")
@@ -188,14 +189,15 @@ autostart = true
 stream = ExtResource("13_vemsw")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(-1.19209e-07, -3.57628e-06)
+position = Vector2(-26, -59)
 scale = Vector2(1.75977, 1.75977)
-energy = 0.7
+energy = 0.78
+range_item_cull_mask = 65
 shadow_enabled = true
 shadow_filter = 2
 shadow_filter_smooth = 4.5
 texture = ExtResource("25_ujntq")
-texture_scale = 1.4
+texture_scale = 0.8
 
 [node name="DarkFilter" type="PointLight2D" parent="."]
 light_mask = 5
