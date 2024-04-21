@@ -15,14 +15,25 @@ public partial class IncreaseCircleSize : Node2D {
 	private AudioStreamPlayer _mainSoundtrack;
 	private AudioStreamPlayer _stressSoundtrack1;
 	private AudioStreamPlayer _stressSoundtrack2;
+	private AudioStreamPlayer _mainSoundtrack2;
+	private AudioStreamPlayer _stressSoundtrack3;
+	private AudioStreamPlayer _stressSoundtrack4;
+	private int _randomZahl;
 	
 	public override void _Ready() {
 		_button = GetNode<Button>("ColorRect/Button");
 		_button.Pressed += UpdateCircleSize;
+		Random rnd = new Random();
+		int _randomZahl = rnd.Next (1,3);
 		_mainSoundtrack = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
 		_stressSoundtrack1 = GetNode<AudioStreamPlayer>("AudioStreamPlayer2");
 		_stressSoundtrack2 = GetNode<AudioStreamPlayer>("AudioStreamPlayer3");
-
+		_mainSoundtrack2 = GetNode<AudioStreamPlayer>("AudioStreamPlayer4");
+		_stressSoundtrack3 = GetNode<AudioStreamPlayer>("AudioStreamPlayer5");
+		_stressSoundtrack4 = GetNode<AudioStreamPlayer>("AudioStreamPlayer6");
+		
+		
+		
 		_closeAnim = GetNode<AnimationPlayer>("ColorRect/AnimationPlayer");
 		_closeAnim.Play("Close");
 		
@@ -34,9 +45,23 @@ public partial class IncreaseCircleSize : Node2D {
 		AddChild(timer);
 		timer.Start();
 		
+		/*_mainSoundtrack.Play();
+		_stressSoundtrack1.Play();
+		_stressSoundtrack2.Play();
+		*/
+		if (_randomZahl == 1f)
+		{
 		_mainSoundtrack.Play();
 		_stressSoundtrack1.Play();
 		_stressSoundtrack2.Play();
+		}
+		
+		else if (_randomZahl == 2f)
+		{
+		_mainSoundtrack2.Play();
+		_stressSoundtrack3.Play();
+		_stressSoundtrack4.Play();
+		}
 	}
 	
 	public void UpdateCircleSize() {
@@ -113,6 +138,9 @@ public partial class IncreaseCircleSize : Node2D {
 			_mainSoundtrack.VolumeDb = 0f;
 			_stressSoundtrack1.VolumeDb = -80f;
 			_stressSoundtrack2.VolumeDb = -80f;
+			_mainSoundtrack2.VolumeDb = 0f;
+			_stressSoundtrack3.VolumeDb = -80f;
+			_stressSoundtrack4.VolumeDb = -80f;
 			
 		}
 		
@@ -124,6 +152,9 @@ public partial class IncreaseCircleSize : Node2D {
 			_mainSoundtrack.VolumeDb = -80f;
 			_stressSoundtrack1.VolumeDb = 0f;
 			_stressSoundtrack2.VolumeDb = -80f;
+			_mainSoundtrack2.VolumeDb = -80f;
+			_stressSoundtrack3.VolumeDb = 0f;
+			_stressSoundtrack4.VolumeDb = -80f;
 		}
 		
 		else if(currentTimeLeft <= 15 && currentTimeLeft >= 10)
@@ -134,6 +165,9 @@ public partial class IncreaseCircleSize : Node2D {
 			_mainSoundtrack.VolumeDb = -80f;
 			_stressSoundtrack1.VolumeDb = -80f;
 			_stressSoundtrack2.VolumeDb = 0f;
+			_mainSoundtrack2.VolumeDb = -80f;
+			_stressSoundtrack3.VolumeDb = -80f;
+			_stressSoundtrack4.VolumeDb = 0f;
 		}
 		
 	}

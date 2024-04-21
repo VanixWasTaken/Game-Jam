@@ -126,7 +126,9 @@ animation = &"walk_down"
 [node name="CircleShader" parent="." instance=ExtResource("3_2ifmp")]
 position = Vector2(-960, -540)
 flashIntervall = 10.0
-flashDuration = 0.5
+flashDuration = 0.2
+timeBetweenFlash = 0.2
+secondFlashDuration = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -39)
