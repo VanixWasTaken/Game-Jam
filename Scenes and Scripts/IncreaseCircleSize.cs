@@ -72,7 +72,7 @@ public partial class IncreaseCircleSize : Node2D {
 		Timer timer2 = new Timer();
 		timer2.WaitTime = 5;
 		timer2.Timeout += StartMusic;
-		timer.OneShot = true;
+		timer2.OneShot = true;
 		AddChild(timer2);
 		timer2.Start();
 		
