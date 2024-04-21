@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://0ihn3m31l6ba"]
+[gd_scene load_steps=18 format=3 uid="uid://0ihn3m31l6ba"]
 
 [ext_resource type="PackedScene" uid="uid://dy5ns274feorx" path="res://Scenes and Scripts/player.tscn" id="1_di0k0"]
 [ext_resource type="Script" path="res://Scenes and Scripts/level.gd" id="1_mrmsb"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bid02qxddbfqu" path="res://Assets/loading screen/Unbenanntes_Projekt-10.png" id="12_f5r5g"]
 [ext_resource type="Script" path="res://Scenes and Scripts/animated_sprite_2d.gd" id="13_u2si1"]
 [ext_resource type="PackedScene" uid="uid://cqonxovi635ux" path="res://Scenes and Scripts/highscore.tscn" id="14_p1ur8"]
+[ext_resource type="PackedScene" uid="uid://3gosd8jl8ker" path="res://Scenes and Scripts/HUD/exit_button.tscn" id="16_ewve3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vr1j3"]
 animations = [{
@@ -71,6 +72,12 @@ autoplay = "default"
 script = ExtResource("13_u2si1")
 
 [node name="Highscore" parent="Player" instance=ExtResource("14_p1ur8")]
+
+[node name="ExitButton" parent="Player" instance=ExtResource("16_ewve3")]
+offset_left = 579.0
+offset_top = -515.0
+offset_right = 937.0
+offset_bottom = -315.0
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 

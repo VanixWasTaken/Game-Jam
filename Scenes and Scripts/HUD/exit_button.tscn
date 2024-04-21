@@ -1,12 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://3gosd8jl8ker"]
+[gd_scene load_steps=4 format=3 uid="uid://3gosd8jl8ker"]
 
-[ext_resource type="Texture2D" uid="uid://c4q07npf85uxo" path="res://Assets/icon.svg" id="1_ajwhu"]
+[ext_resource type="Texture2D" uid="uid://d3o5y18nu6jta" path="res://Assets/Main Menu/button.png" id="1_blbps"]
 [ext_resource type="Script" path="res://Scenes and Scripts/HUD/exit_button.gd" id="2_c3bp4"]
+[ext_resource type="FontFile" uid="uid://dm5x2ub0j0cyl" path="res://Assets/LintsecRegular-Wy2n.ttf" id="3_ptin7"]
 
 [node name="ExitButton" type="TextureButton"]
 offset_right = 40.0
 offset_bottom = 40.0
-texture_normal = ExtResource("1_ajwhu")
+texture_normal = ExtResource("1_blbps")
 script = ExtResource("2_c3bp4")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 93.0
+offset_right = 329.0
+offset_bottom = 181.0
+rotation = -0.114803
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.654902, 0.145098, 0.00784314, 1)
+theme_override_fonts/normal_font = ExtResource("3_ptin7")
+theme_override_font_sizes/normal_font_size = 61
+text = "Quit"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]

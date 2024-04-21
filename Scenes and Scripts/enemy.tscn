@@ -1,25 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://dh0n7nkjo625o"]
+[gd_scene load_steps=8 format=3 uid="uid://dh0n7nkjo625o"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/enemy.gd" id="1_mlcn8"]
-[ext_resource type="Texture2D" uid="uid://bmvmgg2igq56s" path="res://Assets/enemy_down.png" id="2_72min"]
-[ext_resource type="Texture2D" uid="uid://baesuhmqpmwrk" path="res://Assets/enemy_left.png" id="3_un80i"]
-[ext_resource type="Texture2D" uid="uid://d4f1owtbynk1x" path="res://Assets/enemy_up.png" id="4_0i438"]
-[ext_resource type="Texture2D" uid="uid://cftq66vaveb43" path="res://Assets/enemy_right.png" id="5_vyl7i"]
+[ext_resource type="Texture2D" uid="uid://oypiwe7s2wub" path="res://Assets/Enemy/treestump.png" id="2_fa50r"]
+[ext_resource type="Texture2D" uid="uid://tun15fpyhva8" path="res://Assets/Enemy/frog_front.png" id="3_0u275"]
+[ext_resource type="Texture2D" uid="uid://dnpfe0wygxwrl" path="res://Assets/Enemy/frog_left.png" id="4_t6ac5"]
+[ext_resource type="Texture2D" uid="uid://082vdnhyhp6q" path="res://Assets/Enemy/frog_back.png" id="5_ajqg8"]
+[ext_resource type="Texture2D" uid="uid://bno8afjad1nwl" path="res://Assets/Enemy/frog_right.png" id="6_p07ph"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xdefc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_72min")
+"texture": ExtResource("3_0u275")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_un80i")
+"texture": ExtResource("4_t6ac5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_0i438")
+"texture": ExtResource("5_ajqg8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_vyl7i")
+"texture": ExtResource("6_p07ph")
 }],
 "loop": true,
 "name": &"default",
@@ -31,8 +32,17 @@ script = ExtResource("1_mlcn8")
 min_time = 10.0
 max_time = 20.0
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, 1)
+scale = Vector2(0.836364, 0.836364)
+texture = ExtResource("2_fa50r")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5, -81)
+scale = Vector2(0.808333, 0.808333)
 sprite_frames = SubResource("SpriteFrames_xdefc")
+frame = 2
+frame_progress = 0.295866
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0

@@ -1,14 +1,19 @@
-[gd_scene load_steps=22 format=3 uid="uid://dy5ns274feorx"]
+[gd_scene load_steps=27 format=3 uid="uid://dy5ns274feorx"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/player.gd" id="1_iri1f"]
-[ext_resource type="Texture2D" uid="uid://lclfb5qgv6ud" path="res://Assets/Light/light_ball.png" id="2_x15la"]
+[ext_resource type="Texture2D" uid="uid://crlr6l3fqcldf" path="res://Assets/Player/Down Animation/player_front_walkcycle_0001.png" id="2_x3814"]
 [ext_resource type="PackedScene" uid="uid://21afqfophfo3" path="res://Scenes and Scripts/CircleShader.tscn" id="3_2ifmp"]
-[ext_resource type="Texture2D" uid="uid://c4q07npf85uxo" path="res://Assets/icon.svg" id="3_4jnxq"]
+[ext_resource type="Texture2D" uid="uid://ctffq4rg7edwy" path="res://Assets/Player/Down Animation/player_front_walkcycle_0002.png" id="3_iosgt"]
 [ext_resource type="Texture2D" uid="uid://b76dx7lgcsrlc" path="res://Assets/Player/Left Animation/player_walk_left_0001.png" id="4_lwrkq"]
+[ext_resource type="Texture2D" uid="uid://b4qmlr34ovpdh" path="res://Assets/Player/Down Animation/player_front_walkcycle_0003.png" id="4_rnwwi"]
 [ext_resource type="Texture2D" uid="uid://cualhjmkjbxe0" path="res://Assets/Player/Left Animation/player_walk_left_0002.png" id="5_akvcq"]
+[ext_resource type="Texture2D" uid="uid://cfhegwh45hlp3" path="res://Assets/Player/Down Animation/player_front_walkcycle_0004.png" id="5_l4i1j"]
+[ext_resource type="Texture2D" uid="uid://djg3nb6touqek" path="res://Assets/Player/Down Animation/player_front_walkcycle_0005.png" id="6_lj2sw"]
 [ext_resource type="Texture2D" uid="uid://bc7rh8b5opm18" path="res://Assets/Player/Left Animation/player_walk_left_0003.png" id="6_qbjum"]
+[ext_resource type="Texture2D" uid="uid://dy76abtikwra6" path="res://Assets/Player/Down Animation/player_front_walkcycle_0006.png" id="7_i6rcc"]
 [ext_resource type="Texture2D" uid="uid://1r3qg0ega81y" path="res://Assets/Player/Left Animation/player_walk_left_0004.png" id="7_o4r13"]
 [ext_resource type="Texture2D" uid="uid://dkgasoxcjvgyk" path="res://Assets/Player/Left Animation/player_walk_left_0005.png" id="8_pwgqr"]
+[ext_resource type="Texture2D" uid="uid://dsvfglsxh66v6" path="res://Assets/Player/Down Animation/player_front_walkcycle_0007.png" id="8_rak08"]
 [ext_resource type="Texture2D" uid="uid://bw8p3nl8jx5y8" path="res://Assets/Player/Left Animation/player_walk_left_0006.png" id="9_ahg0s"]
 [ext_resource type="Texture2D" uid="uid://bv6cvrrcbb302" path="res://Assets/Player/Left Animation/player_walk_left_0007.png" id="10_gcdb2"]
 [ext_resource type="Texture2D" uid="uid://dw3irndxv2mfm" path="res://Assets/Player/Right Animation/player_walk_right_0001.png" id="11_hp68p"]
@@ -24,10 +29,25 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_x15la")
+"texture": ExtResource("2_x3814")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_4jnxq")
+"texture": ExtResource("3_iosgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rnwwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_l4i1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lj2sw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i6rcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rak08")
 }],
 "loop": true,
 "name": &"walk_down",
@@ -101,7 +121,7 @@ max_time_buzz = 20.0
 position = Vector2(4, -79)
 scale = Vector2(1.07179, 1.07179)
 sprite_frames = SubResource("SpriteFrames_5f1q0")
-animation = &"walk_right"
+animation = &"walk_down"
 
 [node name="CircleShader" parent="." instance=ExtResource("3_2ifmp")]
 position = Vector2(-960, -540)

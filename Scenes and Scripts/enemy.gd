@@ -4,6 +4,7 @@ var player_inside_down_area = false
 var player_inside_left_area = false
 var player_inside_up_area = false
 var player_inside_right_area = false
+var rng = RandomNumberGenerator.new()
 
 @export var min_time: float
 @export var max_time: float
@@ -19,19 +20,25 @@ func _ready():
 
 func _process(delta):
 	if player_inside_down_area and enemy_direction == "down":
-		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 		MusicController.stop()
+		Global.lights_out = false
+		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 	if player_inside_left_area and enemy_direction == "left":
-		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 		MusicController.stop()
+		Global.lights_out = false
+		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 	if player_inside_up_area and enemy_direction == "up":
-		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 		MusicController.stop()
+		Global.lights_out = false
+		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 	if player_inside_right_area and enemy_direction == "right":
-		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 		MusicController.stop()
+		Global.lights_out = false
+		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 
 	if $RayCast2D.is_colliding():
+		MusicController.stop()
+		Global.lights_out = false
 		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 
 
@@ -118,3 +125,15 @@ func _play_ambience(enemy_type):
 			3:
 				$Ambience.stream = load("res://Assets/Sound/SFX/Frog/frog_ambience4.wav")
 		$Ambience.play()
+
+
+
+func random_direction_spawn():
+	var my_random_number = rng.randi_range(0, 100)
+	var my_random_number2 = rng.randi_range(1, 4)
+	if my_random_number2 == 1:
+		$AnimatedSprite2D.frame = 1
+	if my_random_number2 == 2:
+		$AnimatedSprite2D.frame = 2
+	if my_random_number2 == 3:
+		$AnimatedSprite2D.frame = 3

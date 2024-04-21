@@ -83,13 +83,7 @@ func spawn_enemy1():
 	if my_random_number <= enemy_spawn_chance:
 		$EnemySpawns/EnemySpawn1.add_child(enemy)
 	
-	var my_random_number2 = rng.randi_range(1, 4)
-	if my_random_number2 == 1:
-		enemy.rotate(1.5707963267949)
-	if my_random_number2 == 2:
-		enemy.rotate(1.5707963267949 * 2)
-	if my_random_number2 == 3:
-		enemy.rotate(1.5707963267949 * 3)
+	enemy.random_direction_spawn()
 
 
 func spawn_enemy2():
@@ -99,13 +93,7 @@ func spawn_enemy2():
 	if my_random_number <= enemy_spawn_chance:
 		$EnemySpawns/EnemySpawn2.add_child(enemy)
 
-	var my_random_number2 = rng.randi_range(1, 4)
-	if my_random_number2 == 1:
-		enemy.rotate(1.5707963267949)
-	if my_random_number2 == 2:
-		enemy.rotate(1.5707963267949 * 2)
-	if my_random_number2 == 3:
-		enemy.rotate(1.5707963267949 * 3)
+	enemy.random_direction_spawn()
 
 func spawn_enemy3():
 	var my_random_number = rng.randi_range(0, 100)
@@ -113,6 +101,8 @@ func spawn_enemy3():
 	
 	if my_random_number <= enemy_spawn_chance:
 		$EnemySpawns/EnemySpawn3.add_child(enemy)
+	
+	enemy.random_direction_spawn()
 
 func spawn_enemy4():
 	var my_random_number = rng.randi_range(0, 100)
@@ -121,13 +111,7 @@ func spawn_enemy4():
 	if my_random_number <= enemy_spawn_chance:
 		$EnemySpawns/EnemySpawn4.add_child(enemy)
 
-	var my_random_number2 = rng.randi_range(1, 4)
-	if my_random_number2 == 1:
-		enemy.rotate(1.5707963267949)
-	if my_random_number2 == 2:
-		enemy.rotate(1.5707963267949 * 2)
-	if my_random_number2 == 3:
-		enemy.rotate(1.5707963267949 * 3)
+	enemy.random_direction_spawn()
 
 func spawn_enemy5():
 	var my_random_number = rng.randi_range(0, 100)
@@ -136,13 +120,7 @@ func spawn_enemy5():
 	if my_random_number <= enemy_spawn_chance:
 		$EnemySpawns/EnemySpawn5.add_child(enemy)
 
-	var my_random_number2 = rng.randi_range(1, 4)
-	if my_random_number2 == 1:
-		enemy.rotate(1.5707963267949)
-	if my_random_number2 == 2:
-		enemy.rotate(1.5707963267949 * 2)
-	if my_random_number2 == 3:
-		enemy.rotate(1.5707963267949 * 3)
+	enemy.random_direction_spawn()
 
 func spawn_light1():
 	var my_random_number = rng.randi_range(0, 100)

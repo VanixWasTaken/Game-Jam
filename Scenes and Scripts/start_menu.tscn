@@ -1,21 +1,23 @@
-[gd_scene load_steps=10 format=3 uid="uid://jwk6wcnbmqul"]
+[gd_scene load_steps=12 format=3 uid="uid://jwk6wcnbmqul"]
 
-[ext_resource type="Texture2D" uid="uid://cryfoufmtq07e" path="res://Assets/Main Menu/menu_no_balls.png" id="1_u0uop"]
+[ext_resource type="Texture2D" uid="uid://dwhig7mbasd0k" path="res://Assets/Main Menu/menu_no_title.png" id="1_5esod"]
 [ext_resource type="Texture2D" uid="uid://boa0bfvr51aum" path="res://Assets/Main Menu/menu_light_balls.png" id="2_8tk2m"]
 [ext_resource type="PackedScene" uid="uid://3gosd8jl8ker" path="res://Scenes and Scripts/HUD/exit_button.tscn" id="4_4frjo"]
 [ext_resource type="PackedScene" uid="uid://cbggcbgan0wvy" path="res://Scenes and Scripts/HUD/start_button.tscn" id="4_whi0i"]
 [ext_resource type="Texture2D" uid="uid://rf86014uu7s6" path="res://Assets/Main Menu/start_button.png" id="4_x6848"]
 [ext_resource type="AudioStream" uid="uid://b3xc7v8eqm868" path="res://Assets/Sound/SFX/Ambience/insect_ambience.wav" id="6_wlmb2"]
+[ext_resource type="Texture2D" uid="uid://drtkm24pt0cgs" path="res://Assets/Main Menu/text_background.png" id="7_l3p5j"]
+[ext_resource type="FontFile" uid="uid://dm5x2ub0j0cyl" path="res://Assets/LintsecRegular-Wy2n.ttf" id="8_567mv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_koc22"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_u0uop")
+"texture": ExtResource("1_5esod")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 1.0
 }]
 
 [sub_resource type="Animation" id="Animation_3bm6e"]
@@ -51,11 +53,9 @@ grow_vertical = 2
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(959, 541)
 sprite_frames = SubResource("SpriteFrames_koc22")
-autoplay = "default"
-frame_progress = 0.0512843
+frame_progress = 0.790936
 
 [node name="Balls" type="Sprite2D" parent="."]
-position = Vector2(0, 4.11712)
 texture = ExtResource("2_8tk2m")
 centered = false
 
@@ -67,10 +67,10 @@ autoplay = "floating_balls"
 
 [node name="ExitButton" parent="." instance=ExtResource("4_4frjo")]
 layout_mode = 0
-offset_left = 142.0
-offset_top = 350.0
-offset_right = 270.0
-offset_bottom = 478.0
+offset_left = 24.0
+offset_top = 785.0
+offset_right = 382.0
+offset_bottom = 985.0
 
 [node name="StartButton" parent="." instance=ExtResource("4_whi0i")]
 layout_mode = 0
@@ -87,6 +87,32 @@ stream = ExtResource("6_wlmb2")
 volume_db = -12.0
 autoplay = true
 bus = &"SFX"
+
+[node name="TextBackground" type="Sprite2D" parent="."]
+position = Vector2(901, 281)
+scale = Vector2(0.613889, 0.613889)
+texture = ExtResource("7_l3p5j")
+
+[node name="TextBackground2" type="Sprite2D" parent="."]
+position = Vector2(901, 281)
+scale = Vector2(0.613889, 0.613889)
+texture = ExtResource("7_l3p5j")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 181.0
+offset_right = 1467.0
+offset_bottom = 471.0
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.654902, 0.137255, 0.00784314, 1)
+theme_override_colors/font_outline_color = Color(0.639216, 0.74902, 0.309804, 1)
+theme_override_constants/line_separation = 37
+theme_override_constants/outline_size = 25
+theme_override_fonts/normal_font = ExtResource("8_567mv")
+theme_override_font_sizes/normal_font_size = 100
+text = "Nocturnal
+    Ember"
 
 [connection signal="mouse_entered" from="StartButton" to="StartButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="StartButton" to="StartButton" method="_on_mouse_exited"]
