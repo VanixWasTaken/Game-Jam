@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://jwk6wcnbmqul"]
+[gd_scene load_steps=13 format=3 uid="uid://jwk6wcnbmqul"]
 
 [ext_resource type="Texture2D" uid="uid://dwhig7mbasd0k" path="res://Assets/Main Menu/menu_no_title.png" id="1_5esod"]
 [ext_resource type="Texture2D" uid="uid://boa0bfvr51aum" path="res://Assets/Main Menu/menu_light_balls.png" id="2_8tk2m"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://b3xc7v8eqm868" path="res://Assets/Sound/SFX/Ambience/insect_ambience.wav" id="6_wlmb2"]
 [ext_resource type="Texture2D" uid="uid://drtkm24pt0cgs" path="res://Assets/Main Menu/text_background.png" id="7_l3p5j"]
 [ext_resource type="FontFile" uid="uid://dm5x2ub0j0cyl" path="res://Assets/LintsecRegular-Wy2n.ttf" id="8_567mv"]
+[ext_resource type="Texture2D" uid="uid://d3o5y18nu6jta" path="res://Assets/Main Menu/button.png" id="9_jok6c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_koc22"]
 animations = [{
@@ -115,5 +116,34 @@ theme_override_font_sizes/normal_font_size = 100
 text = "Nocturnal
     Ember"
 
+[node name="Credits" type="TextureButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -358.0
+offset_top = -200.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("9_jok6c")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits"]
+offset_left = 19.0
+offset_top = 103.0
+offset_right = 329.0
+offset_bottom = 191.0
+rotation = -0.114803
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.654902, 0.145098, 0.00784314, 1)
+theme_override_fonts/normal_font = ExtResource("8_567mv")
+theme_override_font_sizes/normal_font_size = 46
+text = "Credits"
+
 [connection signal="mouse_entered" from="StartButton" to="StartButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="StartButton" to="StartButton" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Credits" to="StartButton" method="_on_credits_mouse_entered"]
+[connection signal="mouse_exited" from="Credits" to="StartButton" method="_on_credits_mouse_exited"]
+[connection signal="pressed" from="Credits" to="StartButton" method="_on_credits_pressed"]

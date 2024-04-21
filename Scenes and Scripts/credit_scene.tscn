@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2cimbrw0y0vx"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/credit_scene.gd" id="1_j4gpf"]
+[ext_resource type="Texture2D" uid="uid://cysdxuhqendee" path="res://Assets/Credits/Credits.png" id="2_hn2mu"]
+[ext_resource type="Texture2D" uid="uid://d3o5y18nu6jta" path="res://Assets/Main Menu/button.png" id="3_mvn5l"]
+[ext_resource type="FontFile" uid="uid://dm5x2ub0j0cyl" path="res://Assets/LintsecRegular-Wy2n.ttf" id="4_tp6ie"]
+
+[node name="CreditScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j4gpf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_hn2mu")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -358.0
+offset_bottom = 200.0
+grow_horizontal = 0
+texture_normal = ExtResource("3_mvn5l")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureButton"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 91.0
+offset_right = 335.0
+offset_bottom = 179.0
+rotation = -0.114803
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.654902, 0.145098, 0.00784314, 1)
+theme_override_fonts/normal_font = ExtResource("4_tp6ie")
+theme_override_font_sizes/normal_font_size = 61
+text = "Menu"
+
+[node name="UI" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="TextureButton" to="." method="_on_texture_button_mouse_exited"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

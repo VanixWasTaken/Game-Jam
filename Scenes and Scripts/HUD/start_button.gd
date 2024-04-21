@@ -29,3 +29,20 @@ func _on_mouse_entered():
 	%UI.play()
 func _on_mouse_exited():
 	mouse_inside = false
+
+
+func _on_credits_pressed():
+	%UI.stream = load("res://Assets/Sound/SFX/UI/ui_click.wav")
+	%UI.play()
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_file("res://Scenes and Scripts/credit_scene.tscn")
+
+
+func _on_credits_mouse_entered():
+	%Credits.material = outline_shader
+	%UI.stream = load("res://Assets/Sound/SFX/UI/ui_hover.wav")
+	%UI.play()
+
+
+func _on_credits_mouse_exited():
+	%Credits.material = no_shader

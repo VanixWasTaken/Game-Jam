@@ -86,6 +86,31 @@ text = "Quit"
 [node name="UI" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 
+[node name="Credits" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -358.0
+offset_top = -200.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("3_ywwe8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits"]
+offset_left = 19.0
+offset_top = 103.0
+offset_right = 329.0
+offset_bottom = 191.0
+rotation = -0.114803
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.654902, 0.145098, 0.00784314, 1)
+theme_override_fonts/normal_font = ExtResource("5_eoex2")
+theme_override_font_sizes/normal_font_size = 46
+text = "Credits"
+
 [connection signal="mouse_entered" from="VBoxContainer/Retry" to="." method="_on_retry_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer/Retry" to="." method="_on_retry_mouse_exited"]
 [connection signal="pressed" from="VBoxContainer/Retry" to="." method="_on_retry_pressed"]
@@ -95,3 +120,6 @@ unique_name_in_owner = true
 [connection signal="mouse_entered" from="VBoxContainer/Quit" to="." method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer/Quit" to="." method="_on_quit_mouse_exited"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="mouse_entered" from="Credits" to="." method="_on_credits_mouse_entered"]
+[connection signal="mouse_exited" from="Credits" to="." method="_on_credits_mouse_exited"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
