@@ -165,7 +165,7 @@ public partial class IncreaseCircleSize : Node2D {
 	public override void _Process(double delta) {
 		currentTimeLeft =_closeAnim.CurrentAnimationPosition;
 
-		if(currentTimeLeft >= 0 && currentTimeLeft <= 5)
+		if(currentTimeLeft <= 5)
 		{
 			_cameraShake.ShakeCamera(0.1f,0.1f);
 			
