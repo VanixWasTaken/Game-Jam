@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/sign_of_light.mp3-3944a1c4d12df3079243ace085f
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

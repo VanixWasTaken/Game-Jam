@@ -12,9 +12,16 @@ public partial class IncreaseCircleSize : Node2D {
 	[Export] public double flashDuration;
 	private double timeLeft;
 	private double currentTimeLeft;
+	private AudioStreamPlayer _mainSoundtrack;
+	private AudioStreamPlayer _stressSoundtrack1;
+	private AudioStreamPlayer _stressSoundtrack2;
+	
 	public override void _Ready() {
 		_button = GetNode<Button>("ColorRect/Button");
 		_button.Pressed += UpdateCircleSize;
+		_mainSoundtrack = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
+		_stressSoundtrack1 = GetNode<AudioStreamPlayer>("AudioStreamPlayer2");
+		_stressSoundtrack2 = GetNode<AudioStreamPlayer>("AudioStreamPlayer3");
 
 		_closeAnim = GetNode<AnimationPlayer>("ColorRect/AnimationPlayer");
 		_closeAnim.Play("Close");
@@ -26,6 +33,10 @@ public partial class IncreaseCircleSize : Node2D {
 		timer.Timeout += Flash;
 		AddChild(timer);
 		timer.Start();
+		
+		_mainSoundtrack.Play();
+		_stressSoundtrack1.Play();
+		_stressSoundtrack2.Play();
 	}
 	
 	public void UpdateCircleSize() {
@@ -65,7 +76,8 @@ public partial class IncreaseCircleSize : Node2D {
 			//_cameraShake.ShakeCamera(5f,0.1f);
 			GD.Print("1");
 		}
-		*/
+		
+		
 		if(currentTimeLeft >= 7 && currentTimeLeft <= 6)
 		{
 			_cameraShake.ShakeCamera(0.1f,0.1f);
@@ -88,6 +100,40 @@ public partial class IncreaseCircleSize : Node2D {
 		{
 			_cameraShake.ShakeCamera(0.1f,0.5f);
 			GD.Print("5");
+		}
+		*/
+		if(currentTimeLeft >= 0 && currentTimeLeft <= 5)
+		{
+			_cameraShake.ShakeCamera(0.1f,0.1f);
+			GD.Print("2");
+			
+			
+			
+			
+			_mainSoundtrack.VolumeDb = 0f;
+			_stressSoundtrack1.VolumeDb = -80f;
+			_stressSoundtrack2.VolumeDb = -80f;
+			
+		}
+		
+		else if(currentTimeLeft <= 10 && currentTimeLeft >=5)
+		{
+			_cameraShake.ShakeCamera(0.1f,0.2f);
+			GD.Print("3");
+			
+			_mainSoundtrack.VolumeDb = -80f;
+			_stressSoundtrack1.VolumeDb = 0f;
+			_stressSoundtrack2.VolumeDb = -80f;
+		}
+		
+		else if(currentTimeLeft <= 15 && currentTimeLeft >= 10)
+		{
+			_cameraShake.ShakeCamera(0.1f,0.3f);
+			GD.Print("4");
+			
+			_mainSoundtrack.VolumeDb = -80f;
+			_stressSoundtrack1.VolumeDb = -80f;
+			_stressSoundtrack2.VolumeDb = 0f;
 		}
 		
 	}
