@@ -18,7 +18,6 @@ public partial class CameraShake : Camera2D
 	// Call this method to shake the camera
 	public void ShakeCamera(float duration, float magnitude)
 	{
-		GD.Print("owo");
 		shakeDuration = duration;
 		shakeMagnitude = magnitude;
 	}
@@ -28,7 +27,6 @@ public partial class CameraShake : Camera2D
 		if (shakeDuration > 0)
 		{
 			// Shake the camera
-			GD.Print("uwu");
 			Offset = initialPosition + new Vector2((float)GD.RandRange(-1, 1), (float)GD.RandRange(-1, 1)) * shakeMagnitude;
 
 			shakeDuration -= delta * dampingSpeed;
