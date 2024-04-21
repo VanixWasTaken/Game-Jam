@@ -37,6 +37,8 @@ min_time = 10.0
 max_time = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 129
+visibility_layer = 129
 position = Vector2(5, 1)
 scale = Vector2(0.836364, 0.836364)
 texture = ExtResource("2_fa50r")
