@@ -23,6 +23,8 @@ func _process(delta):
 		walk_animation_left()
 	if Input.is_action_just_pressed("ui_down"):
 		walk_animation_down()
+	if Input.is_action_just_pressed("ui_up"):
+		walk_animation_up()
 
 func _physics_process(delta):
 	move(delta)
@@ -71,7 +73,9 @@ func walk_animation_down():
 	$AnimatedSprite2D.stop()
 	$AnimatedSprite2D.play("walk_down")
 
-
+func walk_animation_up():
+	$AnimatedSprite2D.stop()
+	$AnimatedSprite2D.play("walk_up")
 
 func randomize_footsteps():
 	var random = randi() % 4
