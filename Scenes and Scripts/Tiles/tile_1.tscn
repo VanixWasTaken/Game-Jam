@@ -42,7 +42,8 @@ polygon = PackedVector2Array(416, 716, 313, 714, 309, 607, 372, 603, 375, 489, 6
 
 [node name="Tile1" type="Node2D"]
 script = ExtResource("1_jom5r")
-light_spawn_chance = 7
+enemy_spawn_chance = 40
+light_spawn_chance = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
