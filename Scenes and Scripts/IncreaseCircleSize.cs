@@ -23,6 +23,7 @@ public partial class IncreaseCircleSize : Node2D {
 	private AudioStreamPlayer _stressSoundtrack4;
 	private AudioStreamPlayer _flash;
 	private AudioStreamPlayer _secondFlash;
+	private AudioStreamPlayer _bzzt;
 	private int _randomZahl;
 	private bool alreadyFlashed = false;
 
@@ -44,6 +45,7 @@ public partial class IncreaseCircleSize : Node2D {
 		_stressSoundtrack4 = GetNode<AudioStreamPlayer>("AudioStreamPlayer6");
 		_flash = GetNode<AudioStreamPlayer>("AudioStreamPlayer7");
 		_secondFlash = GetNode<AudioStreamPlayer>("AudioStreamPlayer8");
+		_bzzt = GetNode<AudioStreamPlayer>("AudioStreamPlayer9");
 		
 		
 		_closeAnim = GetNode<AnimationPlayer>("ColorRect/AnimationPlayer");
@@ -213,6 +215,11 @@ public partial class IncreaseCircleSize : Node2D {
 			_mainSoundtrack2.VolumeDb = -80f;
 			_stressSoundtrack3.VolumeDb = -80f;
 			_stressSoundtrack4.VolumeDb = 0f;
+		}
+		
+		else if(currentTimeLeft >= 14)
+		{
+			_bzzt.Play();
 		}
 		
 	}
