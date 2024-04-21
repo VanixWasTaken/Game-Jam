@@ -335,6 +335,7 @@ autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player/Loading Screen"]
 stream = ExtResource("9_t2h4w")
+autoplay = true
 
 [node name="Highscore" parent="Player" instance=ExtResource("14_p1ur8")]
 unique_name_in_owner = true
