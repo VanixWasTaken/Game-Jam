@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _on_wegmach_timer_timeout():
+	%Highscore.make_visible()
 	$LoadingScreen.queue_free()
 	$"Glühwürmchen1".queue_free()
 	$"Glühwürmchen2".queue_free()
