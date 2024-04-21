@@ -71,6 +71,7 @@ shader_parameter/mask_edge = 0.813
 shader_parameter/animation_speed = 1.0
 
 [node name="CircleShader" type="Node2D"]
+z_index = 1
 script = ExtResource("1_laj56")
 
 [node name="ColorRect" type="ColorRect" parent="."]

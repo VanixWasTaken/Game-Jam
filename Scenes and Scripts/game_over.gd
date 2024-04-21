@@ -15,7 +15,7 @@ func _process(delta):
 
 func how_die():
 	if Global.lights_out:
-		$LightsOut.stream = load("res://Assets/Sound/SFX/Death Sound/death_sound_lights_out_1.wav")
+		$LightsOut.stream = load("res://Assets/Sound/SFX/Death Sound/death_sounds_lights_out.wav")
 	elif !Global.lights_out:
 		var rand = randi_range(0, 1)
 		if rand == 0:
