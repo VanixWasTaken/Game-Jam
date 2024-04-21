@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dh0n7nkjo625o"]
+[gd_scene load_steps=9 format=3 uid="uid://dh0n7nkjo625o"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/enemy.gd" id="1_mlcn8"]
 [ext_resource type="Texture2D" uid="uid://oypiwe7s2wub" path="res://Assets/Enemy/treestump.png" id="2_fa50r"]
@@ -26,6 +26,9 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1pcy"]
+size = Vector2(135, 192)
 
 [node name="Enemy" type="Node2D"]
 z_index = 1
@@ -58,8 +61,14 @@ bus = &"SFX"
 autostart = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(0, 250)
-collision_mask = 2
+target_position = Vector2(0, 290)
+collision_mask = 6
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-6.5, -47)
+shape = SubResource("RectangleShape2D_p1pcy")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="AmbienceTimer" to="." method="_on_ambience_timer_timeout"]

@@ -113,3 +113,11 @@ func _on_foley_time_timeout():
 
 func play_powerup():
 	$PowerUp.play()
+
+
+func _on_detection_up_area_entered(area):
+	if area.get_name() == "Hitbox":
+		$".".z_index = 3
+func _on_detection_up_area_exited(area):
+	if area.get_name() == "Hitbox":
+		$".".z_index = 1
