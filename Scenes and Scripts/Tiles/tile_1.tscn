@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://wy5shy17ga48"]
+[gd_scene load_steps=23 format=3 uid="uid://wy5shy17ga48"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Tiles/tile_1.gd" id="1_jom5r"]
 [ext_resource type="Texture2D" uid="uid://c08t1yfwyt32e" path="res://Assets/tiles/Labyrinth_1.png" id="2_ut2nn"]
@@ -45,6 +45,9 @@ polygon = PackedVector2Array(477, 658, 303, 656, 307, 613, 475, 612)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mq3wm"]
 polygon = PackedVector2Array(416, 716, 313, 714, 309, 607, 372, 603, 375, 489, 652, 492, 652, 592, 417, 589)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6avt"]
+size = Vector2(648, 182)
 
 [node name="Tile1" type="Node2D"]
 script = ExtResource("1_jom5r")
@@ -380,6 +383,13 @@ texture = ExtResource("9_gf1o0")
 z_index = 1
 position = Vector2(1273, 1029)
 texture = ExtResource("7_76mkk")
+
+[node name="Hitbox2" type="Area2D" parent="Assets/NadelBaumGruppe2"]
+position = Vector2(101, 47)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Assets/NadelBaumGruppe2/Hitbox2"]
+position = Vector2(-6, -50)
+shape = SubResource("RectangleShape2D_q6avt")
 
 [node name="NadelBaumGruppe3" type="Sprite2D" parent="Assets"]
 z_index = 1

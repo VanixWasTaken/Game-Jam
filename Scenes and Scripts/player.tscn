@@ -144,7 +144,7 @@ animations = [{
 size = Vector2(88, 78)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1j6vr"]
-size = Vector2(62, 86)
+size = Vector2(137, 59)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
@@ -209,7 +209,7 @@ texture_scale = 14.51
 [node name="DetectionUp" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionUp"]
-position = Vector2(1, -153)
+position = Vector2(0.5, -115.5)
 shape = SubResource("RectangleShape2D_1j6vr")
 
 [connection signal="timeout" from="Buzzzzzzz/FoleyTime" to="." method="_on_foley_time_timeout"]

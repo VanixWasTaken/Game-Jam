@@ -117,7 +117,11 @@ func play_powerup():
 
 func _on_detection_up_area_entered(area):
 	if area.get_name() == "Hitbox":
-		$".".z_index = 3
+		$".".z_index = 2
+	if area.get_name() == "Hitbox2":
+		$".".z_index = 2
 func _on_detection_up_area_exited(area):
 	if area.get_name() == "Hitbox":
+		$".".z_index = 1
+	if area.get_name() == "Hitbox2":
 		$".".z_index = 1
