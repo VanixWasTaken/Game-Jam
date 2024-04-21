@@ -13,3 +13,8 @@ func _process(delta):
 func _play_music(title: String):
 	MusicController.stream = load("res://Assets/Sound/Music/" + title + ".mp3")
 	MusicController.play()
+
+func _stop_playing():
+	$AnimationPlayer.play("fade_out")
+	await $AnimationPlayer.animation_finished
+	MusicController.stream = null
