@@ -23,8 +23,14 @@ public partial class IncreaseCircleSize : Node2D {
 	private AudioStreamPlayer _stressSoundtrack4;
 	private AudioStreamPlayer _flash;
 	private AudioStreamPlayer _secondFlash;
+	private AudioStreamPlayer _bzzt;
 	private int _randomZahl;
 	private bool alreadyFlashed = false;
+
+	private Sprite2D _light1;
+	private Sprite2D _light2;
+	private Sprite2D _light3;
+	private Sprite2D _light4;
 	
 	public override void _Ready() {
 		_button = GetNode<Button>("ColorRect/Button");
@@ -39,6 +45,7 @@ public partial class IncreaseCircleSize : Node2D {
 		_stressSoundtrack4 = GetNode<AudioStreamPlayer>("AudioStreamPlayer6");
 		_flash = GetNode<AudioStreamPlayer>("AudioStreamPlayer7");
 		_secondFlash = GetNode<AudioStreamPlayer>("AudioStreamPlayer8");
+		_bzzt = GetNode<AudioStreamPlayer>("AudioStreamPlayer9");
 		
 		
 		_closeAnim = GetNode<AnimationPlayer>("ColorRect/AnimationPlayer");
@@ -51,6 +58,16 @@ public partial class IncreaseCircleSize : Node2D {
 		timer.Timeout += Flash;
 		AddChild(timer);
 		timer.Start();
+
+		_light1 = GetNode<Sprite2D>("Sprite2D");
+		_light2 = GetNode<Sprite2D>("Sprite2D2");
+		_light3 = GetNode<Sprite2D>("Sprite2D3");
+		_light4 = GetNode<Sprite2D>("Sprite2D4");
+
+		_light1.Visible = false;
+		_light2.Visible = false;
+		_light3.Visible = false;
+		_light4.Visible = false;
 		
 		/*_mainSoundtrack.Play();
 		_stressSoundtrack1.Play();
@@ -87,6 +104,10 @@ public partial class IncreaseCircleSize : Node2D {
 		timeLeft =_closeAnim.CurrentAnimationPosition;
 		_closeAnim.Stop();
 		_flash.Play();
+
+		_light1.Visible = true;
+		_light2.Visible = true;
+		
 		
 		Timer timer = new Timer();
 		timer.WaitTime = flashDuration;
@@ -101,6 +122,11 @@ public partial class IncreaseCircleSize : Node2D {
 		GD.Print("StopFlash");
 		_closeAnim.Seek(timeLeft);
 		_closeAnim.Play();
+		
+		_light1.Visible = false;
+		_light2.Visible = false;
+		_light3.Visible = false;
+		_light4.Visible = false;
 
 		//Checks if it is the first or second Flash
 		if (alreadyFlashed == false)
@@ -125,6 +151,9 @@ public partial class IncreaseCircleSize : Node2D {
 		_closeAnim.Stop();
 		_secondFlash.Play();
 		
+		_light3.Visible = true;
+		_light4.Visible = true;
+		
 		Timer timer = new Timer();
 		timer.WaitTime = secondFlashDuration;
 		timer.Timeout += StopFlash;
@@ -138,7 +167,7 @@ public partial class IncreaseCircleSize : Node2D {
 	public override void _Process(double delta) {
 		currentTimeLeft =_closeAnim.CurrentAnimationPosition;
 
-		if(currentTimeLeft >= 0 && currentTimeLeft <= 5)
+		if(currentTimeLeft <= 5)
 		{
 			_cameraShake.ShakeCamera(0.1f,0.1f);
 			
@@ -174,6 +203,11 @@ public partial class IncreaseCircleSize : Node2D {
 			_mainSoundtrack2.VolumeDb = -80f;
 			_stressSoundtrack3.VolumeDb = -80f;
 			_stressSoundtrack4.VolumeDb = 0f;
+		}
+		
+		else if(currentTimeLeft >= 14)
+		{
+			_bzzt.Play();
 		}
 		
 	}
