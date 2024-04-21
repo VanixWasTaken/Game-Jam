@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://deego2h08hn4x"
+uid="uid://cf3377j60pnb7"
 path="res://.godot/imported/sign_of_light_4.mp3-1e25733418562eb24151a577942c57dd.mp3str"
 
 [deps]
@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/sign_of_light_4.mp3-1e25733418562eb24151a5779
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

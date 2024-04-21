@@ -10,17 +10,30 @@ public partial class IncreaseCircleSize : Node2D {
 	[Export] public ShaderMaterial _shader;
 	[Export] public double flashIntervall;
 	[Export] public double flashDuration;
-	[Export] public double timeBetweenFlash;
-	[Export] public double secondFlashDuration;
 	private double timeLeft;
 	private double currentTimeLeft;
-	private bool alreadyflashed = false;
-	
+	private AudioStreamPlayer _mainSoundtrack;
+	private AudioStreamPlayer _stressSoundtrack1;
+	private AudioStreamPlayer _stressSoundtrack2;
+	private AudioStreamPlayer _mainSoundtrack2;
+	private AudioStreamPlayer _stressSoundtrack3;
+	private AudioStreamPlayer _stressSoundtrack4;
+	private int _randomZahl;
 	
 	public override void _Ready() {
 		_button = GetNode<Button>("ColorRect/Button");
 		_button.Pressed += UpdateCircleSize;
-
+		Random rnd = new Random();
+		int _randomZahl = rnd.Next (1,3);
+		_mainSoundtrack = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
+		_stressSoundtrack1 = GetNode<AudioStreamPlayer>("AudioStreamPlayer2");
+		_stressSoundtrack2 = GetNode<AudioStreamPlayer>("AudioStreamPlayer3");
+		_mainSoundtrack2 = GetNode<AudioStreamPlayer>("AudioStreamPlayer4");
+		_stressSoundtrack3 = GetNode<AudioStreamPlayer>("AudioStreamPlayer5");
+		_stressSoundtrack4 = GetNode<AudioStreamPlayer>("AudioStreamPlayer6");
+		
+		
+		
 		_closeAnim = GetNode<AnimationPlayer>("ColorRect/AnimationPlayer");
 		_closeAnim.Play("Close");
 		
@@ -31,11 +44,29 @@ public partial class IncreaseCircleSize : Node2D {
 		timer.Timeout += Flash;
 		AddChild(timer);
 		timer.Start();
+		
+		/*_mainSoundtrack.Play();
+		_stressSoundtrack1.Play();
+		_stressSoundtrack2.Play();
+		*/
+		if (_randomZahl == 1f)
+		{
+		_mainSoundtrack.Play();
+		_stressSoundtrack1.Play();
+		_stressSoundtrack2.Play();
+		}
+		
+		else if (_randomZahl == 2f)
+		{
+		_mainSoundtrack2.Play();
+		_stressSoundtrack3.Play();
+		_stressSoundtrack4.Play();
+		}
 	}
 	
 	public void UpdateCircleSize() {
 		var time =_closeAnim.CurrentAnimationPosition;
-		_closeAnim.Seek(time-2);
+		_closeAnim.Seek(time-4);
 	}
 	//Go to Game over screen if Animation hits zero
 	private void _on_animation_player_animation_finished(StringName anim_name) {
@@ -58,37 +89,6 @@ public partial class IncreaseCircleSize : Node2D {
 	public void StopFlash() {
 		_closeAnim.Seek(timeLeft);
 		_closeAnim.Play();
-		
-		//Starts timer for second flash
-		if (alreadyflashed == false)
-		{
-			Timer timer = new Timer();
-			timer.WaitTime = timeBetweenFlash;
-			timer.Timeout += FlashIntervall;
-			timer.OneShot = true;
-			AddChild(timer);
-			timer.Start();
-			alreadyflashed = true;
-		}
-		else
-		{
-			alreadyflashed = false;
-		}
-		
-	}
-
-	//Second Flash / light
-	public void FlashIntervall()
-	{
-		timeLeft =_closeAnim.CurrentAnimationPosition;
-		_closeAnim.Stop();
-		
-		Timer timer = new Timer();
-		timer.WaitTime = secondFlashDuration;
-		timer.Timeout += StopFlash;
-		timer.OneShot = true;
-		AddChild(timer);
-		timer.Start();
 	}
 	
 	//gets current anim time and starts shake, kim sounds hier
@@ -101,7 +101,8 @@ public partial class IncreaseCircleSize : Node2D {
 			//_cameraShake.ShakeCamera(5f,0.1f);
 			GD.Print("1");
 		}
-		*/
+		
+		
 		if(currentTimeLeft >= 7 && currentTimeLeft <= 6)
 		{
 			_cameraShake.ShakeCamera(0.1f,0.1f);
@@ -124,6 +125,49 @@ public partial class IncreaseCircleSize : Node2D {
 		{
 			_cameraShake.ShakeCamera(0.1f,0.5f);
 			GD.Print("5");
+		}
+		*/
+		if(currentTimeLeft >= 0 && currentTimeLeft <= 5)
+		{
+			_cameraShake.ShakeCamera(0.1f,0.1f);
+			GD.Print("2");
+			
+			
+			
+			
+			_mainSoundtrack.VolumeDb = 0f;
+			_stressSoundtrack1.VolumeDb = -80f;
+			_stressSoundtrack2.VolumeDb = -80f;
+			_mainSoundtrack2.VolumeDb = 0f;
+			_stressSoundtrack3.VolumeDb = -80f;
+			_stressSoundtrack4.VolumeDb = -80f;
+			
+		}
+		
+		else if(currentTimeLeft <= 10 && currentTimeLeft >=5)
+		{
+			_cameraShake.ShakeCamera(0.1f,0.2f);
+			GD.Print("3");
+			
+			_mainSoundtrack.VolumeDb = -80f;
+			_stressSoundtrack1.VolumeDb = 0f;
+			_stressSoundtrack2.VolumeDb = -80f;
+			_mainSoundtrack2.VolumeDb = -80f;
+			_stressSoundtrack3.VolumeDb = 0f;
+			_stressSoundtrack4.VolumeDb = -80f;
+		}
+		
+		else if(currentTimeLeft <= 15 && currentTimeLeft >= 10)
+		{
+			_cameraShake.ShakeCamera(0.1f,0.3f);
+			GD.Print("4");
+			
+			_mainSoundtrack.VolumeDb = -80f;
+			_stressSoundtrack1.VolumeDb = -80f;
+			_stressSoundtrack2.VolumeDb = 0f;
+			_mainSoundtrack2.VolumeDb = -80f;
+			_stressSoundtrack3.VolumeDb = -80f;
+			_stressSoundtrack4.VolumeDb = 0f;
 		}
 		
 	}
