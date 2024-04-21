@@ -20,19 +20,25 @@ func _ready():
 
 func _process(delta):
 	if player_inside_down_area and enemy_direction == "down":
-		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 		MusicController.stop()
+		Global.lights_out = false
+		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 	if player_inside_left_area and enemy_direction == "left":
-		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 		MusicController.stop()
+		Global.lights_out = false
+		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 	if player_inside_up_area and enemy_direction == "up":
-		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 		MusicController.stop()
+		Global.lights_out = false
+		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 	if player_inside_right_area and enemy_direction == "right":
-		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 		MusicController.stop()
+		Global.lights_out = false
+		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 
 	if $RayCast2D.is_colliding():
+		MusicController.stop()
+		Global.lights_out = false
 		get_tree().change_scene_to_file("res://Scenes and Scripts/game_over.tscn")
 
 
