@@ -25,10 +25,6 @@ func how_die():
 	$LightsOut.play()
 
 
-func _on_lights_out_finished():
-	$TextureRect.visible = false
-	$VBoxContainer.visible = true
-
 
 func _on_retry_pressed():
 	%UI.stream = load("res://Assets/Sound/SFX/UI/ui_click.wav")
