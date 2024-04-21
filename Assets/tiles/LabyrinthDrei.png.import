@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb11dv4yml45r"
-path="res://.godot/imported/MonsterPlatz3.png-755aa00e33403b92b65a8be0874cfc27.ctex"
+uid="uid://dhlbl6wu6mtmr"
+path="res://.godot/imported/LabyrinthDrei.png-e21e769bccb0e8b965b9b5a43c98a72e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tiles/MonsterPlatz3.png"
-dest_files=["res://.godot/imported/MonsterPlatz3.png-755aa00e33403b92b65a8be0874cfc27.ctex"]
+source_file="res://Assets/tiles/LabyrinthDrei.png"
+dest_files=["res://.godot/imported/LabyrinthDrei.png-e21e769bccb0e8b965b9b5a43c98a72e.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dicbo7k2xiobq"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Tiles/tile_1.gd" id="1_f3lrx"]
-[ext_resource type="Texture2D" uid="uid://bb11dv4yml45r" path="res://Assets/tiles/MonsterPlatz3.png" id="1_hseh6"]
+[ext_resource type="Texture2D" uid="uid://dhlbl6wu6mtmr" path="res://Assets/tiles/LabyrinthDrei.png" id="2_y8fqy"]
 
 [node name="Tile3" type="Node2D"]
 position = Vector2(1, 1)
@@ -10,7 +10,7 @@ light_spawn_chance = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(959, 539)
-texture = ExtResource("1_hseh6")
+texture = ExtResource("2_y8fqy")
 
 [node name="LevelBorder" type="StaticBody2D" parent="."]
 
