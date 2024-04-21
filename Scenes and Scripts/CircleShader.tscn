@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://21afqfophfo3"]
+[gd_scene load_steps=19 format=3 uid="uid://21afqfophfo3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/IncreaseCircleSize.cs" id="1_laj56"]
 [ext_resource type="Shader" path="res://Scenes and Scripts/CircleShader.gdshader" id="2_gfno6"]
 [ext_resource type="Shader" path="res://Scenes and Scripts/testTets.gdshader" id="3_6j6qa"]
 [ext_resource type="AudioStream" uid="uid://c4xqn455if28c" path="res://Assets/Sound/Music/Stress/endless_ramble_stress_2.mp3" id="4_3ls1n"]
 [ext_resource type="AudioStream" uid="uid://cbf60vedoa5wa" path="res://Assets/Sound/SFX/Lightning/flash.wav" id="4_7ndqh"]
+[ext_resource type="AudioStream" uid="uid://dpxb7vtpqosys" path="res://Assets/Sound/SFX/Light Ambience/light_buzz_1.wav" id="4_ykm5x"]
 [ext_resource type="AudioStream" uid="uid://yqf63vpww3nc" path="res://Assets/Sound/SFX/Lightning/second_flash.wav" id="5_0q4yh"]
 [ext_resource type="AudioStream" uid="uid://b6run45r4eb23" path="res://Assets/Sound/Music/Stress/loop_sign_of_light1.mp3" id="5_2njht"]
 [ext_resource type="AudioStream" uid="uid://chk7k6ifvygxc" path="res://Assets/Sound/Music/Stress/endless_ramble_stress_1.mp3" id="5_drjyv"]
@@ -105,6 +106,9 @@ offset_top = -60.0
 offset_right = 2098.0
 offset_bottom = 1158.0
 color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ykm5x")
 
 [node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_7ndqh")
