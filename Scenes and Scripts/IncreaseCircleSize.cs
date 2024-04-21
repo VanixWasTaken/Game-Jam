@@ -104,7 +104,7 @@ public partial class IncreaseCircleSize : Node2D {
 	
 	public void UpdateCircleSize() {
 		var time =_closeAnim.CurrentAnimationPosition;
-		_closeAnim.Seek(time-4);
+		_closeAnim.Seek(time-2.5);
 	}
 	
 	//Go to Game over screen if Animation hits zero
