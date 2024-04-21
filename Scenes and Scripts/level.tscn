@@ -1,59 +1,37 @@
-[gd_scene load_steps=18 format=3 uid="uid://0ihn3m31l6ba"]
+[gd_scene load_steps=13 format=3 uid="uid://0ihn3m31l6ba"]
 
 [ext_resource type="PackedScene" uid="uid://dy5ns274feorx" path="res://Scenes and Scripts/player.tscn" id="1_di0k0"]
 [ext_resource type="Script" path="res://Scenes and Scripts/level.gd" id="1_mrmsb"]
 [ext_resource type="Script" path="res://Scenes and Scripts/CameraShake.cs" id="3_7c3bx"]
-[ext_resource type="Texture2D" uid="uid://c4mbtdkos0i1j" path="res://Assets/loading screen/Unbenanntes_Projekt-1.png" id="3_mrruq"]
-[ext_resource type="Texture2D" uid="uid://ddjwh4uvcgdkg" path="res://Assets/loading screen/Unbenanntes_Projekt-2.png" id="4_dls1g"]
-[ext_resource type="Texture2D" uid="uid://b4qerit35aqfr" path="res://Assets/loading screen/Unbenanntes_Projekt-3.png" id="5_f8e4j"]
-[ext_resource type="Texture2D" uid="uid://col4jko0sr8l0" path="res://Assets/loading screen/Unbenanntes_Projekt-4.png" id="6_rueis"]
-[ext_resource type="Texture2D" uid="uid://bxenn08x57eef" path="res://Assets/loading screen/Unbenanntes_Projekt-5.png" id="7_0w44d"]
-[ext_resource type="Texture2D" uid="uid://fqleu71lj8r0" path="res://Assets/loading screen/Unbenanntes_Projekt-6.png" id="8_1o7al"]
-[ext_resource type="Texture2D" uid="uid://cedme5pjym607" path="res://Assets/loading screen/Unbenanntes_Projekt-7.png" id="9_7dacf"]
-[ext_resource type="Texture2D" uid="uid://cx2g2dn75cugu" path="res://Assets/loading screen/Unbenanntes_Projekt-8.png" id="10_ppxpj"]
-[ext_resource type="Texture2D" uid="uid://bibr86ioid7ow" path="res://Assets/loading screen/Unbenanntes_Projekt-9.png" id="11_erduw"]
-[ext_resource type="Texture2D" uid="uid://bid02qxddbfqu" path="res://Assets/loading screen/Unbenanntes_Projekt-10.png" id="12_f5r5g"]
-[ext_resource type="Script" path="res://Scenes and Scripts/animated_sprite_2d.gd" id="13_u2si1"]
+[ext_resource type="Script" path="res://Scenes and Scripts/loading_screen.gd" id="4_5ocdh"]
+[ext_resource type="Texture2D" uid="uid://i8v4poocji18" path="res://Assets/loading screen/LoadingScreen.png" id="4_vy5uq"]
+[ext_resource type="Texture2D" uid="uid://o0twydsgr3h5" path="res://Assets/loading screen/GlühwurmAn.png" id="5_h6o1j"]
+[ext_resource type="Texture2D" uid="uid://2my436ttenhw" path="res://Assets/Light/LightCone.png" id="6_6oqid"]
+[ext_resource type="Texture2D" uid="uid://ds6cve5alvmx0" path="res://Assets/loading screen/GlühwurmAus.png" id="6_j62e6"]
 [ext_resource type="PackedScene" uid="uid://cqonxovi635ux" path="res://Scenes and Scripts/highscore.tscn" id="14_p1ur8"]
 [ext_resource type="PackedScene" uid="uid://3gosd8jl8ker" path="res://Scenes and Scripts/HUD/exit_button.tscn" id="16_ewve3"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_vr1j3"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_mrruq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_dls1g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_f8e4j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_rueis")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_0w44d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_1o7al")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_7dacf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_ppxpj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_erduw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_f5r5g")
-}],
-"loop": false,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="Animation" id="Animation_rmstb"]
+resource_name = "new_animation"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PointLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.5, 2.0, 0.5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yetfj"]
+_data = {
+"new_animation": SubResource("Animation_rmstb")
+}
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_mrmsb")
@@ -64,14 +42,299 @@ z_index = 1
 [node name="Camera2D" type="Camera2D" parent="Player"]
 script = ExtResource("3_7c3bx")
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player"]
+[node name="Loading Screen" type="Node2D" parent="Player"]
+script = ExtResource("4_5ocdh")
+
+[node name="LoadingScreen" type="Sprite2D" parent="Player/Loading Screen"]
+light_mask = 4
+z_index = 5
+position = Vector2(1, 0)
+texture = ExtResource("4_vy5uq")
+
+[node name="Glühwürmchen1" type="Sprite2D" parent="Player/Loading Screen"]
+light_mask = 0
+z_index = 6
+position = Vector2(-855, 92)
+texture = ExtResource("6_j62e6")
+
+[node name="Glühwürmchen1Leuchtend" type="Sprite2D" parent="Player/Loading Screen/Glühwürmchen1"]
 visible = false
-z_index = 2
-sprite_frames = SubResource("SpriteFrames_vr1j3")
-autoplay = "default"
-script = ExtResource("13_u2si1")
+z_index = 6
+texture = ExtResource("5_h6o1j")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player/Loading Screen/Glühwürmchen1"]
+color = Color(1, 1, 0.188235, 1)
+energy = 0.5
+range_item_cull_mask = 4
+texture = ExtResource("6_6oqid")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Loading Screen/Glühwürmchen1"]
+libraries = {
+"": SubResource("AnimationLibrary_yetfj")
+}
+
+[node name="Timer" type="Timer" parent="Player/Loading Screen/Glühwürmchen1"]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[node name="Glühwürmchen2" type="Sprite2D" parent="Player/Loading Screen"]
+light_mask = 0
+z_index = 6
+position = Vector2(-665, 214)
+texture = ExtResource("6_j62e6")
+
+[node name="Glühwürmchen2Leuchtend" type="Sprite2D" parent="Player/Loading Screen/Glühwürmchen2"]
+visible = false
+z_index = 6
+texture = ExtResource("5_h6o1j")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player/Loading Screen/Glühwürmchen2"]
+color = Color(1, 1, 0.188235, 1)
+energy = 0.5
+range_item_cull_mask = 4
+texture = ExtResource("6_6oqid")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Loading Screen/Glühwürmchen2"]
+libraries = {
+"": SubResource("AnimationLibrary_yetfj")
+}
+
+[node name="Timer2" type="Timer" parent="Player/Loading Screen/Glühwürmchen2"]
+one_shot = true
+autostart = true
+
+[node name="Glühwürmchen3" type="Sprite2D" parent="Player/Loading Screen"]
+light_mask = 0
+z_index = 6
+position = Vector2(-442, 82)
+texture = ExtResource("6_j62e6")
+
+[node name="Glühwürmchen3Leuchtend" type="Sprite2D" parent="Player/Loading Screen/Glühwürmchen3"]
+visible = false
+z_index = 6
+texture = ExtResource("5_h6o1j")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player/Loading Screen/Glühwürmchen3"]
+visible = false
+color = Color(1, 1, 0.188235, 1)
+energy = 0.5
+range_item_cull_mask = 4
+texture = ExtResource("6_6oqid")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Loading Screen/Glühwürmchen3"]
+libraries = {
+"": SubResource("AnimationLibrary_yetfj")
+}
+
+[node name="Timer3" type="Timer" parent="Player/Loading Screen/Glühwürmchen3"]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[node name="Glühwürmchen4" type="Sprite2D" parent="Player/Loading Screen"]
+light_mask = 0
+z_index = 6
+position = Vector2(-269, 212)
+texture = ExtResource("6_j62e6")
+
+[node name="Glühwürmchen4Leuchtend" type="Sprite2D" parent="Player/Loading Screen/Glühwürmchen4"]
+visible = false
+z_index = 6
+texture = ExtResource("5_h6o1j")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player/Loading Screen/Glühwürmchen4"]
+visible = false
+color = Color(1, 1, 0.188235, 1)
+energy = 0.5
+range_item_cull_mask = 4
+texture = ExtResource("6_6oqid")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Loading Screen/Glühwürmchen4"]
+libraries = {
+"": SubResource("AnimationLibrary_yetfj")
+}
+
+[node name="Timer4" type="Timer" parent="Player/Loading Screen/Glühwürmchen4"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="Glühwürmchen5" type="Sprite2D" parent="Player/Loading Screen"]
+light_mask = 0
+z_index = 6
+position = Vector2(-53, 82)
+texture = ExtResource("6_j62e6")
+
+[node name="Glühwürmchen5Leuchtend" type="Sprite2D" parent="Player/Loading Screen/Glühwürmchen5"]
+visible = false
+z_index = 6
+texture = ExtResource("5_h6o1j")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player/Loading Screen/Glühwürmchen5"]
+visible = false
+color = Color(1, 1, 0.188235, 1)
+energy = 0.5
+range_item_cull_mask = 4
+texture = ExtResource("6_6oqid")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Loading Screen/Glühwürmchen5"]
+libraries = {
+"": SubResource("AnimationLibrary_yetfj")
+}
+
+[node name="Timer5" type="Timer" parent="Player/Loading Screen/Glühwürmchen5"]
+wait_time = 2.5
+one_shot = true
+autostart = true
+
+[node name="Glühwürmchen6" type="Sprite2D" parent="Player/Loading Screen"]
+light_mask = 0
+z_index = 6
+position = Vector2(143, 205)
+texture = ExtResource("6_j62e6")
+
+[node name="Glühwürmchen6Leuchtend" type="Sprite2D" parent="Player/Loading Screen/Glühwürmchen6"]
+visible = false
+z_index = 6
+texture = ExtResource("5_h6o1j")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player/Loading Screen/Glühwürmchen6"]
+visible = false
+color = Color(1, 1, 0.188235, 1)
+energy = 0.5
+range_item_cull_mask = 4
+texture = ExtResource("6_6oqid")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Loading Screen/Glühwürmchen6"]
+libraries = {
+"": SubResource("AnimationLibrary_yetfj")
+}
+
+[node name="Timer6" type="Timer" parent="Player/Loading Screen/Glühwürmchen6"]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Glühwürmchen7" type="Sprite2D" parent="Player/Loading Screen"]
+light_mask = 0
+z_index = 6
+position = Vector2(334, 80)
+texture = ExtResource("6_j62e6")
+
+[node name="Glühwürmchen7Leuchtend" type="Sprite2D" parent="Player/Loading Screen/Glühwürmchen7"]
+visible = false
+z_index = 6
+texture = ExtResource("5_h6o1j")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player/Loading Screen/Glühwürmchen7"]
+visible = false
+color = Color(1, 1, 0.188235, 1)
+energy = 0.5
+range_item_cull_mask = 4
+texture = ExtResource("6_6oqid")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Loading Screen/Glühwürmchen7"]
+libraries = {
+"": SubResource("AnimationLibrary_yetfj")
+}
+
+[node name="Timer7" type="Timer" parent="Player/Loading Screen/Glühwürmchen7"]
+wait_time = 3.5
+one_shot = true
+autostart = true
+
+[node name="Glühwürmchen8" type="Sprite2D" parent="Player/Loading Screen"]
+light_mask = 0
+z_index = 6
+position = Vector2(494, 212)
+texture = ExtResource("6_j62e6")
+
+[node name="Glühwürmchen8Leuchtend" type="Sprite2D" parent="Player/Loading Screen/Glühwürmchen8"]
+visible = false
+z_index = 6
+texture = ExtResource("5_h6o1j")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player/Loading Screen/Glühwürmchen8"]
+visible = false
+color = Color(1, 1, 0.188235, 1)
+energy = 0.5
+range_item_cull_mask = 4
+texture = ExtResource("6_6oqid")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Loading Screen/Glühwürmchen8"]
+libraries = {
+"": SubResource("AnimationLibrary_yetfj")
+}
+
+[node name="Timer8" type="Timer" parent="Player/Loading Screen/Glühwürmchen8"]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="Glühwürmchen9" type="Sprite2D" parent="Player/Loading Screen"]
+light_mask = 0
+z_index = 6
+position = Vector2(726, 78)
+texture = ExtResource("6_j62e6")
+
+[node name="Glühwürmchen9Leuchtend" type="Sprite2D" parent="Player/Loading Screen/Glühwürmchen9"]
+visible = false
+z_index = 6
+texture = ExtResource("5_h6o1j")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player/Loading Screen/Glühwürmchen9"]
+visible = false
+color = Color(1, 1, 0.188235, 1)
+energy = 0.5
+range_item_cull_mask = 4
+texture = ExtResource("6_6oqid")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Loading Screen/Glühwürmchen9"]
+libraries = {
+"": SubResource("AnimationLibrary_yetfj")
+}
+
+[node name="Timer9" type="Timer" parent="Player/Loading Screen/Glühwürmchen9"]
+wait_time = 4.5
+one_shot = true
+autostart = true
+
+[node name="Glühwürmchen10" type="Sprite2D" parent="Player/Loading Screen"]
+light_mask = 0
+z_index = 6
+position = Vector2(872, 233)
+texture = ExtResource("6_j62e6")
+
+[node name="Glühwürmchen10Leuchtend" type="Sprite2D" parent="Player/Loading Screen/Glühwürmchen10"]
+visible = false
+z_index = 6
+texture = ExtResource("5_h6o1j")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player/Loading Screen/Glühwürmchen10"]
+visible = false
+color = Color(1, 1, 0.188235, 1)
+energy = 0.5
+range_item_cull_mask = 4
+texture = ExtResource("6_6oqid")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Loading Screen/Glühwürmchen10"]
+libraries = {
+"": SubResource("AnimationLibrary_yetfj")
+}
+
+[node name="Timer10" type="Timer" parent="Player/Loading Screen/Glühwürmchen10"]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="WegmachTimer" type="Timer" parent="Player/Loading Screen"]
+wait_time = 5.0
+one_shot = true
+autostart = true
 
 [node name="Highscore" parent="Player" instance=ExtResource("14_p1ur8")]
+visible = false
 
 [node name="ExitButton" parent="Player" instance=ExtResource("16_ewve3")]
 offset_left = 579.0
@@ -84,4 +347,14 @@ offset_bottom = -315.0
 [node name="UI" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 
-[connection signal="animation_finished" from="Player/AnimatedSprite2D2" to="Player/AnimatedSprite2D2" method="_on_animation_finished"]
+[connection signal="timeout" from="Player/Loading Screen/Glühwürmchen1/Timer" to="Player/Loading Screen" method="_on_timer_timeout"]
+[connection signal="timeout" from="Player/Loading Screen/Glühwürmchen2/Timer2" to="Player/Loading Screen" method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Player/Loading Screen/Glühwürmchen3/Timer3" to="Player/Loading Screen" method="_on_timer_3_timeout"]
+[connection signal="timeout" from="Player/Loading Screen/Glühwürmchen4/Timer4" to="Player/Loading Screen" method="_on_timer_4_timeout"]
+[connection signal="timeout" from="Player/Loading Screen/Glühwürmchen5/Timer5" to="Player/Loading Screen" method="_on_timer_5_timeout"]
+[connection signal="timeout" from="Player/Loading Screen/Glühwürmchen6/Timer6" to="Player/Loading Screen" method="_on_timer_6_timeout"]
+[connection signal="timeout" from="Player/Loading Screen/Glühwürmchen7/Timer7" to="Player/Loading Screen" method="_on_timer_7_timeout"]
+[connection signal="timeout" from="Player/Loading Screen/Glühwürmchen8/Timer8" to="Player/Loading Screen" method="_on_timer_8_timeout"]
+[connection signal="timeout" from="Player/Loading Screen/Glühwürmchen9/Timer9" to="Player/Loading Screen" method="_on_timer_9_timeout"]
+[connection signal="timeout" from="Player/Loading Screen/Glühwürmchen10/Timer10" to="Player/Loading Screen" method="_on_timer_10_timeout"]
+[connection signal="timeout" from="Player/Loading Screen/WegmachTimer" to="Player/Loading Screen" method="_on_wegmach_timer_timeout"]
