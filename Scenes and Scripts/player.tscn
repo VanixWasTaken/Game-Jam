@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dy5ns274feorx"]
+[gd_scene load_steps=35 format=3 uid="uid://dy5ns274feorx"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/player.gd" id="1_iri1f"]
 [ext_resource type="Texture2D" uid="uid://crlr6l3fqcldf" path="res://Assets/Player/Down Animation/player_front_walkcycle_0001.png" id="2_x3814"]
@@ -59,7 +59,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_down",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -85,7 +85,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_left",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -111,7 +111,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_right",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -137,20 +137,18 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_up",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5y7q"]
 size = Vector2(88, 78)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1j6vr"]
-size = Vector2(137, 59)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
 collision_layer = 7
 collision_mask = 7
 script = ExtResource("1_iri1f")
+max_speed = 500
 acceleration = 5000
 friction = 10000
 min_time_buzz = 10.0
@@ -158,10 +156,10 @@ max_time_buzz = 20.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 light_mask = 0
-position = Vector2(4, -79)
+position = Vector2(0, -85)
 scale = Vector2(1.07179, 1.07179)
 sprite_frames = SubResource("SpriteFrames_5f1q0")
-animation = &"walk_up"
+animation = &"walk_down"
 
 [node name="CircleShader" parent="." instance=ExtResource("3_2ifmp")]
 position = Vector2(-960, -540)
@@ -207,12 +205,4 @@ range_item_cull_mask = 128
 texture = ExtResource("25_ujntq")
 texture_scale = 14.51
 
-[node name="DetectionUp" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionUp"]
-position = Vector2(0.5, -115.5)
-shape = SubResource("RectangleShape2D_1j6vr")
-
 [connection signal="timeout" from="Buzzzzzzz/FoleyTime" to="." method="_on_foley_time_timeout"]
-[connection signal="area_entered" from="DetectionUp" to="." method="_on_detection_up_area_entered"]
-[connection signal="area_exited" from="DetectionUp" to="." method="_on_detection_up_area_exited"]

@@ -73,6 +73,7 @@ _data = {
 }
 
 [node name="LightRessource" type="Node2D"]
+z_index = 1
 script = ExtResource("1_b27ry")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -97,7 +98,6 @@ stretch_mode = 2
 [node name="TextureRect2" type="TextureRect" parent="."]
 light_mask = 129
 visibility_layer = 129
-z_as_relative = false
 offset_left = -40.0
 offset_top = -64.0
 offset_right = 40.0

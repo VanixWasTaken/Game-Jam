@@ -41,9 +41,10 @@ polygon = PackedVector2Array(462, 532, 468, 66, 365, 66, 362, 533)
 polygon = PackedVector2Array(461, 770, 466, 67, 363, 68, 369, 766)
 
 [node name="Tile2" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_o5byn")
-enemy_spawn_chance = 40
-light_spawn_chance = 20
+enemy_spawn_chance = 65
+light_spawn_chance = 8
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 light_mask = 129
@@ -84,20 +85,26 @@ polygon = PackedVector2Array(1020, 780, 1020, 1080, 1920, 1080, 1920, 600, 1740,
 polygon = PackedVector2Array(1020, 0, 1020, 60, 1500, 60, 1500, 240, 1620, 240, 1620, 60, 1740, 60, 1740, 480, 1920, 480, 1920, 0)
 
 [node name="EnemySpawns" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="EnemySpawn1" type="Marker2D" parent="EnemySpawns"]
+y_sort_enabled = true
 position = Vector2(300, 240)
 
 [node name="EnemySpawn2" type="Marker2D" parent="EnemySpawns"]
+y_sort_enabled = true
 position = Vector2(540, 720)
 
 [node name="EnemySpawn3" type="Marker2D" parent="EnemySpawns"]
+y_sort_enabled = true
 position = Vector2(1565, 420)
 
 [node name="EnemySpawn4" type="Marker2D" parent="EnemySpawns"]
+y_sort_enabled = true
 position = Vector2(1320, 780)
 
 [node name="EnemySpawn5" type="Marker2D" parent="EnemySpawns"]
+y_sort_enabled = true
 position = Vector2(1800, 180)
 
 [node name="LightSpawns" type="Node2D" parent="."]
@@ -336,85 +343,562 @@ visibility_layer = 129
 position = Vector2(960, 540)
 texture = ExtResource("3_y524s")
 
-[node name="Assets" type="Node2D" parent="."]
-
-[node name="NadelBaumGruppe7" type="Sprite2D" parent="Assets"]
+[node name="Stein" type="Sprite2D" parent="."]
+light_mask = 128
 z_index = 1
-position = Vector2(1743, 887)
-texture = ExtResource("8_24063")
-
-[node name="BaumStumpf" type="Sprite2D" parent="Assets"]
-visible = false
-position = Vector2(809, 742)
-texture = ExtResource("4_yve0p")
-
-[node name="Stein" type="Sprite2D" parent="Assets"]
-position = Vector2(1109, 549)
+position = Vector2(1320, 376)
 texture = ExtResource("6_2ukfs")
+offset = Vector2(-0.255, -0.875)
 
-[node name="NadelBaum" type="Sprite2D" parent="Assets"]
+[node name="Stein11" type="Sprite2D" parent="."]
+light_mask = 128
 z_index = 1
-position = Vector2(1564, 70)
+position = Vector2(1025, 195)
+texture = ExtResource("6_2ukfs")
+offset = Vector2(-0.255, -0.875)
+
+[node name="Stein2" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1563, 578)
+texture = ExtResource("6_2ukfs")
+offset = Vector2(-0.255, -0.875)
+
+[node name="Stein10" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1807, 310)
+texture = ExtResource("6_2ukfs")
+offset = Vector2(-0.255, -0.875)
+
+[node name="Stein8" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1798, 644)
+texture = ExtResource("6_2ukfs")
+offset = Vector2(-0.255, -0.875)
+
+[node name="Stein9" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1769, 828)
+texture = ExtResource("6_2ukfs")
+offset = Vector2(-0.255, -0.875)
+
+[node name="Stein3" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(784, 851)
+texture = ExtResource("6_2ukfs")
+offset = Vector2(-0.255, -0.875)
+
+[node name="Stein4" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(537, 555)
+texture = ExtResource("6_2ukfs")
+offset = Vector2(-0.255, -0.875)
+
+[node name="Stein7" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(750, 336)
+texture = ExtResource("6_2ukfs")
+offset = Vector2(-0.255, -0.875)
+
+[node name="Stein5" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(296, 387)
+texture = ExtResource("6_2ukfs")
+offset = Vector2(-0.255, -0.875)
+
+[node name="Stein6" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(727, 100)
+texture = ExtResource("6_2ukfs")
+offset = Vector2(-0.255, -0.875)
+
+[node name="LaubBaum" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(545, 342)
+texture = ExtResource("5_lqsk6")
+offset = Vector2(-8.22, -67.785)
+
+[node name="LaubBaum2" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(300, 765)
+texture = ExtResource("5_lqsk6")
+offset = Vector2(-8.22, -67.785)
+
+[node name="LaubBaum5" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(830, 722)
+texture = ExtResource("5_lqsk6")
+offset = Vector2(-8.22, -67.785)
+
+[node name="LaubBaum6" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1080, 602)
+texture = ExtResource("5_lqsk6")
+offset = Vector2(-8.22, -67.785)
+
+[node name="LaubBaum3" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1330, 591)
+texture = ExtResource("5_lqsk6")
+offset = Vector2(-8.22, -67.785)
+
+[node name="LaubBaum7" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1564, 184)
+texture = ExtResource("5_lqsk6")
+offset = Vector2(-8.22, -67.785)
+
+[node name="LaubBaum4" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1711, 942)
+texture = ExtResource("5_lqsk6")
+offset = Vector2(-8.22, -67.785)
+
+[node name="BaumStumpf" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1083, 840)
+texture = ExtResource("4_yve0p")
+offset = Vector2(4.19, -6.33)
+
+[node name="BaumStumpf3" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1590, 842)
+texture = ExtResource("4_yve0p")
+offset = Vector2(4.19, -6.33)
+
+[node name="BaumStumpf2" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(810, 458)
+texture = ExtResource("4_yve0p")
+offset = Vector2(4.19, -6.33)
+
+[node name="BaumStumpf4" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(296, 531)
+texture = ExtResource("4_yve0p")
+offset = Vector2(4.19, -6.33)
+
+[node name="NadelBaum" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(540, 929)
 texture = ExtResource("7_mlh6q")
+offset = Vector2(0.005, -35.1)
 
-[node name="NadelBaumGruppe" type="Sprite2D" parent="Assets"]
-position = Vector2(605, 81)
+[node name="NadelBaum2" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1085, 397)
+texture = ExtResource("7_mlh6q")
+offset = Vector2(0.005, -35.1)
+
+[node name="NadelBaumGruppe2" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(11, 402)
 texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
 
-[node name="TotHolzHaufen" type="Sprite2D" parent="Assets"]
-position = Vector2(809, 935)
+[node name="NadelBaumGruppe3" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(31, 318)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe4" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(-4, 237)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe5" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(38, 182)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe6" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(-3, 90)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe7" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(69, 7)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe8" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(206, -25)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe9" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(248, -4)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe10" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(368, -33)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe11" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(453, -7)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe12" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(584, -25)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe13" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(679, 26)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe14" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(807, -20)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe15" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1122, -14)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe16" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1239, -36)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe17" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1309, -16)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe18" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1429, -47)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe19" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1506, -15)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe20" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1634, -39)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe21" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1708, -10)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe22" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1831, -32)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe27" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1922, 373)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe28" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1900, 410)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe29" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1928, 619)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe30" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1888, 749)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe31" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1946, 831)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe32" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1904, 899)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe33" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1951, 947)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe34" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1898, 1022)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe35" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1783, 1088)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe36" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1681, 1037)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe37" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1597, 1094)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe38" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1501, 1060)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe39" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1395, 1095)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe40" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1309, 1046)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe41" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1223, 1089)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe42" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1148, 1042)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe43" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1107, 1073)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe44" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(809, 1055)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe45" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(744, 1090)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe46" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(655, 1047)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe47" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(536, 1112)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe48" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(468, 1070)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe49" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(392, 1103)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe50" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(318, 1048)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe51" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(214, 1101)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe52" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(161, 1058)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe53" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(97, 1081)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe54" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(31, 1022)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe55" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(-7, 950)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe56" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(-5, 824)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe57" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(32, 781)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe58" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(-9, 723)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="NadelBaumGruppe59" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(10, 645)
+texture = ExtResource("8_24063")
+offset = Vector2(3.995, -21.49)
+
+[node name="TotHolzHaufen" type="Sprite2D" parent="."]
+light_mask = 128
+z_index = 1
+position = Vector2(1279, 193)
 texture = ExtResource("9_1bsr7")
+offset = Vector2(1.665, 3.025)
 
-[node name="NadelBaumGruppe2" type="Sprite2D" parent="Assets"]
+[node name="TotHolzHaufen2" type="Sprite2D" parent="."]
+light_mask = 128
 z_index = 1
-position = Vector2(1627, 880)
-texture = ExtResource("8_24063")
-
-[node name="NadelBaumGruppe3" type="Sprite2D" parent="Assets"]
-z_index = 1
-position = Vector2(1645, 995)
-texture = ExtResource("8_24063")
-
-[node name="NadelBaumGruppe4" type="Sprite2D" parent="Assets"]
-z_index = 1
-position = Vector2(1859, 938)
-texture = ExtResource("8_24063")
-
-[node name="NadelBaumGruppe5" type="Sprite2D" parent="Assets"]
-z_index = 1
-position = Vector2(1758, 1010)
-texture = ExtResource("8_24063")
-
-[node name="NadelBaumGruppe6" type="Sprite2D" parent="Assets"]
-z_index = 1
-position = Vector2(1317, 1024)
-texture = ExtResource("8_24063")
-
-[node name="Stein2" type="Sprite2D" parent="Assets"]
-position = Vector2(1568, 676)
-texture = ExtResource("6_2ukfs")
-
-[node name="Laubbaum3" type="Sprite2D" parent="Assets"]
-position = Vector2(295, 471)
-texture = ExtResource("5_lqsk6")
-
-[node name="Laubbaum4" type="Sprite2D" parent="Assets"]
-position = Vector2(813, 774)
-texture = ExtResource("5_lqsk6")
-
-[node name="BaumStumpf2" type="Sprite2D" parent="Assets"]
-position = Vector2(544, 590)
-texture = ExtResource("4_yve0p")
-
-[node name="BaumStumpf3" type="Sprite2D" parent="Assets"]
-position = Vector2(1082, 436)
-texture = ExtResource("4_yve0p")
-
-[node name="Laubbaum6" type="Sprite2D" parent="Assets"]
-z_index = 1
-position = Vector2(1841, 332)
-texture = ExtResource("5_lqsk6")
-
-[node name="BaumStumpf4" type="Sprite2D" parent="Assets"]
-position = Vector2(813, 459)
-texture = ExtResource("4_yve0p")
+position = Vector2(569, 125)
+texture = ExtResource("9_1bsr7")
+offset = Vector2(1.665, 3.025)

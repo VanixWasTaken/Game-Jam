@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjwn3hwxwrks3"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_jbf7m"]
+[ext_resource type="Texture2D" uid="uid://tun15fpyhva8" path="res://Assets/Enemy/frog_front.png" id="2_5cy0h"]
+[ext_resource type="Texture2D" uid="uid://oypiwe7s2wub" path="res://Assets/Enemy/treestump.png" id="3_jv1kf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xh6nr"]
+
+[node name="TESTSETEST" type="Node2D"]
+y_sort_enabled = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(422, 145)
+script = ExtResource("1_jbf7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_5cy0h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_xh6nr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(249, 296)
+texture = ExtResource("3_jv1kf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(251, 475)
+texture = ExtResource("3_jv1kf")
