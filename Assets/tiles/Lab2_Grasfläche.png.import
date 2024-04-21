@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpgfqrivhuavf"
-path="res://.godot/imported/LabyrinthZwei.png-c9811944b20ace06272c422697f8983b.ctex"
+uid="uid://diahcoxk1jhs2"
+path="res://.godot/imported/Lab2_Grasfläche.png-ff608511e2c09ad3953a6278899942f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tiles/LabyrinthZwei.png"
-dest_files=["res://.godot/imported/LabyrinthZwei.png-c9811944b20ace06272c422697f8983b.ctex"]
+source_file="res://Assets/tiles/Lab2_Grasfläche.png"
+dest_files=["res://.godot/imported/Lab2_Grasfläche.png-ff608511e2c09ad3953a6278899942f8.ctex"]
 
 [params]
 

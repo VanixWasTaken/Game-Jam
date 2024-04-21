@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://dm5x2ub0j0cyl" path="res://Assets/LintsecRegular-Wy2n.ttf" id="3_ptin7"]
 
 [node name="ExitButton" type="TextureButton"]
+z_index = 1
 offset_right = 40.0
 offset_bottom = 40.0
 texture_normal = ExtResource("1_blbps")
