@@ -1,11 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://21afqfophfo3"]
+[gd_scene load_steps=15 format=3 uid="uid://21afqfophfo3"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/IncreaseCircleSize.cs" id="1_laj56"]
 [ext_resource type="Shader" path="res://Scenes and Scripts/CircleShader.gdshader" id="2_gfno6"]
 [ext_resource type="Shader" path="res://Scenes and Scripts/testTets.gdshader" id="3_6j6qa"]
-[ext_resource type="AudioStream" uid="uid://ra843uwyoy7k" path="res://Assets/Sound/Music/Stress/loop_sign_of_light2.mp3" id="4_5x82l"]
+[ext_resource type="AudioStream" uid="uid://c4xqn455if28c" path="res://Assets/Sound/Music/Stress/endless_ramble_stress_2.mp3" id="4_3ls1n"]
 [ext_resource type="AudioStream" uid="uid://b6run45r4eb23" path="res://Assets/Sound/Music/Stress/loop_sign_of_light1.mp3" id="5_2njht"]
+[ext_resource type="AudioStream" uid="uid://chk7k6ifvygxc" path="res://Assets/Sound/Music/Stress/endless_ramble_stress_1.mp3" id="5_drjyv"]
+[ext_resource type="AudioStream" uid="uid://crfbv0m6yrnjy" path="res://Assets/Sound/Music/Endless Ramble Loopable.mp3" id="6_5jj8c"]
 [ext_resource type="AudioStream" uid="uid://tflpsk1afybd" path="res://Assets/Sound/Music/sign_of_light.mp3" id="6_ha80y"]
+[ext_resource type="AudioStream" uid="uid://cvtli8huekmkt" path="res://Assets/Sound/Music/Stress/loop_sign_of_light2.wav" id="7_8gamr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_634l2"]
 shader = ExtResource("2_gfno6")
@@ -96,8 +99,17 @@ offset_right = 2098.0
 offset_bottom = 1158.0
 color = Color(0, 0, 0, 1)
 
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3ls1n")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_drjyv")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5jj8c")
+
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_5x82l")
+stream = ExtResource("7_8gamr")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_2njht")

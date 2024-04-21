@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/endless_ramble_1.mp3-96ab5a6db8049e15488e8816
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
