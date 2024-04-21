@@ -144,6 +144,7 @@ animations = [{
 size = Vector2(88, 78)
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 1
 script = ExtResource("1_iri1f")
 acceleration = 5000
 friction = 10000

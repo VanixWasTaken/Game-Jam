@@ -89,7 +89,7 @@ position = Vector2(300, 240)
 position = Vector2(540, 720)
 
 [node name="EnemySpawn3" type="Marker2D" parent="EnemySpawns"]
-position = Vector2(1080, 600)
+position = Vector2(1565, 420)
 
 [node name="EnemySpawn4" type="Marker2D" parent="EnemySpawns"]
 position = Vector2(1320, 780)

@@ -83,7 +83,7 @@ libraries = {
 
 [node name="Blink" type="TextureRect" parent="."]
 visible = false
-z_index = 1
+z_index = 2
 material = SubResource("ShaderMaterial_43b4a")
 offset_left = -40.0
 offset_top = -64.0
@@ -112,7 +112,7 @@ shape = SubResource("RectangleShape2D_m0rb1")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(1, 26)
 scale = Vector2(0.519531, 0.533203)
-energy = 0.472021
+energy = 0.592069
 shadow_enabled = true
 texture = ExtResource("5_2dmvw")
 

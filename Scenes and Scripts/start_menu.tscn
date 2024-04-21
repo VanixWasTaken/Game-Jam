@@ -131,6 +131,7 @@ grow_vertical = 0
 texture_normal = ExtResource("9_jok6c")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Credits"]
+layout_mode = 0
 offset_left = 19.0
 offset_top = 103.0
 offset_right = 329.0
