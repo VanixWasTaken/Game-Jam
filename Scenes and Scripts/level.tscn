@@ -38,7 +38,6 @@ _data = {
 script = ExtResource("1_mrmsb")
 
 [node name="Player" parent="." instance=ExtResource("1_di0k0")]
-z_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 script = ExtResource("3_7c3bx")

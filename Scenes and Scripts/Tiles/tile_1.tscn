@@ -1,8 +1,14 @@
-[gd_scene load_steps=16 format=3 uid="uid://wy5shy17ga48"]
+[gd_scene load_steps=22 format=3 uid="uid://wy5shy17ga48"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Tiles/tile_1.gd" id="1_jom5r"]
 [ext_resource type="Texture2D" uid="uid://c08t1yfwyt32e" path="res://Assets/tiles/Labyrinth_1.png" id="2_ut2nn"]
 [ext_resource type="Texture2D" uid="uid://b5gigyp304wty" path="res://Assets/tiles/Lab1_Grasfläche.png" id="3_7n0jb"]
+[ext_resource type="Texture2D" uid="uid://34oij5yvlgv0" path="res://Assets/TileAssets/BaumStumpf.png" id="4_w0vst"]
+[ext_resource type="Texture2D" uid="uid://bt134b382jkld" path="res://Assets/TileAssets/LaubBaum.png" id="5_72uua"]
+[ext_resource type="Texture2D" uid="uid://b5nkl1ky2pi7i" path="res://Assets/TileAssets/NadelBaum.png" id="6_x85y2"]
+[ext_resource type="Texture2D" uid="uid://drjey3ongtec7" path="res://Assets/TileAssets/NadelBaumGruppe.png" id="7_76mkk"]
+[ext_resource type="Texture2D" uid="uid://bqpoldfcjdkv8" path="res://Assets/TileAssets/Steine.png" id="8_eop57"]
+[ext_resource type="Texture2D" uid="uid://cjt1anq6fjbnw" path="res://Assets/TileAssets/TotHolzHaufen.png" id="9_gf1o0"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wplrg"]
 polygon = PackedVector2Array(182, 429, 349, 432, 347, 715, 178, 714)
@@ -344,4 +350,90 @@ texture = ExtResource("3_7n0jb")
 
 [node name="Assets" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="Assets"]
+[node name="BaumStumpf" type="Sprite2D" parent="Assets"]
+position = Vector2(849, 655)
+texture = ExtResource("4_w0vst")
+
+[node name="Laubbaum" type="Sprite2D" parent="Assets"]
+position = Vector2(1366, 308)
+texture = ExtResource("5_72uua")
+
+[node name="Stein" type="Sprite2D" parent="Assets"]
+position = Vector2(1109, 549)
+texture = ExtResource("8_eop57")
+
+[node name="NadelBaum" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(-20, 366)
+texture = ExtResource("6_x85y2")
+
+[node name="NadelBaumGruppe" type="Sprite2D" parent="Assets"]
+position = Vector2(785, 70)
+texture = ExtResource("7_76mkk")
+
+[node name="TotHolzHaufen" type="Sprite2D" parent="Assets"]
+position = Vector2(571, 867)
+texture = ExtResource("9_gf1o0")
+
+[node name="NadelBaumGruppe2" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(1273, 1029)
+texture = ExtResource("7_76mkk")
+
+[node name="NadelBaumGruppe3" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(1127, 1038)
+texture = ExtResource("7_76mkk")
+
+[node name="NadelBaumGruppe4" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(1514, 1029)
+texture = ExtResource("7_76mkk")
+
+[node name="NadelBaumGruppe5" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(1389, 1029)
+texture = ExtResource("7_76mkk")
+
+[node name="NadelBaumGruppe6" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(1628, 1024)
+texture = ExtResource("7_76mkk")
+
+[node name="Stein2" type="Sprite2D" parent="Assets"]
+position = Vector2(1489, 833)
+texture = ExtResource("8_eop57")
+
+[node name="Laubbaum2" type="Sprite2D" parent="Assets"]
+position = Vector2(841, 282)
+texture = ExtResource("5_72uua")
+
+[node name="Laubbaum3" type="Sprite2D" parent="Assets"]
+position = Vector2(269, 482)
+texture = ExtResource("5_72uua")
+
+[node name="Laubbaum4" type="Sprite2D" parent="Assets"]
+position = Vector2(275, 895)
+texture = ExtResource("5_72uua")
+
+[node name="Laubbaum5" type="Sprite2D" parent="Assets"]
+position = Vector2(120, 865)
+texture = ExtResource("5_72uua")
+
+[node name="BaumStumpf2" type="Sprite2D" parent="Assets"]
+position = Vector2(577, 502)
+texture = ExtResource("4_w0vst")
+
+[node name="BaumStumpf3" type="Sprite2D" parent="Assets"]
+position = Vector2(838, 915)
+texture = ExtResource("4_w0vst")
+
+[node name="Laubbaum6" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(1894, 204)
+texture = ExtResource("5_72uua")
+
+[node name="Laubbaum7" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(185, 1013)
+texture = ExtResource("5_72uua")

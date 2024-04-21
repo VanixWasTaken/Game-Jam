@@ -1,8 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://bmr5rn02o2kae"]
+[gd_scene load_steps=20 format=3 uid="uid://bmr5rn02o2kae"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/Tiles/tile_1.gd" id="1_o5byn"]
 [ext_resource type="Texture2D" uid="uid://b2m0pp0qp6837" path="res://Assets/tiles/Labyrinth_2.png" id="2_r7iyv"]
 [ext_resource type="Texture2D" uid="uid://diahcoxk1jhs2" path="res://Assets/tiles/Lab2_Grasfläche.png" id="3_y524s"]
+[ext_resource type="Texture2D" uid="uid://34oij5yvlgv0" path="res://Assets/TileAssets/BaumStumpf.png" id="4_yve0p"]
+[ext_resource type="Texture2D" uid="uid://bt134b382jkld" path="res://Assets/TileAssets/LaubBaum.png" id="5_lqsk6"]
+[ext_resource type="Texture2D" uid="uid://bqpoldfcjdkv8" path="res://Assets/TileAssets/Steine.png" id="6_2ukfs"]
+[ext_resource type="Texture2D" uid="uid://b5nkl1ky2pi7i" path="res://Assets/TileAssets/NadelBaum.png" id="7_mlh6q"]
+[ext_resource type="Texture2D" uid="uid://drjey3ongtec7" path="res://Assets/TileAssets/NadelBaumGruppe.png" id="8_24063"]
+[ext_resource type="Texture2D" uid="uid://cjt1anq6fjbnw" path="res://Assets/TileAssets/TotHolzHaufen.png" id="9_1bsr7"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cwn71"]
 polygon = PackedVector2Array(0, 0, 0, 476, 97, 470, 101, 46, 488, 48, 484, 172, 759, 168, 760, 48, 893, 49, 893, 0)
@@ -325,3 +331,94 @@ occluder = SubResource("OccluderPolygon2D_3f8db")
 light_mask = 0
 position = Vector2(960, 540)
 texture = ExtResource("3_y524s")
+
+[node name="Assets" type="Node2D" parent="."]
+
+[node name="BaumStumpf" type="Sprite2D" parent="Assets"]
+visible = false
+position = Vector2(809, 742)
+texture = ExtResource("4_yve0p")
+
+[node name="Laubbaum" type="Sprite2D" parent="Assets"]
+position = Vector2(1331, 310)
+texture = ExtResource("5_lqsk6")
+
+[node name="Stein" type="Sprite2D" parent="Assets"]
+position = Vector2(1109, 549)
+texture = ExtResource("6_2ukfs")
+
+[node name="NadelBaum" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(1564, 70)
+texture = ExtResource("7_mlh6q")
+
+[node name="NadelBaumGruppe" type="Sprite2D" parent="Assets"]
+position = Vector2(600, 99)
+texture = ExtResource("8_24063")
+
+[node name="TotHolzHaufen" type="Sprite2D" parent="Assets"]
+position = Vector2(809, 935)
+texture = ExtResource("9_1bsr7")
+
+[node name="NadelBaumGruppe2" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(1756, 853)
+texture = ExtResource("8_24063")
+
+[node name="NadelBaumGruppe3" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(1864, 794)
+texture = ExtResource("8_24063")
+
+[node name="NadelBaumGruppe4" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(1857, 906)
+texture = ExtResource("8_24063")
+
+[node name="NadelBaumGruppe5" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(1756, 963)
+texture = ExtResource("8_24063")
+
+[node name="NadelBaumGruppe6" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(1842, 1016)
+texture = ExtResource("8_24063")
+
+[node name="Stein2" type="Sprite2D" parent="Assets"]
+position = Vector2(1568, 676)
+texture = ExtResource("6_2ukfs")
+
+[node name="Laubbaum2" type="Sprite2D" parent="Assets"]
+position = Vector2(785, 420)
+texture = ExtResource("5_lqsk6")
+
+[node name="Laubbaum3" type="Sprite2D" parent="Assets"]
+position = Vector2(295, 471)
+texture = ExtResource("5_lqsk6")
+
+[node name="Laubbaum4" type="Sprite2D" parent="Assets"]
+position = Vector2(807, 712)
+texture = ExtResource("5_lqsk6")
+
+[node name="Laubbaum5" type="Sprite2D" parent="Assets"]
+position = Vector2(1075, 835)
+texture = ExtResource("5_lqsk6")
+
+[node name="BaumStumpf2" type="Sprite2D" parent="Assets"]
+position = Vector2(539, 442)
+texture = ExtResource("4_yve0p")
+
+[node name="BaumStumpf3" type="Sprite2D" parent="Assets"]
+position = Vector2(1082, 436)
+texture = ExtResource("4_yve0p")
+
+[node name="Laubbaum6" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(1800, 368)
+texture = ExtResource("5_lqsk6")
+
+[node name="Laubbaum7" type="Sprite2D" parent="Assets"]
+z_index = 1
+position = Vector2(87, 1006)
+texture = ExtResource("5_lqsk6")
