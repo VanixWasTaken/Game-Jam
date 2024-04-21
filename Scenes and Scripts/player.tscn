@@ -157,8 +157,7 @@ min_time_buzz = 10.0
 max_time_buzz = 20.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-light_mask = 192
-visibility_layer = 129
+light_mask = 0
 position = Vector2(4, -79)
 scale = Vector2(1.07179, 1.07179)
 sprite_frames = SubResource("SpriteFrames_5f1q0")
