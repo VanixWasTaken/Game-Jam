@@ -73,7 +73,7 @@ public partial class IncreaseCircleSize : Node2D {
 		timer2.WaitTime = 5;
 		timer2.Timeout += StartMusic;
 		timer.OneShot = true;
-		AddChild(timer);
+		AddChild(timer2);
 		timer2.Start();
 		
 		/*_mainSoundtrack.Play();
@@ -85,6 +85,8 @@ public partial class IncreaseCircleSize : Node2D {
 
 	public void StartMusic()
 	{
+		Random rnd = new Random();
+		int _randomZahl = rnd.Next (1,3);
 		if (_randomZahl == 1f)
 		{
 			_mainSoundtrack.Play();
